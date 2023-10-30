@@ -1,10 +1,14 @@
 @import '../../../scss//variables.scss';
 
 .header {
-    border-bottom: 1px solid $black5;
+    height: 87px;
+    position: absolute;
+    right: 0;
     display: flex;
     align-items: center;
     padding: 0 16px;
+    border-bottom: 1px solid $black5;
+    transition: all 200ms ease;
 }
 
 .title {

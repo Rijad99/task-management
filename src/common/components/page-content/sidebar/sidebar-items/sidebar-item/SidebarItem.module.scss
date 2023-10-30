@@ -4,13 +4,16 @@
 
 .active {
     background-color: $green5;
-    color: $green;
 
     svg {
 
         path {
             fill: $green !important;
         }
+    }
+
+    .name {
+        color: $green;
     }
 }
 
@@ -22,13 +25,16 @@
 
     &:hover {
         background-color: $green5;
-        color: $green;
     
         svg {
     
             path {
                 fill: $green !important;
             }
+        }
+
+        .name {
+            color: $green;
         }
     }
 }
@@ -45,11 +51,15 @@
 
     &:hover {
         background-color: $red5;
-        color: $red;
+   
+        .name {
+            color: $red;
+        }
     }
 }
 
 .name {
+    color: $neutral;
     margin-left: 0;
     padding-right: 0;
     width: 0;

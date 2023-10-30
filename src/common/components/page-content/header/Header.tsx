@@ -1,31 +1,22 @@
 // React
-import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { forwardRef } from 'react'
 
 // CSS
 import headerCSS from './Header.module.scss'
 
-// Utils
-import { setTitle } from './utils'
+// Custom hooks
+import useHeaderHook from './useHeaderHook'
 
 
 
-function Header() {
-    const [currentTitle, setCurrentTitle] = useState<string | null>(null)
-
-    const location = useLocation()
-
-    useEffect(() => {
-        const title = setTitle(location.pathname)
-
-        setCurrentTitle(title)
-    }, [location.pathname])
+const Header = forwardRef<HTMLDivElement>((_, ref) => {
+    const { currentTitle } = useHeaderHook()
 
     return (
-        <div className={headerCSS.header}>
+        <div ref={ref} className={headerCSS.header}>
             <span className={headerCSS.title}>{currentTitle}</span>
         </div>
     )
-}
+})
 
 export default Header
