@@ -1,0 +1,60 @@
+@import '../../../../../scss/variables.scss';
+
+
+
+.active {
+    background-color: $green5;
+    color: $green;
+
+    svg {
+
+        path {
+            fill: $green !important;
+        }
+    }
+}
+
+.sidebarItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: $medium;
+
+    &:hover {
+        background-color: $green5;
+        color: $green;
+    
+        svg {
+    
+            path {
+                fill: $green !important;
+            }
+        }
+    }
+}
+
+.sidebarItem:not(:first-child) {
+    margin-top: 1rem;
+}
+
+.logoutSidebarItem {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: $medium;
+
+    &:hover {
+        background-color: $red5;
+        color: $red;
+    }
+}
+
+.name {
+    margin-left: 0;
+    padding-right: 0;
+    width: 0;
+    opacity: 0;
+    visibility: hidden;
+    white-space: nowrap;
+    transition: margin 200ms ease, padding 200ms ease, width 200ms ease, opacity 200ms ease, visiblity 200ms ease;
+}

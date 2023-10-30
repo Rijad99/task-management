@@ -1,0 +1,9 @@
+.pageContentLayout {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 87px 1fr;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    transition: all 300ms ease;
+}
