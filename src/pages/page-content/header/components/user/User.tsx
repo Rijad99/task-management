@@ -8,6 +8,7 @@ import Status from '../../../../../common/components/status/Status'
 import { UserProps } from './User.types'
 
 
+
 function User({ firstName, lastName, email, photo, status, _onStatusChange }: UserProps) {
 
     return (

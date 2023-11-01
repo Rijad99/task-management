@@ -16,3 +16,11 @@ export enum UserStatus {
     IN_A_MEETING = 'in a meeting',
     OUT_OF_OFFICE = 'out of office'
 }
+
+export enum StatusColor {
+    GREEN = 'green',
+    GRAY = 'gray',
+    RED = 'red',
+    ORANGE = 'orange',
+    PURPLE = 'purple'
+}

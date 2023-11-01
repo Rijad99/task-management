@@ -14,9 +14,6 @@ import useHeaderHook from './useHeaderHook'
 // User photo
 import photo from '../../../common/images/profile-photos/Profile.png'
 
-// ENUMS
-import { UserStatus } from './components/user/User.types'
-
 
 
 const Header = forwardRef<HTMLDivElement>((_, ref) => {
@@ -26,7 +23,7 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
         <div ref={ref} className={headerCSS.header}>
             <span className={headerCSS.title}>{currentTitle}</span>
             <Search />
-            <User firstName='John' lastName='Doe' email='johndoe@example.com' photo={photo} status={UserStatus.ONLINE} onStatusChange={() => null} />
+            <User firstName='John' lastName='Doe' email='johndoe@example.com' photo={photo} status='online' onStatusChange={() => null} />
         </div>
     )
 })

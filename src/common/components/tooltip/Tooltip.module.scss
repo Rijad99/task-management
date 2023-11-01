@@ -1,0 +1,19 @@
+@import '../../scss/variables.scss';
+
+
+
+.tooltip {
+    position: absolute;
+    font-size: $caption;
+    font-weight: $medium;
+    color: $white;
+    background-color: $neutral;
+    padding: 0.3rem;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 200ms ease;
+}
+
+.tooltipVisible {
+    opacity: 1;
+}
