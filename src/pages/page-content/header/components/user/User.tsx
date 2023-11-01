@@ -2,7 +2,7 @@
 import userCSS from './User.module.scss'
 
 // Components
-import Status from '../../../../status/Status'
+import Status from '../../../../../common/components/status/Status'
 
 // Types
 import { UserProps } from './User.types'

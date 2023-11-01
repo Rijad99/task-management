@@ -1,17 +1,17 @@
 // Components
-import Button from "../../../../button/Button"
-import Svg from "../../../../svg/Svg"
+import Button from "../../../../../common/components/button/Button"
+import Svg from "../../../../../common/components/svg/Svg"
 
 // CSS
 import sidebarItemCSS from './SidebarItem.module.scss'
 
 // Types
 import { SidebarItemProps } from "./SidebarItem.types"
-import { ButtonSize, ButtonType } from "../../../../button/Button.types"
+import { ButtonSize, ButtonType } from "../../../../../common/components/button/Button.types"
 
 // ENUMS
-import { SvgFillRule, SvgClipRule } from "../../../../svg/Svg.types"
-import { Paths } from "../../../../../utils/paths"
+import { SvgFillRule, SvgClipRule } from "../../../../../common/components/svg/Svg.types"
+import { Paths } from "../../../../../common/utils/paths"
 
 
 

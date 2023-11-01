@@ -1,9 +1,9 @@
 // Types
-import { Paths } from "../../../../utils/paths";
+import { Paths } from "../../../../common/utils/paths";
 import { SidebarLink } from "./types";
 
 // Icons
-import { dashboardIcon, logoutIcon, peopleIcon, reportsIcon, settingsIcon, sprintIcon } from "../../../../icons/icons";
+import { dashboardIcon, logoutIcon, peopleIcon, reportsIcon, settingsIcon, sprintIcon } from "../../../../common/icons/icons";
 
 
 

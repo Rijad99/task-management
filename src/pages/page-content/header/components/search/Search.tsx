@@ -2,13 +2,13 @@
 import { useState } from 'react'
 
 // Components
-import FormControl from "../../../../form/form-control/FormControl";
+import FormControl from '../../../../../common/components/form/form-control/FormControl';
 
 // CSS
 import searchCSS from './Search.module.scss'
 
 // Icons
-import { searchIcon } from '../../../../../icons/icons';
+import { searchIcon } from '../../../../../common/icons/icons';
 
 
 

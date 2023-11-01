@@ -1,24 +1,24 @@
 // Components
-import Button from '../../../button/Button'
-import Svg from '../../../svg/Svg'
+import Button from '../../../../common/components/button/Button'
+import Svg from '../../../../common/components/svg/Svg'
 import SidebarItem from './sidebar-item/SidebarItem'
 
 // Types
 import { SidebarItemsProps } from './SidebarItems.types'
 
 // ENUMS
-import { SvgColors, SvgStrokeLineCap, SvgStrokeLineJoin } from '../../../svg/Svg.types'
-import { ButtonSize, ButtonType } from '../../../button/Button.types'
+import { SvgColors, SvgStrokeLineCap, SvgStrokeLineJoin } from '../../../../common/components/svg/Svg.types'
+import { ButtonSize, ButtonType } from '../../../../common/components/button/Button.types'
 
 // CSS
-import utilsCSS from '../../../../scss/utils.module.scss'
+import utilsCSS from '../../../../common/scss/utils.module.scss'
 import sidebarCSS from '../Sidebar.module.scss'
 
 // SidebarItems hook
 import useSidebarItemsHook from './useSidebarItemsHook'
 
 // Icons
-import { arrowIcon } from '../../../../icons/icons'
+import { arrowIcon } from '../../../../common/icons/icons'
 
 
 

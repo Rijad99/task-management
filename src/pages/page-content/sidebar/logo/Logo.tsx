@@ -2,7 +2,7 @@
 import logoCSS from './Logo.module.scss'
 
 // Logo
-import logo from '../../../../images/logo/logo.png'
+import logo from '../../../../common/images/logo/logo.png'
 
 
 

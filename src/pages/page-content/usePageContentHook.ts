@@ -17,12 +17,14 @@ function usePageContentHook() {
 
     const handlePageContentWidthUpdate = () => {
 
-        setTimeout(() => {
+        const sidebarTimeout = setTimeout(() => {
             const sidebarWidth = sidebarRef.current?.getBoundingClientRect().width
 
             pageContentRef.current!.style.width = `calc(100vw - ${sidebarWidth}px)`
             headerRef.current!.style.width = `calc(100vw - ${sidebarWidth}px)`
-        }, 200);
+
+            clearTimeout(sidebarTimeout)
+        }, 200)
     }
 
     return { sidebarRef, headerRef, pageContentRef, handlePageContentWidthUpdate }

@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { Paths } from './common/utils/paths'
 
 // Components
-import PageContent from './common/components/page-content/PageContent'
+import PageContent from './pages/page-content/PageContent'
 const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'))
 
 

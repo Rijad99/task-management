@@ -2,7 +2,7 @@
 import { forwardRef } from 'react'
 
 // CSS
-import '../../../scss/main.scss'
+import '../../../common/scss/main.scss'
 import sidebarCSS from './Sidebar.module.scss'
 
 // Components

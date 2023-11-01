@@ -12,7 +12,7 @@ import User from './components/user/User'
 import useHeaderHook from './useHeaderHook'
 
 // User photo
-import photo from '../../../images/profile-photos/Profile.png'
+import photo from '../../../common/images/profile-photos/Profile.png'
 
 // ENUMS
 import { UserStatus } from './components/user/User.types'
