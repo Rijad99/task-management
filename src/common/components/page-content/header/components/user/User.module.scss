@@ -1,0 +1,24 @@
+@import '../../../../../scss/variables.scss';
+
+
+
+.userContainer {
+    display: flex;
+    align-items: center;
+}
+
+.photo {
+    margin-right: 0.5rem;
+}
+
+.userInfo {
+    line-height: 1.1;
+
+    .name {
+        font-weight: $bold;
+    }
+
+    .email {
+        font-size: $bodyThree;
+    }
+}
