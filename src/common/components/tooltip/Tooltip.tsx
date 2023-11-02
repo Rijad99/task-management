@@ -1,5 +1,5 @@
 // React
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 
 // CSS
 import tooltipCSS from './Tooltip.module.scss'
@@ -9,27 +9,30 @@ import { TooltipPosition, TooltipProps } from './Tooltip.types'
 
 
 
-function Tooltip({ text, position }: TooltipProps) {
+function Tooltip({ text, position, children, additionalClasses }: TooltipProps) {
     const tooltipRef = useRef<HTMLDivElement>(null)
 
-    const handleShowTooltip = () => {
-
-        switch (position) {
+    useEffect(() => {
         
+        switch (position) {
+
             case TooltipPosition.TOP:
             case TooltipPosition.BOTTOM:
-                tooltipRef.current!.style[position] = `${0 - 25}px`
+                tooltipRef.current!.style[position] = `-${28}px`
+                tooltipRef.current!.style.left= `50%`
+                tooltipRef.current!.style.transform = 'translateX(-50%)'
                 break
             
             case TooltipPosition.LEFT:
-                tooltipRef.current!.style[position] = `${tooltipRef.current?.getBoundingClientRect().width! - 30}px`
-                break
-
             case TooltipPosition.RIGHT:
-                tooltipRef.current!.style[position] = `${tooltipRef.current?.getBoundingClientRect().width! - 30}px`
+                tooltipRef.current!.style[position] = `${+tooltipRef.current?.getBoundingClientRect().width! - 95}px`
+                tooltipRef.current!.style.top= `50%`
+                tooltipRef.current!.style.transform = 'translateY(-50%)'
                 break
         }
+    }, [])
 
+    const handleShowTooltip = () => {
         tooltipRef.current?.classList.add(tooltipCSS.tooltipVisible)
     }
 
@@ -38,8 +41,11 @@ function Tooltip({ text, position }: TooltipProps) {
     }
 
     return (
-        <div ref={tooltipRef} className={`${tooltipCSS.tooltip} ${tooltipCSS[position]}`} onMouseOver={handleShowTooltip} onMouseLeave={handleHideTooltip}>
-            {text}
+        <div className={`${tooltipCSS.tooltipContainer} ${additionalClasses && additionalClasses}`} onMouseOver={handleShowTooltip} onMouseLeave={handleHideTooltip}>
+            {children}
+            <div ref={tooltipRef} className={`${tooltipCSS.tooltip} ${tooltipCSS[position]}`}>
+                {text}
+            </div>
         </div>
     )
 }
