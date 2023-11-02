@@ -30,3 +30,28 @@
 .purple {
     background-color: $purple;
 }
+
+.online {
+    background-color: $green10;
+    color: $green;
+}
+
+.offline {
+    background-color: $black10;
+    color: $black;
+}
+
+.away {
+    background-color: $orange10;
+    color: $orange;
+}
+
+.out_of_office {
+    background-color: $purple10;
+    color: $purple;
+}
+
+.do_not_disturb, .busy, .in_a_meeting {
+    background-color: $red5;
+    color: $red;
+}

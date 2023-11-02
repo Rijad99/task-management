@@ -9,7 +9,7 @@ import { TooltipPosition, TooltipProps } from './Tooltip.types'
 
 
 
-function Tooltip({ text, position, children, additionalClasses }: TooltipProps) {
+function Tooltip({ text, position, children, tooltipContainerClasses, tooltipClasses }: TooltipProps) {
     const tooltipRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -41,9 +41,9 @@ function Tooltip({ text, position, children, additionalClasses }: TooltipProps) 
     }
 
     return (
-        <div className={`${tooltipCSS.tooltipContainer} ${additionalClasses && additionalClasses}`} onMouseOver={handleShowTooltip} onMouseLeave={handleHideTooltip}>
+        <div className={`${tooltipCSS.tooltipContainer} ${tooltipContainerClasses && tooltipContainerClasses}`} onMouseOver={handleShowTooltip} onMouseLeave={handleHideTooltip}>
             {children}
-            <div ref={tooltipRef} className={`${tooltipCSS.tooltip} ${tooltipCSS[position]}`}>
+            <div ref={tooltipRef} className={`${tooltipCSS.tooltip} ${tooltipCSS[position]} ${tooltipClasses && tooltipClasses}`}>
                 {text}
             </div>
         </div>

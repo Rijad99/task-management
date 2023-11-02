@@ -2,7 +2,8 @@ export interface TooltipProps {
     text: string
     position: TooltipPosition
     children: React.ReactElement
-    additionalClasses?: string
+    tooltipContainerClasses?: string
+    tooltipClasses?: string
 }
 
 export enum TooltipPosition {

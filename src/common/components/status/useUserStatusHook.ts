@@ -3,7 +3,7 @@ import { UserStatus, StatusColor } from "../../../pages/page-content/header/comp
 
 
 
-function useStatusHook() {
+function useUserStatusHook() {
 
     const getStatus = (status: string) => {
 
@@ -31,4 +31,4 @@ function useStatusHook() {
     return { getStatus }
 }
 
-export default useStatusHook
+export default useUserStatusHook

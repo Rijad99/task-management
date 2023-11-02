@@ -8,13 +8,13 @@ export interface UserProps {
 }
 
 export enum UserStatus {
-    ONLINE = 'online',
-    OFFLINE = 'offline',
-    AWAY = 'away',
-    BUSY = 'busy',
-    DO_NOT_DISTURB = 'do not disturb',
-    IN_A_MEETING = 'in a meeting',
-    OUT_OF_OFFICE = 'out of office'
+    ONLINE = 'Online',
+    OFFLINE = 'Offline',
+    AWAY = 'Away',
+    BUSY = 'Busy',
+    DO_NOT_DISTURB = 'Do not disturb',
+    IN_A_MEETING = 'In a meeting',
+    OUT_OF_OFFICE = 'Out of office'
 }
 
 export enum StatusColor {

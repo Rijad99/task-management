@@ -10,12 +10,12 @@
     font-size: $caption;
     font-weight: $medium;
     color: $white;
-    background-color: $neutral;
-    padding: 0.3rem;
-    border-radius: 8px;
+    white-space: nowrap;
+    padding: 0.4rem 0.6rem;
+    border-radius: 9px;
     opacity: 0;
-    transition: all 200ms ease;
     pointer-events: none;
+    transition: all 200ms ease;
 }
 
 .tooltipVisible {
