@@ -6,4 +6,5 @@ export interface DropdownProps {
 export interface DropdownItem {
     id: string | number
     actionName: string
+    icon?: React.ReactElement
 }

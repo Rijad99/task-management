@@ -8,7 +8,7 @@ import { DropdownItem, DropdownProps } from './Dropdown.types'
 
 function Dropdown({ items, onActionChange }: DropdownProps) {
 
-    const handleStatusChange = (item: DropdownItem) => {
+    const handleActionChange = (item: DropdownItem) => {
         onActionChange(item)
     }
 
@@ -20,7 +20,8 @@ function Dropdown({ items, onActionChange }: DropdownProps) {
                     items.map(item => {
 
                         return (
-                            <li key={item.id} className={dropdownCSS.dropdownItem} onClick={() => handleStatusChange(item)}>
+                            <li key={item.id} className={dropdownCSS.dropdownItem} onClick={() => handleActionChange(item)}>
+                                {item.icon && item.icon}
                                 {item.actionName}
                             </li>
                         )

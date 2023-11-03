@@ -18,14 +18,14 @@ function Tooltip({ text, position, children, tooltipContainerClasses, tooltipCla
 
             case TooltipPosition.TOP:
             case TooltipPosition.BOTTOM:
-                tooltipRef.current!.style[position] = `-${28}px`
+                tooltipRef.current!.style[position] = `-${30}px`
                 tooltipRef.current!.style.left= `50%`
                 tooltipRef.current!.style.transform = 'translateX(-50%)'
                 break
             
             case TooltipPosition.LEFT:
             case TooltipPosition.RIGHT:
-                tooltipRef.current!.style[position] = `${+tooltipRef.current?.getBoundingClientRect().width! - 95}px`
+                tooltipRef.current!.style[position] = `${+tooltipRef.current?.getBoundingClientRect().width! - 100}px`
                 tooltipRef.current!.style.top= `50%`
                 tooltipRef.current!.style.transform = 'translateY(-50%)'
                 break

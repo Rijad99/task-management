@@ -31,6 +31,10 @@
     background-color: $purple;
 }
 
+.gray {
+    background-color: $neutral;
+}
+
 .online {
     background-color: $green10;
     color: $green;
@@ -54,4 +58,10 @@
 .do_not_disturb, .busy, .in_a_meeting {
     background-color: $red5;
     color: $red;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
 }

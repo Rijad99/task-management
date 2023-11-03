@@ -14,11 +14,14 @@
 }
 
 .dropdownItem {
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
     font-size: $caption;
     font-weight: $medium;
     color: $neutral;
     white-space: nowrap;
-    padding: 0.5rem 0.5rem;
+    padding: 0 0.5rem;
     border-radius: 8px;
     cursor: pointer;
     transition: all 200ms ease;

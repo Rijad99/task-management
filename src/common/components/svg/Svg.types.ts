@@ -17,7 +17,8 @@ export enum SvgColors {
     GREEN = 'green',
     RED = 'red',
     NEUTRAL = 'neutral',
-    BLACK = 'black'
+    BLACK = 'black',
+    ORANGE = 'orange'
 }
 
 export enum SvgFillRule {

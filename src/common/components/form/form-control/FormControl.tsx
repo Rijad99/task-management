@@ -18,7 +18,7 @@ function FormControl({ type, name, placeholder, value, id, label, icon, disabled
     return (
         <div className={formControlCSS.formControl}>
             {label && <label className={formControlCSS.label}>{label}</label>}
-            {icon && <Svg path={icon} width='21' height='19' viewBox='0 -0.5 19 19' color={SvgColors.NEUTRAL} additionalClasses={utilsCSS.mr1} />}
+            {icon && <Svg path={icon} width='21' height='19' viewBox='0 -0.5 19 19' color={SvgColors.NEUTRAL} additionalClasses={utilsCSS.mr05} />}
             <input 
                 type={type} 
                 name={name}
