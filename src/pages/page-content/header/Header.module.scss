@@ -18,3 +18,13 @@
     font-weight: $medium;
     color: $neutral;
 }
+
+.headerRightSide, .actions {
+    display: flex;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    margin-right: 1.5rem;
+}

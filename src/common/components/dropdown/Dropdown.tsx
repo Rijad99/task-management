@@ -1,3 +1,6 @@
+// React
+import { forwardRef } from 'react'
+
 // CSS
 import dropdownCSS from './Dropdown.module.scss'
 
@@ -6,18 +9,18 @@ import { DropdownItem, DropdownProps } from './Dropdown.types'
 
 
 
-function Dropdown({ items, onActionChange }: DropdownProps) {
+const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, ref) => {
 
     const handleActionChange = (item: DropdownItem) => {
-        onActionChange(item)
+        props.onActionChange(item)
     }
 
     return (
-        <div className={dropdownCSS.dropdown}>
+        <div ref={ref} className={dropdownCSS.dropdown}>
             <ul>
 
                 {
-                    items.map(item => {
+                    props.items.map(item => {
 
                         return (
                             <li key={item.id} className={dropdownCSS.dropdownItem} onClick={() => handleActionChange(item)}>
@@ -31,6 +34,6 @@ function Dropdown({ items, onActionChange }: DropdownProps) {
             </ul>
         </div>
     )
-}
+})
 
 export default Dropdown

@@ -1,5 +1,9 @@
+// React
+import { createRef, useContext } from 'react'
+
 // CSS
 import userCSS from './User.module.scss'
+import dropdownCSS from '../../../../../common/components/dropdown/Dropdown.module.scss'
 
 // Components
 import UserStatus from '../../../../../common/components/status/UserStatus'
@@ -12,13 +16,27 @@ import { DropdownItem } from '../../../../../common/components/dropdown/Dropdown
 // Data
 import { userStatusData } from '../../../../../common/components/status/utils/user-status-mock-data'
 
+// Context
+import { UserContext } from '../../../../../common/context/UserContext'
+
 
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
+    const { user, setUser } = useContext(UserContext) 
+
+    const dropdownRef = createRef<HTMLDivElement>()
 
     const handleChangeStatus = (item: DropdownItem) => {
-        console.log('Status')
-        console.log(item)
+        setUser({
+            ...user,
+            status: item.actionName
+        })
+
+        dropdownRef.current?.classList.remove(dropdownCSS.dropdownVisible)
+    }
+
+    const handleStatusDropdownOpen = () => {
+        dropdownRef.current?.classList.toggle(dropdownCSS.dropdownVisible)
     }
 
     return (
@@ -27,10 +45,10 @@ function User({ firstName, lastName, email, photo, status }: UserProps) {
             <div className={userCSS.userInfo}>
                 <span className={userCSS.name}>
                     {`${firstName} ${lastName}`} 
-                    <UserStatus status={status} />
+                    <UserStatus status={status} onStatusDropdownOpen={handleStatusDropdownOpen} />
                 </span>
                 <span className={userCSS.email}>{email}</span>
-                <Dropdown items={userStatusData} onActionChange={handleChangeStatus} />
+                <Dropdown ref={dropdownRef} items={userStatusData} onActionChange={handleChangeStatus} />
             </div>
         </div>
     )

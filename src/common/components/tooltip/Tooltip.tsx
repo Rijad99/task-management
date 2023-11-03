@@ -25,12 +25,12 @@ function Tooltip({ text, position, children, tooltipContainerClasses, tooltipCla
             
             case TooltipPosition.LEFT:
             case TooltipPosition.RIGHT:
-                tooltipRef.current!.style[position] = `${+tooltipRef.current?.getBoundingClientRect().width! - 100}px`
+                tooltipRef.current!.style[position] = `12px`
                 tooltipRef.current!.style.top= `50%`
                 tooltipRef.current!.style.transform = 'translateY(-50%)'
                 break
         }
-    }, [])
+    }, [text])
 
     const handleShowTooltip = () => {
         tooltipRef.current?.classList.add(tooltipCSS.tooltipVisible)

@@ -9,6 +9,10 @@ import { Paths } from './common/utils/paths'
 import PageContent from './pages/page-content/PageContent'
 const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'))
 
+// Providers
+import { LocalizationProvider } from "./common/context/LocalizationContext"
+import { UserProvider } from "./common/context/UserContext"
+
 
 
 function App() {
@@ -22,39 +26,43 @@ function App() {
 
     return ( 
 
-        <BrowserRouter>   
-            <Routes>
-                <Route path={Paths.ROOT} element={<PageContent />}>
+        <LocalizationProvider>
+            <UserProvider>
+                <BrowserRouter>   
+                    <Routes>
+                        <Route path={Paths.ROOT} element={<PageContent />}>
 
-                    <Route path={Paths.DASHBOARD} element={
-                        <Suspense fallback={'Loading component...'}>
-                            <Dashboard />
-                        </Suspense>
-                    } />
-                    <Route path={Paths.SPRINT} element={
-                        <Suspense fallback={'Loading component...'}>
-                            <></>
-                        </Suspense>
-                    } />
-                    <Route path={Paths.MYTEAM} element={
-                        <Suspense fallback={'Loading component...'}>
-                            <></>
-                        </Suspense>
-                    } />
-                    <Route path={Paths.REPORTS} element={
-                        <Suspense fallback={'Loading component...'}>
-                            <></>
-                        </Suspense>
-                    } />
-                    <Route path={Paths.SETTINGS} element={
-                        <Suspense fallback={'Loading component...'}>
-                            <></>
-                        </Suspense>
-                    } />
+                            <Route path={Paths.DASHBOARD} element={
+                                <Suspense fallback={'Loading component...'}>
+                                    <Dashboard />
+                                </Suspense>
+                            } />
+                            <Route path={Paths.SPRINT} element={
+                                <Suspense fallback={'Loading component...'}>
+                                    <></>
+                                </Suspense>
+                            } />
+                            <Route path={Paths.MYTEAM} element={
+                                <Suspense fallback={'Loading component...'}>
+                                    <></>
+                                </Suspense>
+                            } />
+                            <Route path={Paths.REPORTS} element={
+                                <Suspense fallback={'Loading component...'}>
+                                    <></>
+                                </Suspense>
+                            } />
+                            <Route path={Paths.SETTINGS} element={
+                                <Suspense fallback={'Loading component...'}>
+                                    <></>
+                                </Suspense>
+                            } />
 
-                </Route>
-            </Routes>
-        </BrowserRouter>
+                        </Route>
+                    </Routes>
+                </BrowserRouter>
+            </UserProvider>
+        </LocalizationProvider>
     )
 }
 

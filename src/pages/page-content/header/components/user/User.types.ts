@@ -4,7 +4,14 @@ export interface UserProps {
     email: string
     photo: string
     status: string
-    onStatusChange: (userStatus: UserStatus) => void
+}
+
+export interface User {
+    firstName: string
+    lastName: string
+    email: string
+    photo: string
+    status: string
 }
 
 export enum UserStatus {

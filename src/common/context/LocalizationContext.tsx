@@ -29,13 +29,13 @@ interface LocalizationProviderProps {
     children: React.ReactNode
 }
 
-const LocalizationProvider: React.FC<LocalizationProviderProps>= ({ children }) => {
+const LocalizationProvider: React.FC<LocalizationProviderProps> = ({ children }) => {
     const [userLanguage, setUserLanguage] = useState<string>('English')
-    const [localization, setLocalization] = useState<Localization>({})
+    const [localization, _setLocalization] = useState<Localization>({})
 
     useEffect(() => {
-        const localization = localStorage.getItem('language')
-        const url = `../src/data/localization/${localization?.toLowerCase()}.json`
+        //const localization = localStorage.getItem('language')
+        //const url = `../src/data/localization/${localization?.toLowerCase()}.json`
 
         /* if (localization) {
             getData(url)
