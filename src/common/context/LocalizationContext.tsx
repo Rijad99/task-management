@@ -2,10 +2,10 @@
 import { createContext, useState, useEffect } from 'react'
 
 // HTTP
-// import { getData } from '../utils/http-utils'
+import { getData } from '../utils/http'
 
 // English localization - Used as default or fallback
-//import englishLocalization from '../../data/localization/english.json'
+import englishLocalization from '../../data/localization/english.json'
 
 
 
@@ -14,13 +14,13 @@ export interface Localization {
 }
 
 interface LocalizationContextProps {
-    userLanguage: string
+    userLanguage: Language
     localization: Localization
-    setUserLanguage: (language: string) => void
+    setUserLanguage: (language: Language) => void
 }
 
 const LocalizationContext = createContext<LocalizationContextProps>({
-    userLanguage: '',
+    userLanguage: { id: null, value: '', icon: '' },
     localization: {},
     setUserLanguage: () => null
 })
@@ -29,19 +29,27 @@ interface LocalizationProviderProps {
     children: React.ReactNode
 }
 
+export interface Language {
+    id: string | number | null
+    value: string
+    icon: string
+}
+
 const LocalizationProvider: React.FC<LocalizationProviderProps> = ({ children }) => {
-    const [userLanguage, setUserLanguage] = useState<string>('English')
-    const [localization, _setLocalization] = useState<Localization>({})
+    const [userLanguage, setUserLanguage] = useState<Language>({ id: 0, value: 'English', icon: '/src/common/images/flags/english.png' })
+    const [localization, setLocalization] = useState<Localization>(englishLocalization)
 
     useEffect(() => {
-        //const localization = localStorage.getItem('language')
-        //const url = `../src/data/localization/${localization?.toLowerCase()}.json`
+        const localization = JSON.parse(localStorage.getItem('language')!)
+        const url = `../src/data/localization/${localization.value.toLowerCase()}.json`
 
-        /* if (localization) {
+        setUserLanguage({ id: localization.id, value: localization.value!, icon: `/src/common/images/flags/${localization.value?.toLowerCase()}.png` })
+
+        if (userLanguage.value) {
             getData(url)
-                .then(localization => setLocalization(localization))
-        } */
-    }, [userLanguage])
+                .then(localization => setLocalization(localization)
+        )}
+    }, [userLanguage.value])
 
     const value = {
         userLanguage,

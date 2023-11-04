@@ -21,6 +21,7 @@ import useHeaderHook from './useHeaderHook'
 
 // Context
 import { UserContext } from '../../../common/context/UserContext'
+import { LocalizationContext } from '../../../common/context/LocalizationContext'
 
 // Icons
 import { messageIcon, notificationIcon } from '../../../common/icons/icons'
@@ -31,10 +32,11 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
     const { currentTitle } = useHeaderHook()
 
     const { user } = useContext(UserContext)
+    const { localization } = useContext(LocalizationContext)
 
     return (
         <div ref={ref} className={headerCSS.header}>
-            <span className={headerCSS.title}>{currentTitle}</span>
+            <span className={headerCSS.title}>{localization[currentTitle!]}</span>
             <Search />
             <div className={headerCSS.headerRightSide}>
                 <div className={headerCSS.actions}>

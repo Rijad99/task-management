@@ -20,7 +20,7 @@ function App() {
     useEffect(() => {
 
         if (!localStorage.getItem('language')) {
-            localStorage.setItem('language', 'English')
+            localStorage.setItem('language', JSON.stringify({ value: 'English', icon: '/src/common/images/flags/english.png' }))
         }
     }, [])
 

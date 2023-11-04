@@ -6,10 +6,12 @@ import { Option } from "../../../../../common/components/select/components/optio
 export const languageOptions: Option[] = [
     {
         id: 0,
-        value: 'English'
+        value: 'English',
+        icon: '/src/common/images/flags/english.png'
     },
     {
         id: 1,
-        value: 'German'
+        value: 'German',
+        icon: '/src/common/images/flags/german.png'
     }
 ]

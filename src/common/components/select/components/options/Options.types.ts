@@ -4,7 +4,7 @@ export interface OptionsProps {
 }
 
 export interface Option {
-    id: string | number
+    id: string | number | null
     value: string
-    icon?: React.ReactElement
+    icon?: string
 }

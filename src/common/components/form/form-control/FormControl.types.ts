@@ -8,5 +8,5 @@ export interface FormControlProps {
     icon?: string
     disabled?: boolean
     additionalClasses?: string
-    onKeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void
+    onInput: (e: React.KeyboardEvent<HTMLInputElement>) => void
 }

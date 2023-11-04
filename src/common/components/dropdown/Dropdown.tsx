@@ -1,5 +1,5 @@
 // React
-import { forwardRef } from 'react'
+import { forwardRef, useContext } from 'react'
 
 // CSS
 import dropdownCSS from './Dropdown.module.scss'
@@ -7,9 +7,13 @@ import dropdownCSS from './Dropdown.module.scss'
 // Types
 import { DropdownItem, DropdownProps } from './Dropdown.types'
 
+// Context
+import { LocalizationContext } from '../../context/LocalizationContext'
+
 
 
 const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, ref) => {
+    const { localization } = useContext(LocalizationContext)
 
     const handleActionChange = (item: DropdownItem) => {
         props.onActionChange(item)
@@ -25,7 +29,7 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, ref) => {
                         return (
                             <li key={item.id} className={dropdownCSS.dropdownItem} onClick={() => handleActionChange(item)}>
                                 {item.icon && item.icon}
-                                {item.actionName}
+                                {localization[item.actionName]}
                             </li>
                         )
                     })

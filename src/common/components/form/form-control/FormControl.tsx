@@ -13,7 +13,7 @@ import { SvgColors } from '../../svg/Svg.types'
 
 
 
-function FormControl({ type, name, placeholder, value, id, label, icon, disabled, additionalClasses, onKeyUp }: FormControlProps) {
+function FormControl({ type, name, placeholder, value, id, label, icon, disabled, additionalClasses, onInput }: FormControlProps) {
 
     return (
         <div className={formControlCSS.formControl}>
@@ -29,7 +29,7 @@ function FormControl({ type, name, placeholder, value, id, label, icon, disabled
                 id={id} 
                 disabled={disabled} 
                 className={`${formControlCSS.input} ${additionalClasses && additionalClasses}`} 
-                onKeyUp={onKeyUp} 
+                onInput={onInput} 
             />
         </div>
     )

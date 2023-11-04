@@ -5,7 +5,7 @@
 .optionsList {
     width: 100%;
     position: absolute;
-    top: 35px;
+    top: 40px;
     border: 1px solid $black5;
     border-radius: 8px;
     background-color: $white;
@@ -35,5 +35,10 @@
 
     &:hover {
         background-color: $black5;
+    }
+
+    img {
+        width: 20px;
+        margin-right: 0.5rem;
     }
 }

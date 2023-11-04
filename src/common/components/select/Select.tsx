@@ -11,6 +11,7 @@ import Options from './components/options/Options'
 
 // Types
 import { SelectProps } from './Select.types'
+import { Option } from './components/options/Options.types'
 
 
 
@@ -21,10 +22,16 @@ function Select({ selectedOption, placeholder, options, additionalClasses, onOpt
         optionsRef.current?.classList.toggle(optionsCSS.optionsListVisible)
     }
 
+    const handleOptionChange = (option: Option) => {
+        onOptionChange(option)
+
+        optionsRef.current?.classList.remove(optionsCSS.optionsListVisible)
+    }
+
     return (
         <div className={`${selectCSS.selectContainer} ${additionalClasses && additionalClasses}`}>
             <SelectedOption selectedOption={selectedOption} placeholder={placeholder} onSelectOpen={handleSelectOpen} />
-            <Options ref={optionsRef} options={options} onOptionChange={onOptionChange} />
+            <Options ref={optionsRef} options={options} onOptionChange={handleOptionChange} />
         </div>
     )
 }
