@@ -17,24 +17,6 @@
     transition: all 200ms ease;
 }
 
-.dropdownItem {
-    height: 1.8rem;
-    display: flex;
-    align-items: center;
-    font-size: $caption;
-    font-weight: $medium;
-    color: $neutral;
-    white-space: nowrap;
-    padding: 0 0.5rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 200ms ease;
-
-    &:hover {
-        background-color: $black5;
-    }
-}
-
 .dropdownVisible {
     opacity: 1;
     visibility: visible;

@@ -11,7 +11,7 @@ import Dropdown from '../../../../../common/components/dropdown/Dropdown'
 
 // Types
 import { UserProps } from './User.types'
-import { DropdownItem } from '../../../../../common/components/dropdown/Dropdown.types'
+import { DropdownItem } from '../../../../../common/components/dropdown/components/dropdown-item/DropdownItem.types'
 
 // Data
 import { userStatusData } from '../../../../../common/components/status/utils/user-status-mock-data'

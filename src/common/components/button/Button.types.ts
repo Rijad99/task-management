@@ -6,6 +6,7 @@ export interface ButtonProps {
 }
 
 export enum ButtonSize {
+    SMALLEST = 'smallest',
     SMALL = 'small',
     LARGE = 'large'
 }

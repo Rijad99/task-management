@@ -1,5 +1,5 @@
 // React
-import { forwardRef } from 'react'
+import { forwardRef, useRef, useImperativeHandle, useEffect } from 'react'
 
 // CSS
 import optionsCSS from './Options.module.scss'
@@ -10,7 +10,10 @@ import { Option, OptionsProps } from './Options.types'
 
 
 
-const Options = forwardRef<HTMLUListElement, OptionsProps>((props, ref) => {
+const Options = forwardRef<HTMLUListElement, OptionsProps>((props, outerRef) => {
+    const listRef = useRef<HTMLUListElement>(null)
+
+    useImperativeHandle(outerRef, () => listRef.current!, []);
 
     const handleOptionChange = (option: Option, e?: React.MouseEvent<HTMLLIElement>) => {
         const arrow = e?.currentTarget.parentElement?.parentElement?.firstChild?.firstChild?.lastChild as SVGSVGElement
@@ -20,8 +23,27 @@ const Options = forwardRef<HTMLUListElement, OptionsProps>((props, ref) => {
         arrow.classList.remove(selectedOptionCSS.rotateArrow)
     }
 
+    useEffect(() => {
+
+        const handleClickOutside = (e: MouseEvent) => {
+
+            if (listRef.current && !listRef.current.contains(e.target as Node)) {
+                listRef.current.classList.remove(optionsCSS.optionsListVisible)
+                
+                const arrow = listRef.current.parentElement?.firstChild?.firstChild?.lastChild as SVGSVGElement
+                arrow.classList.remove(selectedOptionCSS.rotateArrow)
+            }
+        }
+
+        document.addEventListener('click', handleClickOutside, true)
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside, true)
+        }
+    }, [])
+
     return (   
-        <ul ref={ref} className={optionsCSS.optionsList}>
+        <ul ref={listRef} className={optionsCSS.optionsList}>
 
             {
                 props.options.map(option => {

@@ -29,7 +29,7 @@ function LanguageSelect() {
     }
 
     return (
-        <Select placeholder='Choose language' selectedOption={userLanguage} options={languageOptions} additionalClasses={`${languageSelectCSS.languageSelect} ${utilsCSS.mr1}`} onOptionChange={handleLanguageChange} />
+        <Select placeholder='Choose language' selectedOption={userLanguage} options={languageOptions} additionalClasses={`${languageSelectCSS.languageSelect} ${utilsCSS.mr1_5}`} onOptionChange={handleLanguageChange} />
     )
 }
 

@@ -1,0 +1,25 @@
+@import '../../../../../common/scss/variables.scss';
+
+
+
+.notification {
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 1px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $red;
+        border: 1px solid $white;
+    }
+}
+
+.notificationTooltip {
+    background-color: $red5;
+    color: $red
+}

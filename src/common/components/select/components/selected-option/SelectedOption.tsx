@@ -26,7 +26,7 @@ function SelectedOption({ selectedOption, placeholder, onSelectOpen }: SelectedO
     }
 
     return (
-        <div className={selectedOptionCSS.selectedOptionContainer} onClick={handleSelectOpen}>
+        <div className={selectedOptionCSS.selectedOptionContainer + ' test'} onClick={handleSelectOpen}>
             <span className={`${selectedOptionCSS.option} ${selectedOption ? selectedOptionCSS.currentOption : selectedOptionCSS.placeholder}`}>
                 <div className={selectedOptionCSS.selectedOption}>
                     {selectedOption.icon && <img src={selectedOption.icon} />} 

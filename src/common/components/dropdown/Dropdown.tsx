@@ -1,40 +1,35 @@
 // React
-import { forwardRef, useContext } from 'react'
+import { forwardRef, useImperativeHandle } from 'react'
 
 // CSS
 import dropdownCSS from './Dropdown.module.scss'
 
+import DropdownItem from './components/dropdown-item/DropdownItem'
+
 // Types
-import { DropdownItem, DropdownProps } from './Dropdown.types'
+import { DropdownProps } from './Dropdown.types'
 
-// Context
-import { LocalizationContext } from '../../context/LocalizationContext'
+// Dropdown hook
+import useDropdownHook from './useDropdownHook'
 
 
 
-const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, ref) => {
-    const { localization } = useContext(LocalizationContext)
+const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, outerRef) => {
+    const { dropdownRef, handleActionChange } = useDropdownHook(props.onActionChange)
 
-    const handleActionChange = (item: DropdownItem) => {
-        props.onActionChange(item)
-    }
+    useImperativeHandle(outerRef, () => dropdownRef.current!, []);
 
     return (
-        <div ref={ref} className={dropdownCSS.dropdown}>
+        <div ref={dropdownRef} className={dropdownCSS.dropdown}>
             <ul>
-
                 {
                     props.items.map(item => {
 
                         return (
-                            <li key={item.id} className={dropdownCSS.dropdownItem} onClick={() => handleActionChange(item)}>
-                                {item.icon && item.icon}
-                                {localization[item.actionName]}
-                            </li>
+                            <DropdownItem key={item.id} item={item} onActionChange={handleActionChange} />
                         )
                     })
                 }
-
             </ul>
         </div>
     )
