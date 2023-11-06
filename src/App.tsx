@@ -37,6 +37,13 @@ function App() {
                                     <Dashboard />
                                 </Suspense>
                             } />
+
+                            <Route path={`${Paths.DASHBOARD}/:project`} element={
+                                <Suspense fallback={'Loading component...'}>
+                                    <Dashboard />
+                                </Suspense>
+                            } />
+
                             <Route path={Paths.SPRINT} element={
                                 <Suspense fallback={'Loading component...'}>
                                     <></>

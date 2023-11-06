@@ -1,7 +1,7 @@
 {
     "Dashboard": "Dashboard",
     "Sprint": "Sprint",
-    "My Team": "My Team",
+    "MyTeam": "My Team",
     "Reports": "Reports",
     "Settings": "Settings",
     "Log out": "Log out",
@@ -13,5 +13,6 @@
     "In a meeting": "In a metting",
     "Do not disturb": "Do not disturb",
     "Out of office": "Out of office",
-    "newNotifications": "New notifications"
+    "newNotifications": "New notifications",
+    "projects": "Projects"
 }

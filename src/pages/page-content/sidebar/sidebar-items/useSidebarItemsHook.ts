@@ -24,7 +24,9 @@ function useSidebarItemsHook(onPageContentWidthChange: () => void) {
     }
 
     const handleActiveRoute = (path: string) => {
-        return location.pathname === path ? true : false
+        const currentLocation = `/${location.pathname.split('/')[1]}`
+
+        return currentLocation === path ? true : false
     }
 
     const handleOpenSidebar = () => {

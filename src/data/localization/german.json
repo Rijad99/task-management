@@ -1,7 +1,7 @@
 {
     "Dashboard": "Armaturenbrett",
     "Sprint": "Sprint",
-    "My Team": "Mein Team",
+    "MyTeam": "Mein Team",
     "Reports": "Berichte",
     "Settings": "Einstellungen",
     "Log out": "Ausloggen",
@@ -13,5 +13,6 @@
     "In a meeting": "In einem Meeting",
     "Do not disturb": "Bitte nicht stören",
     "Out of office": "Ausserhaus",
-    "newNotifications": "Neue Benachrichtigungen"
+    "newNotifications": "Neue Benachrichtigungen",
+    "projects": "Projekte"
 }
