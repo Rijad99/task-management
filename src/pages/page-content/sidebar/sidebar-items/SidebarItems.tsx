@@ -28,18 +28,15 @@ function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
     return (
         <>
             <div ref={sidebarRef} className={`${utilsCSS.max_height} ${utilsCSS.mt4} ${utilsCSS.flex} ${utilsCSS.flex_column} ${utilsCSS.jc_sb}`}>
-                <div className={sidebarCSS.sidebarItems}>
-                    
+                <div className={sidebarCSS.sidebarItems}>                
                     {
                         links.map(sidebarLink => {
-                            const activeRoute = handleActiveRoute(sidebarLink.linkTo)
 
                             return (
-                                <SidebarItem key={sidebarLink.id} sidebarLink={sidebarLink} color={SvgColors.NEUTRAL} activeRoute={activeRoute} onRouteChange={() => handleNavigateTo(sidebarLink.linkTo)} />
+                                <SidebarItem key={sidebarLink.id} sidebarLink={sidebarLink} color={SvgColors.NEUTRAL} activeRoute={handleActiveRoute(sidebarLink.linkTo)} onRouteChange={() => handleNavigateTo(sidebarLink.linkTo)} />
                             )
                         })
                     }
-
                 </div>
                 <SidebarItem sidebarLink={logoutLink} color={SvgColors.RED} onRouteChange={() => handleNavigateTo(logoutLink.linkTo)} />
             </div>

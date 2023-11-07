@@ -1,9 +1,5 @@
-// React
-import { createRef, useContext } from 'react'
-
 // CSS
 import userCSS from './User.module.scss'
-import dropdownCSS from '../../../../../common/components/dropdown/Dropdown.module.scss'
 
 // Components
 import UserStatus from '../../../../../common/components/status/UserStatus'
@@ -11,33 +7,17 @@ import Dropdown from '../../../../../common/components/dropdown/Dropdown'
 
 // Types
 import { UserProps } from './User.types'
-import { DropdownItem } from '../../../../../common/components/dropdown/components/dropdown-item/DropdownItem.types'
 
 // Data
 import { userStatusData } from '../../../../../common/components/status/utils/user-status-mock-data'
 
-// Context
-import { UserContext } from '../../../../../common/context/UserContext'
+// User hook
+import useUserHook from './useUserHook'
 
 
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
-    const { user, setUser } = useContext(UserContext) 
-
-    const dropdownRef = createRef<HTMLDivElement>()
-
-    const handleChangeStatus = (item: DropdownItem) => {
-        setUser({
-            ...user,
-            status: item.actionName
-        })
-
-        dropdownRef.current?.classList.remove(dropdownCSS.dropdownVisible)
-    }
-
-    const handleStatusDropdownOpen = () => {
-        dropdownRef.current?.classList.toggle(dropdownCSS.dropdownVisible)
-    }
+    const { dropdownRef, handleChangeStatus, handleStatusDropdownOpen } = useUserHook()
 
     return (
         <div className={userCSS.userContainer}>
