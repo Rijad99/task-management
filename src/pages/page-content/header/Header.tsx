@@ -15,7 +15,7 @@ import Messages from './components/messages/Messages'
 import useHeaderHook from './useHeaderHook'
 
 // Context
-import { UserContext } from '../../../common/context/UserContext'
+import { UserContext } from '../../../common/context/user-context/UserContext'
 import { LocalizationContext } from '../../../common/context/LocalizationContext'
 
 

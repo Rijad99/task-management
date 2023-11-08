@@ -2,10 +2,10 @@
 import { createContext, useEffect, useState } from "react"
 
 // Types
-import { User } from "../../pages/page-content/header/components/user/User.types"
+import { User } from "../../../pages/page-content/header/components/user/User.types"
 
-// User photo - temporarily
-import profilePhoto from '../images/profile-photos/Profile.png'
+// Logged In user data - temporarily
+import { loggedInUser } from "./utils/user-mock-data"
 
 
 
@@ -15,7 +15,7 @@ interface UserContextProps {
 }
 
 const UserContext = createContext<UserContextProps>({
-    user: { firstName: '', lastName: '', email: '', photo: '', status: '' },
+    user: { id: '', firstName: '', lastName: '', email: '', photo: '', status: '' },
     setUser: () => null
 })
 
@@ -24,17 +24,11 @@ interface UserProviderProps {
 }
 
 const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
-    const [user, setUser] = useState<User>({ firstName: '', lastName: '', email: '', photo: '', status: '' })
+    const [user, setUser] = useState<User>({ id: '', firstName: '', lastName: '', email: '', photo: '', status: '' })
 
     useEffect(() => {
 
-        setUser({
-            firstName: 'John',
-            lastName: 'Doe',
-            email: 'johndoe@gmail.com',
-            photo: profilePhoto,
-            status: 'Online'
-        })
+        setUser(loggedInUser)
     }, [])
 
     const value = {

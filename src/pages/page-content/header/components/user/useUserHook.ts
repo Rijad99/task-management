@@ -8,7 +8,7 @@ import dropdownCSS from '../../../../../common/components/dropdown/Dropdown.modu
 import { DropdownItem } from '../../../../../common/components/dropdown/components/dropdown-item/DropdownItem.types'
 
 // Context
-import { UserContext } from '../../../../../common/context/UserContext'
+import { UserContext } from '../../../../../common/context/user-context/UserContext'
 
 
 

@@ -11,7 +11,7 @@ const Dashboard = lazy(() => import('./pages/dashboard/Dashboard'))
 
 // Providers
 import { LocalizationProvider } from "./common/context/LocalizationContext"
-import { UserProvider } from "./common/context/UserContext"
+import { UserProvider } from "./common/context/user-context/UserContext"
 
 
 
