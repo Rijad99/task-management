@@ -18,6 +18,8 @@
     grid-area: d-sidebar;
     padding: 3rem 2rem;
     border-right: 1px solid $black5;
+    max-height: calc(100vh - 87px);
+    overflow-x: auto;
 }
 
 .dashboardHeader {

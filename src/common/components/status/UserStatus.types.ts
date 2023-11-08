@@ -1,4 +1,4 @@
 export interface StatusProps {
     status: string
-    onStatusDropdownOpen: () => void
+    onStatusDropdownOpen?: () => void
 }
