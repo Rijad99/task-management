@@ -1,7 +1,8 @@
 export interface TooltipProps {
     text: string
-    position: TooltipPosition
     children: React.ReactElement
+    position: TooltipPosition
+    hoverDisabled?: boolean
     tooltipContainerClasses?: string
     tooltipClasses?: string
 }

@@ -2,10 +2,10 @@
 
 
 
-.userContainer {
+.userButton {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     border: 1px solid $black5;
     margin-top: 1rem;
     transition: all 200ms ease;
@@ -13,11 +13,6 @@
     &:hover {
         background-color: rgba($black5, 0.15);
     }
-}
-
-.user {
-    display: flex;
-    align-items: center;
 }
 
 .userInfo {
@@ -31,20 +26,9 @@
         font-size: $medium;
         font-weight: $medium;
     }
-
-    .statusContainer {
-        display: flex;
-        align-items: center;
-
-        .status {
-            margin-left: 0.25rem;
-            font-size: $caption;
-            font-weight: $medium;
-            color: $neutral;
-        }
-    }
 }
 
 .arrow {
+    margin-left: auto;
     transform: rotate(180deg);
 }

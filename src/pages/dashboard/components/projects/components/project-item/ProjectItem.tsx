@@ -25,10 +25,10 @@ function ProjectItem({ project, activeProject, onProjectChange }: ProjectItemPro
     }
 
     return (
-        <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={`${projectItemCSS.project} ${activeProject ? projectItemCSS.activeProject : ''}`} onClick={() => handleProjectChange(project)}>
+        <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={`${projectItemCSS.projectButton} ${activeProject ? projectItemCSS.activeProjectButton : ''}`} onClick={() => handleProjectChange(project)}>
             <div className={projectItemCSS.projectInfo}>
                 <img src='/src/common/images/projects/project.png' />
-                {project.name}
+                <span className={projectItemCSS.name}>{project.name}</span>
             </div>
             <Svg path={dotsIcon} width='20' height='19' viewBox='0 -3 1 24' color={SvgColors.NEUTRAL} fillRule={SvgFillRule.EVENODD} clipRule={SvgClipRule.EVENODD} />
         </Button>

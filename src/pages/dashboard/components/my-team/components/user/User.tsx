@@ -17,19 +17,15 @@ import { arrowIcon } from '../../../../../../common/icons/icons'
 import UserStatus from '../../../../../../common/components/status/UserStatus'
 
 
+
 function User({ user }: UserProps) {
 
     return (
-        <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={userCSS.userContainer} onClick={() => null}>
-            <div className={userCSS.user}>
-                <img src={user.photo} />
-                <div className={userCSS.userInfo}>
-                    <span className={userCSS.name}>{`${user.firstName} ${user.lastName}`}</span>
-                    <div className={userCSS.statusContainer}>
-                        <UserStatus status={user.status} />
-                        <span className={userCSS.status}>{user.status}</span>
-                    </div>
-                </div>
+        <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={userCSS.userButton} onClick={() => null}>
+            <img src={user.photo} />
+            <div className={userCSS.userInfo}>
+                <span className={userCSS.name}>{`${user.firstName} ${user.lastName}`}</span>
+                <UserStatus status={user.status} showStatusText={true} />
             </div>
             <Svg path={arrowIcon} width='8' height='6' strokeWidth='1.5' viewBox='0 0 12 7' stroke={SvgColors.BLACK} strokeLinecap={SvgStrokeLineCap.ROUND} strokeLinejoin={SvgStrokeLineJoin.ROUND} additionalClasses={userCSS.arrow} />
         </Button>

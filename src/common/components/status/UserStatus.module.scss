@@ -2,14 +2,25 @@
 
 
 
-.status {
-    width: 8px;
-    height: 8px;
+.statusContainer {
     display: flex;
     align-items: center;
-    position: relative;
-    border-radius: 50%;
-    cursor: pointer;
+
+    .status {
+        width: 8px;
+        height: 8px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .statusText {
+        color: $neutral;
+        font-weight: $medium;
+        margin-left: 0.25rem;
+    }
 }
 
 .green {

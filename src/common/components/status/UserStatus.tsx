@@ -21,16 +21,20 @@ import { TooltipPosition } from "../tooltip/Tooltip.types"
 import { LocalizationContext } from '../../context/LocalizationContext'
 
 
-function UserStatus({ status, onStatusDropdownOpen }: StatusProps) {
-    const { getStatus } = useUserStatusHook()
+
+function UserStatus({ status, showStatusText, onStatusDropdownOpen }: StatusProps) {
+    const { getStatus, handleHoverDisabled } = useUserStatusHook(showStatusText)
 
     const { localization } = useContext(LocalizationContext)
 
     const statusColor = getStatus(status)
 
     return (
-        <Tooltip text={localization[status]} position={TooltipPosition.RIGHT} tooltipContainerClasses={utilsCSS.ml05} tooltipClasses={statusCSS[status.split(' ').join('_').toLowerCase()]}>
-            <div className={`${statusCSS.circle} ${statusCSS.status} ${statusCSS} ${statusCSS[statusColor!]}`} onClick={onStatusDropdownOpen}></div>
+        <Tooltip text={localization[status]} position={TooltipPosition.RIGHT} hoverDisabled={handleHoverDisabled()} tooltipContainerClasses={utilsCSS.ml05} tooltipClasses={statusCSS[status.split(' ').join('_').toLowerCase()]}>
+            <div className={statusCSS.statusContainer}>
+                <div className={`${statusCSS.circle} ${statusCSS.status} ${statusCSS} ${statusCSS[statusColor!]}`} onClick={onStatusDropdownOpen}></div>
+                {showStatusText && <span className={statusCSS.statusText}>{status}</span>}
+            </div>
         </Tooltip>
     )
 }
