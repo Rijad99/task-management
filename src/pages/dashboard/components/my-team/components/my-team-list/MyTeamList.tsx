@@ -2,7 +2,7 @@
 import { MyTeamListProps } from "./MyTeamList.types"
 
 // Components
-import User from "../user/User"
+import TeamUser from "../team-user/TeamUser"
 
 
 
@@ -14,7 +14,7 @@ function MyTeamList({ myTeam }: MyTeamListProps) {
                 myTeam.map(user => {
 
                     return (
-                        <User user={user} />
+                        <TeamUser key={user.id} user={user} />
                     )
                 })
             }

@@ -19,7 +19,7 @@ export const myTeam: User[] = [
         photo: profilePhotoOne
     },
     {
-        id: 1,
+        id: 2,
         firstName: 'Mandy', 
         lastName: 'Kane',
         email: 'mandykane@gmail.com',
@@ -27,7 +27,7 @@ export const myTeam: User[] = [
         photo: profilePhotoTwo
     },
     {
-        id: 1,
+        id: 3,
         firstName: 'Mandy', 
         lastName: 'Kane',
         email: 'mandykane@gmail.com',
@@ -35,7 +35,7 @@ export const myTeam: User[] = [
         photo: profilePhotoThree
     },
     {
-        id: 1,
+        id: 4,
         firstName: 'Mandy', 
         lastName: 'Kane',
         email: 'mandykane@gmail.com',

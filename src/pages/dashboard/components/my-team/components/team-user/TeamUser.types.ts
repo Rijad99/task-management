@@ -5,5 +5,4 @@ import { User } from "../../../../../page-content/header/components/user/User.ty
 
 export interface UserProps {
     user: User
-    onUserDropdownShow: () => void
 }

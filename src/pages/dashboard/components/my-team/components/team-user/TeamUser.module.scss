@@ -11,7 +11,14 @@
     transition: all 200ms ease;
 
     &:hover {
-        background-color: rgba($black5, 0.15);
+        background-color: rgba($black5, 0.2);
+
+        .arrow {
+
+            path {
+                stroke: $black;
+            }
+        }
     }
 }
 
@@ -31,4 +38,8 @@
 .arrow {
     margin-left: auto;
     transform: rotate(180deg);
+
+    path {
+        stroke: $neutral;
+    }
 }

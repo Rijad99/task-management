@@ -3,7 +3,7 @@ import { UserStatus, StatusColor } from "../../../pages/page-content/header/comp
 
 
 
-function useUserStatusHook(showStatusText?: boolean) {
+function useUserStatusHook() {
 
     const getStatus = (status: string) => {
 
@@ -28,9 +28,7 @@ function useUserStatusHook(showStatusText?: boolean) {
         }
     }
 
-    const handleHoverDisabled = (): boolean => showStatusText ? true : false
-
-    return { getStatus, handleHoverDisabled }
+    return { getStatus }
 }
 
 export default useUserStatusHook

@@ -9,8 +9,8 @@ import useTooltipHook from './useTooltipHook'
 
 
 
-function Tooltip({ text, children, position, hoverDisabled, tooltipContainerClasses, tooltipClasses }: TooltipProps) {
-    const { tooltipRef, handleShowTooltip, handleHideTooltip } = useTooltipHook(text, position, hoverDisabled)
+function Tooltip({ text, children, position, tooltipContainerClasses, tooltipClasses }: TooltipProps) {
+    const { tooltipRef, handleShowTooltip, handleHideTooltip } = useTooltipHook(text, position)
 
     return (
         <div className={`${tooltipCSS.tooltipContainer} ${tooltipContainerClasses && tooltipContainerClasses}`} onMouseOver={handleShowTooltip} onMouseLeave={handleHideTooltip}>

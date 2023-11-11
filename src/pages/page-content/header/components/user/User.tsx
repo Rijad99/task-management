@@ -1,9 +1,18 @@
+// React
+import { useContext } from 'react'
+
 // CSS
 import userCSS from './User.module.scss'
+import utilsCSS from '../../../../../common/scss/utils.module.scss'
+import statusCSS from '../../../../../common/components/status/UserStatus.module.scss'
 
 // Components
 import UserStatus from '../../../../../common/components/status/UserStatus'
 import Dropdown from '../../../../../common/components/dropdown/Dropdown'
+import Tooltip from '../../../../../common/components/tooltip/Tooltip'
+
+// ENUMS
+import { TooltipPosition } from '../../../../../common/components/tooltip/Tooltip.types'
 
 // Types
 import { UserProps } from './User.types'
@@ -14,10 +23,15 @@ import { userStatusData } from '../../../../../common/components/status/utils/us
 // User hook
 import useUserHook from './useUserHook'
 
+// Context
+import { LocalizationContext } from '../../../../../common/context/LocalizationContext'
+
 
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
     const { dropdownRef, handleChangeStatus, handleStatusDropdownOpen } = useUserHook()
+
+    const { localization } = useContext(LocalizationContext)
 
     return (
         <div className={userCSS.userContainer}>
@@ -25,7 +39,9 @@ function User({ firstName, lastName, email, photo, status }: UserProps) {
             <div className={userCSS.userInfo}>
                 <span className={userCSS.name}>
                     {`${firstName} ${lastName}`} 
-                    <UserStatus status={status} onStatusDropdownOpen={handleStatusDropdownOpen} />
+                    <Tooltip text={localization[status]} position={TooltipPosition.RIGHT} tooltipContainerClasses={utilsCSS.ml05} tooltipClasses={statusCSS[status.split(' ').join('_').toLowerCase()]}>
+                        <UserStatus status={status} onStatusDropdownOpen={handleStatusDropdownOpen} />
+                    </Tooltip>
                 </span>
                 <span className={userCSS.email}>{email}</span>
                 <Dropdown ref={dropdownRef} items={userStatusData} onActionChange={handleChangeStatus} />

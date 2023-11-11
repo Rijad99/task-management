@@ -9,7 +9,7 @@ import { TooltipPosition } from './Tooltip.types'
 
 
 
-function useTooltipHook(text: string, position: string, hoverDisabled?: boolean) {
+function useTooltipHook(text: string, position: string) {
     const tooltipRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -33,10 +33,7 @@ function useTooltipHook(text: string, position: string, hoverDisabled?: boolean)
     }, [text])
 
     const handleShowTooltip = () => {   
-
-        if (!hoverDisabled) {
-            tooltipRef.current?.classList.add(tooltipCSS.tooltipVisible)
-        }
+        tooltipRef.current?.classList.add(tooltipCSS.tooltipVisible)
     }
 
     const handleHideTooltip = () => {
