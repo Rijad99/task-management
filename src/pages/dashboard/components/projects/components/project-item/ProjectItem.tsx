@@ -20,7 +20,7 @@ function ProjectItem({ project, activeProject, onProjectChange }: ProjectItemPro
     }
 
     return (
-        <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={`${projectItemCSS.projectButton} ${activeProject ? projectItemCSS.activeProjectButton : ''}`} onClick={handleProjectChange}>
+        <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={`${projectItemCSS.projectButton} ${activeProject ? projectItemCSS.activeProjectButton : ''}`} onClick={() => handleProjectChange(project)}>
             <div className={projectItemCSS.projectInfo}>
                 <img src='/src/common/images/projects/project.png' />
                 <span className={projectItemCSS.name}>{project.name}</span>

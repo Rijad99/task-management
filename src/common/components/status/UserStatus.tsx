@@ -1,3 +1,6 @@
+// React
+import { useContext } from 'react'
+
 // Status hook
 import useUserStatusHook from "./useUserStatusHook"
 
@@ -7,17 +10,22 @@ import { StatusProps } from "./UserStatus.types"
 // CSS
 import statusCSS from './UserStatus.module.scss'
 
+// Context
+import { LocalizationContext } from "../../context/LocalizationContext"
+
 
 
 function UserStatus({ status, showStatusText, additionalClasses, onStatusDropdownOpen }: StatusProps) {
     const { getStatus } = useUserStatusHook()
+
+    const { localization } = useContext(LocalizationContext)
 
     const statusColor = getStatus(status)
 
     return (
         <div className={`${statusCSS.statusContainer} ${additionalClasses ? additionalClasses : ''}`}>
             <div className={`${statusCSS.circle} ${statusCSS.status} ${statusCSS} ${statusCSS[statusColor!]}`} onClick={onStatusDropdownOpen}></div>
-            {showStatusText && <span className={statusCSS.statusText}>{status}</span>}
+            {showStatusText && <span className={statusCSS.statusText}>{localization[status]}</span>}
         </div>
     )
 }

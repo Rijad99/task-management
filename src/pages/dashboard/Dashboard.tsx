@@ -1,13 +1,10 @@
-// React
-import { Outlet } from 'react-router-dom'
-
 // CSS
 import dashboardCSS from './Dashboard.module.scss'
 
 // Components
 import Projects from './components/projects/Projects'
 import MyTeam from './components/my-team/MyTeam'
-
+import TasksBoard from './components/tasks-board/TasksBoard'
 
 
 function Dashboard() {
@@ -26,7 +23,7 @@ function Dashboard() {
                 {/* <DashboardTabs /> */}
             </div>
             <div className={dashboardCSS.dashboardContent}>
-                <Outlet />
+                <TasksBoard />
             </div>
         </div>
     )
