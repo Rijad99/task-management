@@ -1,0 +1,26 @@
+@import '../../../../../../common/scss/variables.scss';
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {
+    font-size: $bodyOne;
+}
+
+.tasksNumber {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $black5;
+    margin-left: 1rem;
+    border-radius: 50%;
+    font-size: $bodyThree;
+    font-weight: $bold;
+}

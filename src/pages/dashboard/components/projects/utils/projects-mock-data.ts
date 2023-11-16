@@ -6,18 +6,18 @@ import { Project } from "../components/project-item/ProjectItem.types"
 export const projectsData: Project[] = [
     {
         id: 0,
-        name: 'ProjectX'
+        name: 'ProjectX',
     },
     {
         id: 1,
-        name: 'ProjectY'
+        name: 'ProjectY',
     },
     {
         id: 2,
-        name: 'ProjectA'
+        name: 'ProjectA',
     },
     {
         id: 3,
-        name: 'ProjectB'
+        name: 'ProjectB',
     }
 ]

@@ -1,0 +1,33 @@
+@import '../../../../../../../../common/scss/variables.scss';
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    font-size: $bodyThree;
+    font-weight: $bold;
+    margin-left: 0.5rem;
+}
+
+.priorityIcon {
+    cursor: pointer;
+}
+
+.lowpriority {
+    color: $green;
+    background-color: $green10;
+}
+
+.mediumpriority {
+    color: $orange;
+    background-color: $orange10;
+}
+
+.highpriority {
+    color: $red;
+    background-color: $red5;
+}

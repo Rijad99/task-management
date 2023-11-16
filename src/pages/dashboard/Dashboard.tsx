@@ -6,13 +6,19 @@ import Projects from './components/projects/Projects'
 import MyTeam from './components/my-team/MyTeam'
 import TasksBoard from './components/tasks-board/TasksBoard'
 
+// Dashboard hook
+import useDashboardHook from './useDashboardHook'
+import Popup from '../../common/components/popup/Popup'
+
+
 
 function Dashboard() {
+    const { tasks, isProjectSelected, handleProjectChange } = useDashboardHook()
 
     return (
         <div className={dashboardCSS.dashboardGrid}>
             <div className={dashboardCSS.dashboardSidebar}>
-                <Projects />
+                <Projects onProjectChange={handleProjectChange} />
                 <MyTeam />
             </div>
             <div className={dashboardCSS.dashboardHeader}>
@@ -23,7 +29,9 @@ function Dashboard() {
                 {/* <DashboardTabs /> */}
             </div>
             <div className={dashboardCSS.dashboardContent}>
-                <TasksBoard />
+                {
+                    isProjectSelected() ? <TasksBoard tasks={tasks} /> : <Popup title='Info' description='Select project to view tasks' />
+                }
             </div>
         </div>
     )

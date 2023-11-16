@@ -1,0 +1,12 @@
+@import '../../../../../../common/scss/variables.scss';
+
+
+
+.task {
+    width: 100%;
+    padding: 1rem;
+    background-color: $white;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid $black5;
+}

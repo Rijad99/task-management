@@ -1,0 +1,10 @@
+@import '../../../../../../common/scss/variables.scss';
+
+
+
+.tasksColumn {
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+}

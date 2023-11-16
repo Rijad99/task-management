@@ -8,22 +8,20 @@ import ProjectItems from './components/project-items/ProjectItems'
 // Data
 import { projectsData } from './utils/projects-mock-data'
 
-// Projects hook
-import useProjectsHook from './useProjectsHook'
-
 // Context
 import { LocalizationContext } from '../../../../common/context/LocalizationContext'
 
+// Types
+import { ProjectsProps } from './Projects.types'
 
 
-function Projects() {
+
+function Projects({ onProjectChange }: ProjectsProps) {
     const { localization } = useContext(LocalizationContext)
-
-    const { handleProjectChange } = useProjectsHook()
 
     return (
         <Accordion title={localization.projects}>
-            <ProjectItems projects={projectsData} onProjectChange={handleProjectChange} />
+            <ProjectItems projects={projectsData} onProjectChange={onProjectChange} />
         </Accordion>
     )
 }
