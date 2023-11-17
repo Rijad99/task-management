@@ -5,6 +5,6 @@ import { Option } from "../options/Options.types"
 
 export interface SelectedOptionProps {
     selectedOption: Option
-    placeholder: string
+    placeholder?: string
     onSelectOpen: () => void
 }

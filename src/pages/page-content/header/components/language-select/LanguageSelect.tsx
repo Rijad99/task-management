@@ -2,7 +2,6 @@
 import Select from '../../../../../common/components/select/Select'
 
 // CSS
-import languageSelectCSS from './LanguageSelect.module.scss'
 import utilsCSS from '../../../../../common/scss/utils.module.scss'
 
 // Data
@@ -17,7 +16,7 @@ function LanguageSelect() {
     const { userLanguage, handleLanguageChange } = useLanguageSelectHook()
 
     return (
-        <Select placeholder='Choose language' selectedOption={userLanguage} options={languageOptions} additionalClasses={`${languageSelectCSS.languageSelect} ${utilsCSS.mr1_5}`} onOptionChange={handleLanguageChange} />
+        <Select selectedOption={userLanguage} options={languageOptions} additionalClasses={utilsCSS.mr1_5} onOptionChange={handleLanguageChange} />
     )
 }
 

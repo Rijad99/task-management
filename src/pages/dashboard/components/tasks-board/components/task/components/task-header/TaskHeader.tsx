@@ -11,6 +11,7 @@ import { TooltipPosition } from '../../../../../../../../common/components/toolt
 // Components
 import Svg from '../../../../../../../../common/components/svg/Svg'
 import Tooltip from '../../../../../../../../common/components/tooltip/Tooltip'
+import TaskStatus from '../task-status/TaskStatus'
 
 // Icons
 import { priorityIcon } from '../../../../../../../../common/icons/icons'
@@ -23,7 +24,7 @@ import { LocalizationContext } from '../../../../../../../../common/context/Loca
 
 
 
-function TaskHeader({ title, priority }: TaskHeaderProps) {
+function TaskHeader({ title, priority, status, onTaskStatusChange }: TaskHeaderProps) {
     const { localization } = useContext(LocalizationContext)
 
     const priorityIconColor = getPriorityIconColor(priority)
@@ -49,6 +50,7 @@ function TaskHeader({ title, priority }: TaskHeaderProps) {
                 <Svg path={priorityIcon} width='17' height='14' viewBox='0 0 17 14' color={priorityIconColor} additionalClasses={taskHeaderCSS.priorityIcon} />
             </Tooltip>
             <h4 className={taskHeaderCSS.title}>{title}</h4>
+            <TaskStatus status={status} onTaskStatusChange={onTaskStatusChange} />
         </div>
     )
 }

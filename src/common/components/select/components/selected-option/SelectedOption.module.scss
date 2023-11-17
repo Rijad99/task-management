@@ -5,7 +5,8 @@
 .selectedOptionContainer {
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
+    height: 36px;
     border: 1px solid $black5;
     border-radius: 8px;
     cursor: pointer;
@@ -16,6 +17,7 @@
     align-items: center;
     font-size: $caption;
     font-weight: $medium;
+    margin-right: 0.5rem;
 
     img {
         width: 20px;
@@ -28,6 +30,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    white-space: nowrap;
 }
 
 .arrow {

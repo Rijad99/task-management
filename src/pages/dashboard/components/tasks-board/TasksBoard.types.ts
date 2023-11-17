@@ -1,3 +1,8 @@
+// Types
+import { Option } from "../../../../common/components/select/components/options/Options.types"
+
+
+
 export enum TaskPriority {
     LOW = 1,
     MEDIUM = 2,
@@ -21,6 +26,7 @@ export interface Task {
     priority: number
     fromDate: string
     toDate: string
+    status: Option
     participants: Participant[]
 }
 

@@ -11,6 +11,12 @@
     font-size: $bodyThree;
     font-weight: $bold;
     margin-left: 0.5rem;
+    margin-right: 1rem;
+    width: 500px;
+    max-width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .priorityIcon {

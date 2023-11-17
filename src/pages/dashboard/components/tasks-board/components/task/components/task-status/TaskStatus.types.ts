@@ -3,9 +3,7 @@ import { Option } from "../../../../../../../../common/components/select/compone
 
 
 
-export interface TaskHeaderProps {
-    title: string
-    priority: number
+export interface TaskStatusProps {
     status: Option
     onTaskStatusChange: (status: Option) => void
 }
