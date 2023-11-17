@@ -1,3 +1,6 @@
+// React
+import { useContext } from 'react'
+
 // CSS
 import dashboardCSS from './Dashboard.module.scss'
 
@@ -10,10 +13,15 @@ import TasksBoard from './components/tasks-board/TasksBoard'
 import useDashboardHook from './useDashboardHook'
 import Popup from '../../common/components/popup/Popup'
 
+// Context
+import { LocalizationContext } from '../../common/context/LocalizationContext'
+
 
 
 function Dashboard() {
     const { tasks, isProjectSelected, handleProjectChange } = useDashboardHook()
+
+    const { localization } = useContext(LocalizationContext)
 
     return (
         <div className={dashboardCSS.dashboardGrid}>
@@ -30,7 +38,7 @@ function Dashboard() {
             </div>
             <div className={dashboardCSS.dashboardContent}>
                 {
-                    isProjectSelected() ? <TasksBoard tasks={tasks} /> : <Popup title='Info' description='Select project to view tasks' />
+                    isProjectSelected() ? <TasksBoard tasks={tasks} /> : <Popup title={localization.info} description={localization.noProjectSelected} />
                 }
             </div>
         </div>

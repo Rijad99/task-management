@@ -14,5 +14,14 @@
     "Do not disturb": "Do not disturb",
     "Out of office": "Out of office",
     "newNotifications": "New notifications",
-    "projects": "Projects"
+    "projects": "Projects",
+    "info": "Info",
+    "noProjectSelected": "Select project to view tasks",
+    "todaysTasks": "Today's tasks",
+    "upcomingTasks": "Upcoming tasks",
+    "completedTasks": "Completed tasks",
+    "deadline": "Deadline",
+    "lowPriority": "Low Priority",
+    "mediumPriority": "Medium Priority",
+    "highPriority": "High Priority"
 }

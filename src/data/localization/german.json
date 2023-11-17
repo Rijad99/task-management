@@ -14,5 +14,14 @@
     "Do not disturb": "Bitte nicht stören",
     "Out of office": "Ausserhaus",
     "newNotifications": "Neue Benachrichtigungen",
-    "projects": "Projekte"
+    "projects": "Projekte",
+    "info": "Die Info",
+    "noProjectSelected": "Wählen Sie ein Projekt aus, um Aufgaben anzuzeigen",
+    "todaysTasks": "Die heutigen Aufgaben",
+    "upcomingTasks": "Anstehende Aufgaben",
+    "completedTasks": "Abgeschlossene Aufgaben",
+    "deadline": "Der Einsendeschluss",
+    "lowPriority": "Niedrige Priorität",
+    "mediumPriority": "Mittlere Priorität",
+    "highPriority": "Hohe Priorität"
 }
