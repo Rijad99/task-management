@@ -6,11 +6,11 @@ import { TaskCategory } from "../TasksBoard.types"
 export const tasksCategory: TaskCategory[] = [
     {
         id: 0,
-        category: "todaysTasks"
+        category: "todoTasks"
     },
     {
         id: 1,
-        category: "upcomingTasks"
+        category: "inprogressTasks"
     },
     {
         id: 2,
