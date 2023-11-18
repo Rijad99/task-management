@@ -1,0 +1,30 @@
+@import '../../../../../../../../../../common/scss/variables.scss';
+
+
+
+.participants {
+    display: flex;
+}
+
+.addParticipantButton {
+    width: 31px;
+    height: 31px;
+    padding: unset;
+    border: 1px solid $black10;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.restOfParticipants {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: -10px;
+    font-size: $smallestCaption;
+    font-weight: $medium;
+    background-color: $black5;
+    border-radius: 50%;
+}

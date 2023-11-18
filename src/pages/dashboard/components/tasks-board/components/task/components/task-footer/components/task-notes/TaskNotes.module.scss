@@ -1,0 +1,11 @@
+@import '../../../../../../../../../../common/scss/variables.scss';
+
+
+
+.number {
+    font-size: $smallestCaption;
+    font-weight: $medium;
+    color: $neutral;
+    position: relative;
+    left: -2px;
+}

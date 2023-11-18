@@ -17,6 +17,7 @@ export enum SvgColors {
     GREEN = 'green',
     RED = 'red',
     NEUTRAL = 'neutral',
+    LIGHT_GRAY = 'lightGray',
     BLACK = 'black',
     ORANGE = 'orange'
 }

@@ -1,5 +1,5 @@
 {
-    "todaysTasks": [
+    "todoTasks": [
         {
             "id": 2,
             "title": "Project X dashboard UI design",
@@ -15,6 +15,22 @@
                 },
                 {
                     "id": 2,
+                    "photo": "/src/common/images/profile-photos/Profile2.png"
+                },
+                {
+                    "id": 3,
+                    "photo": "/src/common/images/profile-photos/Profile1.png"
+                },
+                {
+                    "id": 4,
+                    "photo": "/src/common/images/profile-photos/Profile2.png"
+                },
+                {
+                    "id": 5,
+                    "photo": "/src/common/images/profile-photos/Profile1.png"
+                },
+                {
+                    "id": 6,
                     "photo": "/src/common/images/profile-photos/Profile2.png"
                 }
             ]
@@ -58,7 +74,7 @@
             ]
         }
     ],
-    "upcomingTasks": [
+    "inProgressTasks": [
         {
             "id": 0,
             "title": "Project X dashboard UI design",
@@ -79,10 +95,6 @@
                 {
                     "id": 3,
                     "photo": "/src/common/images/profile-photos/Profile3.png"
-                },
-                {
-                    "id": 4,
-                    "photo": "/src/common/images/profile-photos/Profile.png"
                 }
             ]
         },
@@ -106,7 +118,7 @@
             ]
         },
         {
-            "id": 0,
+            "id": 2,
             "title": "Project X dashboard UI design",
             "description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
             "priority": 1,
@@ -128,12 +140,16 @@
                 },
                 {
                     "id": 4,
-                    "photo": "/src/common/images/profile-photos/Profile.png"
+                    "photo": "/src/common/images/profile-photos/Profile1.png"
+                },
+                {
+                    "id": 5,
+                    "photo": "/src/common/images/profile-photos/Profile2.png"
                 }
             ]
         },
         {
-            "id": 1,
+            "id": 3,
             "title": "Project X dashboard UI design",
             "description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
             "priority": 3,
@@ -152,7 +168,7 @@
             ]
         },
         {
-            "id": 0,
+            "id": 4,
             "title": "Project X dashboard UI design",
             "description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
             "priority": 1,
@@ -174,12 +190,16 @@
                 },
                 {
                     "id": 4,
-                    "photo": "/src/common/images/profile-photos/Profile.png"
+                    "photo": "/src/common/images/profile-photos/Profile1.png"
+                },
+                {
+                    "id": 5,
+                    "photo": "/src/common/images/profile-photos/Profile2.png"
                 }
             ]
         },
         {
-            "id": 1,
+            "id": 5,
             "title": "Project X dashboard UI design",
             "description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
             "priority": 3,
@@ -200,7 +220,7 @@
     ],
     "completedTasks": [
         {
-            "id": 2,
+            "id": 0,
             "title": "Project X dashboard UI design",
             "description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
             "priority": 2,
@@ -219,6 +239,14 @@
                 {
                     "id": 3,
                     "photo": "/src/common/images/profile-photos/Profile3.png"
+                },
+                {
+                    "id": 4,
+                    "photo": "/src/common/images/profile-photos/Profile1.png"
+                },
+                {
+                    "id": 5,
+                    "photo": "/src/common/images/profile-photos/Profile2.png"
                 }
             ]
         }

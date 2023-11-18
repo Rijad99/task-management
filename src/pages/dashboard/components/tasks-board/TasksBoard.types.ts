@@ -9,8 +9,8 @@ export interface TasksBoardProps {
 }
 
 export interface Tasks {
-    todaysTasks: Task[]
-    upcomingTasks: Task[]
+    todoTasks: Task[]
+    inProgressTasks: Task[]
     completedTasks: Task[]
 }
 
@@ -30,7 +30,7 @@ export interface TaskCategory {
     category: string
 }
 
-interface Participant {
+export interface Participant {
     id: string | number
     photo: string
 }

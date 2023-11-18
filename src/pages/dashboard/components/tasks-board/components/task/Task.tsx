@@ -18,7 +18,7 @@ function Task({ task }: TaskProps) {
         <div className={taskCSS.task}>
             <TaskHeader title={task.title} priority={task.priority} status={task.status} />
             <TaskContent description={task.description} fromDate={task.fromDate} toDate={task.toDate} />
-            <TaskFooter />
+            <TaskFooter participants={task.participants} />
         </div>
     )
 }
