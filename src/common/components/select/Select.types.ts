@@ -8,5 +8,6 @@ export interface SelectProps {
     placeholder?: string
     options: Option[]
     additionalClasses?: string
+    selectedOptionAdditionalClasses?: string
     onOptionChange: (option: Option) => void
 }

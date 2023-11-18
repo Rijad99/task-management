@@ -3,9 +3,9 @@
 
 
 .tasksContainer {
+    margin-top: 3rem;
     max-height: calc(100vh - 430px);
     overflow-x: hidden;
     overflow-y: auto;
-    margin-top: 3rem;
-    padding-right: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
 }

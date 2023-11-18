@@ -24,7 +24,7 @@ import { LocalizationContext } from '../../../../../../../../common/context/Loca
 
 
 
-function TaskHeader({ title, priority, status, onTaskStatusChange }: TaskHeaderProps) {
+function TaskHeader({ title, priority, status }: TaskHeaderProps) {
     const { localization } = useContext(LocalizationContext)
 
     const priorityIconColor = getPriorityIconColor(priority)
@@ -50,7 +50,7 @@ function TaskHeader({ title, priority, status, onTaskStatusChange }: TaskHeaderP
                 <Svg path={priorityIcon} width='17' height='14' viewBox='0 0 17 14' color={priorityIconColor} additionalClasses={taskHeaderCSS.priorityIcon} />
             </Tooltip>
             <h4 className={taskHeaderCSS.title}>{title}</h4>
-            <TaskStatus status={status} onTaskStatusChange={onTaskStatusChange} />
+            <TaskStatus status={status} />
         </div>
     )
 }

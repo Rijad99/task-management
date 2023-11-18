@@ -1,22 +1,19 @@
 // CSS
 import taskStatusCSS from './TaskStatus.module.scss'
 
-// Components
-import Select from '../../../../../../../../common/components/select/Select'
-
 // Types
 import { TaskStatusProps } from './TaskStatus.types'
 
-// Data
-import { taskStatuses } from './utils/task-statuses-mock-data'
 
 
-
-function TaskStatus({ status, onTaskStatusChange }: TaskStatusProps) {
+function TaskStatus({ status }: TaskStatusProps) {
+    const statusStyle = status.split(' ').join('').toLowerCase()
 
     return ( 
-        <Select selectedOption={status} options={taskStatuses} onOptionChange={onTaskStatusChange} additionalClasses={taskStatusCSS.taskStatusSelect} />
-    )
+        <div className={`${taskStatusCSS.status} ${taskStatusCSS[statusStyle]}`}>
+            {status}
+        </div>
+        )
 }
 
 export default TaskStatus

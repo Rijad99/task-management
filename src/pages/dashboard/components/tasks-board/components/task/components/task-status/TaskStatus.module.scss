@@ -2,6 +2,25 @@
 
 
 
-.taskStatusSelect {
-    margin-left: auto;
+.status {
+    padding: 0.5rem;
+    font-size: $caption;
+    font-weight: $medium;
+    white-space: nowrap;
+    border-radius: 8px;
+}
+
+.inprogress {
+    background-color: $blue5;
+    color: $blue;
+}
+
+.todo {
+    background-color: $orange5;
+    color: $orange;
+}
+
+.done {
+    background-color: $green5;
+    color: $green;
 }

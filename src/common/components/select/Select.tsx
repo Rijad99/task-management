@@ -15,7 +15,7 @@ import { Option } from './components/options/Options.types'
 
 
 
-function Select({ selectedOption, placeholder, options, additionalClasses, onOptionChange }: SelectProps) {
+function Select({ selectedOption, placeholder, options, selectedOptionAdditionalClasses, additionalClasses, onOptionChange }: SelectProps) {
     const optionsRef = createRef<HTMLUListElement>()
 
     const handleSelectOpen = () => {
@@ -30,7 +30,7 @@ function Select({ selectedOption, placeholder, options, additionalClasses, onOpt
 
     return (
         <div className={`${selectCSS.selectContainer} ${additionalClasses && additionalClasses}`}>
-            <SelectedOption selectedOption={selectedOption} placeholder={placeholder} onSelectOpen={handleSelectOpen} />
+            <SelectedOption selectedOption={selectedOption} placeholder={placeholder} selectedOptionAdditionalClasses={selectedOptionAdditionalClasses} onSelectOpen={handleSelectOpen} />
             <Options ref={optionsRef} options={options} onOptionChange={handleOptionChange} />
         </div>
     )

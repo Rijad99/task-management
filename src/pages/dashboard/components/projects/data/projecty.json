@@ -13,10 +13,7 @@
             "priority": 2,
             "fromDate": "2023-07-03T18:25:43.511Z",
             "toDate": "2023-07-22T18:25:43.511Z",
-            "status": {
-                "id": 0,
-                "value": "In Progress"
-            },
+            "status": "In Progress",
             "participants": [
                 {
                     "id": 1,

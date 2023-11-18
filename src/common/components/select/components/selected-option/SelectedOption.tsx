@@ -16,7 +16,7 @@ import { SvgColors, SvgStrokeLineCap, SvgStrokeLineJoin } from '../../../svg/Svg
 
 
 
-function SelectedOption({ selectedOption, placeholder, onSelectOpen }: SelectedOptionProps) {
+function SelectedOption({ selectedOption, placeholder, selectedOptionAdditionalClasses, onSelectOpen }: SelectedOptionProps) {
     const arrowRef = createRef<SVGSVGElement>()
 
     const handleSelectOpen = () => {
@@ -26,7 +26,7 @@ function SelectedOption({ selectedOption, placeholder, onSelectOpen }: SelectedO
     }
 
     return (
-        <div className={selectedOptionCSS.selectedOptionContainer + ' test'} onClick={handleSelectOpen}>
+        <div className={`${selectedOptionCSS.selectedOptionContainer} ${selectedOptionAdditionalClasses ? selectedOptionAdditionalClasses : ''}`} onClick={handleSelectOpen}>
             <span className={`${selectedOptionCSS.option} ${selectedOption ? selectedOptionCSS.currentOption : selectedOptionCSS.placeholder}`}>
                 <div className={selectedOptionCSS.selectedOption}>
                     {selectedOption.icon && <img src={selectedOption.icon} />} 

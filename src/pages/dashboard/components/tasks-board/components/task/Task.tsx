@@ -13,14 +13,10 @@ import TaskFooter from './components/task-footer/TaskFooter'
 
 function Task({ task }: TaskProps) {
 
-    const handleTaskStatusChange = () => {
-
-    }
-
     return (
         
         <div className={taskCSS.task}>
-            <TaskHeader title={task.title} priority={task.priority} status={task.status} onTaskStatusChange={handleTaskStatusChange} />
+            <TaskHeader title={task.title} priority={task.priority} status={task.status} />
             <TaskContent description={task.description} fromDate={task.fromDate} toDate={task.toDate} />
             <TaskFooter />
         </div>
