@@ -1,9 +1,6 @@
 // React
 import { useContext } from 'react'
 
-// CSS
-import myTeamCSS from './MyTeam.module.scss'
-
 // Components
 import Accordion from '../../../../common/components/accordion/Accordion'
 import MyTeamList from './components/my-team-list/MyTeamList'
@@ -20,7 +17,7 @@ function MyTeam() {
     const { localization } = useContext(LocalizationContext)
 
     return (
-        <Accordion title={localization.MyTeam}>
+        <Accordion title={localization.myteam}>
             <MyTeamList myTeam={myTeam} />
         </Accordion>
     )
