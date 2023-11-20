@@ -16,7 +16,7 @@ function useHeaderHook() {
     useEffect(() => {
         const title = setTitle(location.pathname)
 
-        setCurrentTitle(title)
+        setCurrentTitle(title.toLowerCase())
     }, [location.pathname])
 
     return { currentTitle }

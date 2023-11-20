@@ -6,7 +6,7 @@ import Accordion from '../../../../common/components/accordion/Accordion'
 import ProjectItems from './components/project-items/ProjectItems'
 
 // Data
-import { projectsData } from './utils/projects-mock-data'
+import { allProjectsData } from './utils/projects-mock-data'
 
 // Context
 import { LocalizationContext } from '../../../../common/context/LocalizationContext'
@@ -21,7 +21,7 @@ function Projects({ onProjectChange }: ProjectsProps) {
 
     return (
         <Accordion title={localization.projects}>
-            <ProjectItems projects={projectsData} onProjectChange={onProjectChange} />
+            <ProjectItems projects={allProjectsData} onProjectChange={onProjectChange} />
         </Accordion>
     )
 }

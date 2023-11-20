@@ -8,6 +8,11 @@ import dashboardCSS from './Dashboard.module.scss'
 import Projects from './components/projects/Projects'
 import MyTeam from './components/my-team/MyTeam'
 import TasksBoard from './components/tasks-board/TasksBoard'
+import SelectedProject from './components/selected-project/SelectedProject'
+import Participants from './components/projects/components/participants/Participants'
+
+// Types
+import { Task } from './components/tasks-board/TasksBoard.types'
 
 // Dashboard hook
 import useDashboardHook from './useDashboardHook'
@@ -19,7 +24,7 @@ import { LocalizationContext } from '../../common/context/LocalizationContext'
 
 
 function Dashboard() {
-    const { tasks, isProjectSelected, handleProjectChange } = useDashboardHook()
+    const { project, isProjectSelected, handleProjectChange } = useDashboardHook()
 
     const { localization } = useContext(LocalizationContext)
 
@@ -30,15 +35,15 @@ function Dashboard() {
                 <MyTeam />
             </div>
             <div className={dashboardCSS.dashboardHeader}>
-                {/* <SelectedProject /> */}
-                {/* <ProjectTeam /> */}
+                <SelectedProject name={project.name} image={project.image} tasks={project.tasks} />
+                <Participants participants={project.participants} />
             </div>
             <div className={dashboardCSS.dashboardSubheader}>
-                {/* <DashboardTabs /> */}
+
             </div>
             <div className={dashboardCSS.dashboardContent}>
                 {
-                    isProjectSelected() ? <TasksBoard tasks={tasks} /> : <Popup title={localization.info} description={localization.noProjectSelected} />
+                    isProjectSelected() ? <TasksBoard tasks={project.tasks as unknown as Task[]} /> : <Popup title={localization.info} description={localization.noProjectSelected} />
                 }
             </div>
         </div>

@@ -5,7 +5,7 @@ import taskFooterCSS from './TaskFooter.module.scss'
 import { TaskFooterProps } from './TaskFooter.types'
 
 // Components
-import TaskParticipants from './components/task-participants/TaskParticipants'
+import Participants from '../../../../../projects/components/participants/Participants'
 import TaskAttachments from './components/task-attachments/TaskAttachments'
 import TaskNotes from './components/task-notes/TaskNotes'
 
@@ -15,7 +15,7 @@ function TaskFooter({ participants }: TaskFooterProps) {
 
     return (
         <div className={taskFooterCSS.footer}>
-            <TaskParticipants participants={participants} />
+            <Participants participants={participants} />
             <div className={taskFooterCSS.buttonActions}>
                 <TaskAttachments />
                 <TaskNotes />

@@ -3,7 +3,7 @@ import projectItemCSS from './ProjectItem.module.scss'
 
 // Types
 import { ProjectItemProps } from './ProjectItem.types'
-import { Project } from './ProjectItem.types'
+import { Project } from '../../../../Dashboard.types'
 
 // Components
 import Button from '../../../../../../common/components/button/Button'
@@ -22,7 +22,7 @@ function ProjectItem({ project, activeProject, onProjectChange }: ProjectItemPro
     return (
         <Button type={ButtonType.PRIMARY} size={ButtonSize.LARGE} additionalClasses={`${projectItemCSS.projectButton} ${activeProject ? projectItemCSS.activeProjectButton : ''}`} onClick={() => handleProjectChange(project)}>
             <div className={projectItemCSS.projectInfo}>
-                <img src='/src/common/images/projects/project.png' />
+                <img src={project.image} />
                 <span className={projectItemCSS.name}>{project.name}</span>
             </div>
         </Button>

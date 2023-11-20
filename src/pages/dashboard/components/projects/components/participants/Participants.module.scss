@@ -1,4 +1,4 @@
-@import '../../../../../../../../../../common/scss/variables.scss';
+@import '../../../../../../common/scss/variables.scss';
 
 
 
@@ -13,6 +13,11 @@
     border: 1px solid $black10;
     border-radius: 50%;
     margin-left: 0.5rem;
+}
+
+.addParticipantTooltip {
+    color: $blue;
+    background-color: $blue5;
 }
 
 .restOfParticipants {

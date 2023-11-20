@@ -1,5 +1,5 @@
 // Types
-import { Participant } from "../../../../../../../../TasksBoard.types";
+import { Participant } from "../../../../../tasks-board/TasksBoard.types"
 
 
 

@@ -10,37 +10,37 @@ import { dashboardIcon, logoutIcon, peopleIcon, reportsIcon, settingsIcon, sprin
 export const sidebarLinks: SidebarLink[] = [
     {
         id: 0,
-        name: 'Dashboard',
+        name: 'dashboard',
         linkTo: Paths.DASHBOARD,
         icon: dashboardIcon
     },
     {
         id: 1,
-        name: 'Sprint',
+        name: 'sprint',
         linkTo: Paths.SPRINT,
         icon: sprintIcon
     },
     {
         id: 2,
-        name: 'MyTeam',
+        name: 'myTeam',
         linkTo: Paths.MYTEAM,
         icon: peopleIcon
     },
     {
         id: 3,
-        name: 'Reports',
+        name: 'reports',
         linkTo: Paths.REPORTS,
         icon: reportsIcon
     },
     {
         id: 4,
-        name: 'Settings',
+        name: 'settings',
         linkTo: Paths.SETTINGS,
         icon: settingsIcon
     },
     {
         id: 5,
-        name: 'Log out',
+        name: 'logOut',
         linkTo: Paths.LOGOUT,
         icon: logoutIcon
     }

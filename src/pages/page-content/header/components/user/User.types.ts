@@ -16,13 +16,13 @@ export interface User {
 }
 
 export enum UserStatus {
-    ONLINE = 'Online',
-    OFFLINE = 'Offline',
-    AWAY = 'Away',
-    BUSY = 'Busy',
-    DO_NOT_DISTURB = 'Do not disturb',
-    IN_A_MEETING = 'In a meeting',
-    OUT_OF_OFFICE = 'Out of office'
+    ONLINE = 'online',
+    OFFLINE = 'offline',
+    AWAY = 'away',
+    BUSY = 'busy',
+    DO_NOT_DISTURB = 'doNotDisturb',
+    IN_A_MEETING = 'inAMeeting',
+    OUT_OF_OFFICE = 'outOfOffice'
 }
 
 export enum StatusColor {

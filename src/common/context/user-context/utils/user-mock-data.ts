@@ -12,5 +12,5 @@ export const loggedInUser: User = {
     lastName: 'Doe',
     email: 'johndoe@gmail.com',
     photo: userPhoto,
-    status: 'Online'
+    status: 'online'
 }
