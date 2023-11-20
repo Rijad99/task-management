@@ -40,7 +40,7 @@ function Participants({ participants }: TaskParticipantsProps) {
                         {`+${restOfParticipantsNumber}`}
                     </div>
             }
-            <Tooltip text='Add participant' position={TooltipPosition.TOP} tooltipClasses={taskParticipantsCSS.addParticipantTooltip}>
+            <Tooltip text='Add participant' position={TooltipPosition.TOP} tooltipContainerClasses={taskParticipantsCSS.addParticipantTooltipContainer} tooltipClasses={taskParticipantsCSS.addParticipantTooltip}>
                 <Button type={ButtonType.PRIMARY} size={ButtonSize.SMALL} additionalClasses={taskParticipantsCSS.addParticipantButton} onClick={() => null}>
                     <Svg path={plusIcon} width="10" height="11" viewBox="0 0 13 12" color={SvgColors.LIGHT_GRAY} />
                 </Button>

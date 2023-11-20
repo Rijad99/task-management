@@ -2,10 +2,27 @@
 
 
 
+.attachmentsButton {
+
+    &:hover {
+
+        svg {
+
+            path {
+                fill: $black20;
+            }
+        }
+
+        .number {
+            color: $black30;
+        }
+    }
+}
+
 .number {
     font-size: $smallestCaption;
     font-weight: $medium;
-    color: $neutral;
+    color: $black20;
     position: relative;
     left: -2px;
 }

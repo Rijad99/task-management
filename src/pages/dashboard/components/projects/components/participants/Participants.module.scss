@@ -6,18 +6,21 @@
     display: flex;
 }
 
+.addParticipantTooltipContainer {
+    margin-left: 0.5rem;
+}
+
 .addParticipantButton {
     width: 31px;
     height: 31px;
     padding: unset;
     border: 1px solid $black10;
     border-radius: 50%;
-    margin-left: 0.5rem;
 }
 
 .addParticipantTooltip {
-    color: $blue;
-    background-color: $blue5;
+    color: $green;
+    background-color: $green5;
 }
 
 .restOfParticipants {
@@ -30,6 +33,7 @@
     margin-left: -10px;
     font-size: $smallestCaption;
     font-weight: $medium;
-    background-color: $black5;
+    color: $neutral;
+    background-color: $black2_5;
     border-radius: 50%;
 }
