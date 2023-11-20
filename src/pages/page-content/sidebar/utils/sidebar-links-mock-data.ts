@@ -22,7 +22,7 @@ export const sidebarLinks: SidebarLink[] = [
     },
     {
         id: 2,
-        name: 'myTeam',
+        name: 'myteam',
         linkTo: Paths.MYTEAM,
         icon: peopleIcon
     },
