@@ -13,7 +13,7 @@ import useSelectedProjectHook from './useSelectedProjectHook'
 
 
 function SelectedProject({ name, image, tasks }: SelectProjectProps) {
-    const { progressBarRef, completionPercentage } = useSelectedProjectHook(name, tasks)
+    const { completionPercentage } = useSelectedProjectHook(name, tasks)
 
     return (
         
@@ -22,7 +22,7 @@ function SelectedProject({ name, image, tasks }: SelectProjectProps) {
                 <img src={image} />
                 <div className={selectedProjectCSS.info}>
                     <h4 className={selectedProjectCSS.projectName}>{name}</h4>
-                    <ProjectProgressBar ref={progressBarRef} completionPercentage={completionPercentage!} />
+                    <ProjectProgressBar completionPercentage={completionPercentage!} />
                 </div>
             </div>
         </div>

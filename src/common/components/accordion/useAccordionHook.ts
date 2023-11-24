@@ -1,22 +1,43 @@
 // React
-import { createRef } from 'react'
+import { useState } from 'react'
 
-// CSS
-import accordionContentCSS from './components/accordion-content/AccordionContent.module.scss'
-import accordionHeaderCSS from './components/accordion-header/AccordionHeader.module.scss'
-
+// Framer motion
+import { useAnimate } from 'framer-motion'
 
 
 function useAccordionHook() {
-    const arrowRef = createRef<SVGSVGElement>()
-    const accordionContentRef = createRef<HTMLDivElement>()
+    const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(true)
 
-    const handleShowHideContent = () => {
-        accordionContentRef.current?.classList.toggle(accordionContentCSS.hideAccordionContent)
-        arrowRef.current?.classList.toggle(accordionHeaderCSS.rotateArrow)
+    const [accordionContentScope, animateAccordionContentScope] = useAnimate<HTMLDivElement>()
+    const [arrow, animateArrow] = useAnimate<SVGSVGElement>()
+
+    const accordionContentVariant = {
+        open: {
+            opacity: 1,
+            height: 'auto'
+        },
+        closed: {
+            opacity: 0,
+            height: 0
+        }
     }
 
-    return { arrowRef, accordionContentRef, handleShowHideContent }
+    const arrowVariant = {
+        rotate: {
+            transform: 'rotate(180deg)',
+            transition: {
+                duration: 0.25
+            }
+        },
+        rotateToInitial: {
+            transform: 'rotate(0deg)',
+            transition: {
+                duration: 0.25
+            }
+        }
+    }
+
+    return { isAccordionOpen, accordionContentScope, arrow, accordionContentVariant, arrowVariant, setIsAccordionOpen, animateAccordionContentScope, animateArrow }
 }
 
 export default useAccordionHook

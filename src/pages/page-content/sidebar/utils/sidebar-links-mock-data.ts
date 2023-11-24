@@ -40,7 +40,7 @@ export const sidebarLinks: SidebarLink[] = [
     },
     {
         id: 5,
-        name: 'logOut',
+        name: 'logout',
         linkTo: Paths.LOGOUT,
         icon: logoutIcon
     }

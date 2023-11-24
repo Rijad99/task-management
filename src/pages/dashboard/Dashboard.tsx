@@ -1,6 +1,9 @@
 // React
 import { useContext } from 'react'
 
+// Framer motion
+import { motion } from 'framer-motion'
+
 // CSS
 import dashboardCSS from './Dashboard.module.scss'
 
@@ -24,16 +27,16 @@ import { LocalizationContext } from '../../common/context/LocalizationContext'
 
 
 function Dashboard() {
-    const { project, isProjectSelected, handleProjectChange } = useDashboardHook()
+    const { project, dashboardSidebarVariant, isProjectSelected, handleProjectChange } = useDashboardHook()
 
     const { localization } = useContext(LocalizationContext)
 
     return (
         <div className={dashboardCSS.dashboardGrid}>
-            <div className={dashboardCSS.dashboardSidebar}>
+            <motion.div className={dashboardCSS.dashboardSidebar} initial={{ opacity: 0 }} animate='visible' variants={dashboardSidebarVariant}>
                 <Projects onProjectChange={handleProjectChange} />
                 <MyTeam />
-            </div>
+            </motion.div>
             <div className={dashboardCSS.dashboardHeader}>
                 <SelectedProject name={project.name} image={project.image} tasks={project.tasks} />
                 <Participants participants={project.participants} />

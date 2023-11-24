@@ -1,3 +1,6 @@
+// Framer motion
+import { motion } from 'framer-motion'
+
 // CSS
 import tasksCSS from './Tasks.module.scss'
 
@@ -11,8 +14,19 @@ import { TasksProps } from './Tasks.types'
 
 function Tasks({ tasks }: TasksProps) {
 
+    const tasksContainerVariant = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            staggerChildren: 0.2
+          }
+        }
+    }
+    
     return (
-        <div className={tasksCSS.tasksContainer}>
+        <motion.div className={tasksCSS.tasksContainer} initial='hidden' animate={tasks.length > 0 && 'visible'} variants={tasksContainerVariant}>
             {
                 tasks.map(task => {
         
@@ -21,7 +35,7 @@ function Tasks({ tasks }: TasksProps) {
                     )
                 })
             }    
-        </div>
+        </motion.div>
     )
 }
 

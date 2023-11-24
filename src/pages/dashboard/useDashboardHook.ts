@@ -26,6 +26,15 @@ function useDashboardHook() {
         }     
     })
 
+    const dashboardSidebarVariant = {
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.5
+            }
+        }
+    }
+
     const navigate = useNavigate()
 
     const location = useLocation()
@@ -51,7 +60,7 @@ function useDashboardHook() {
         return location.pathname !== Paths.DASHBOARD
     }
   
-    return { project, handleProjectChange, isProjectSelected }
+    return { project, dashboardSidebarVariant, handleProjectChange, isProjectSelected }
 }
 
 export default useDashboardHook

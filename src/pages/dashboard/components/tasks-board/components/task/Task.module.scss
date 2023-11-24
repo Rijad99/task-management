@@ -8,16 +8,10 @@
     background-color: $white;
     border-radius: 10px;
     border: 1px solid $black5;
-    transition: all 100ms ease;
     user-select: none;
     cursor: grab;
 
     &:not(:last-child) {
         margin-bottom: 1rem;
-    }
-
-    &:hover {
-        transform: scale(1.025);
-        box-shadow: 0 0 25px rgba($black, 0.05);
     }
 }

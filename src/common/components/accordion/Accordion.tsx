@@ -17,12 +17,19 @@ import useAccordionHook from './useAccordionHook'
 
 
 function Accordion(props: PropsWithChildren<AccordionProps>) {
-    const { arrowRef, accordionContentRef, handleShowHideContent} = useAccordionHook()
+    const { isAccordionOpen, accordionContentScope, arrow, accordionContentVariant, arrowVariant, setIsAccordionOpen, animateAccordionContentScope, animateArrow } = useAccordionHook()
+
+    const handleShowHideContent = () => {
+        animateAccordionContentScope('main', isAccordionOpen ? accordionContentVariant.closed : accordionContentVariant.open)
+        animateArrow(arrow.current, isAccordionOpen ? arrowVariant.rotate : arrowVariant.rotateToInitial)
+
+        setIsAccordionOpen(!isAccordionOpen)
+    }
 
     return (
         <div className={accordionCSS.accordion}>
-            <AccordionHeader ref={arrowRef} title={props.title} onShowHideContent={handleShowHideContent} />
-            <AccordionContent ref={accordionContentRef} children={props.children} />
+            <AccordionHeader ref={arrow} title={props.title} onShowHideContent={handleShowHideContent} />
+            <AccordionContent ref={accordionContentScope} children={props.children} />
         </div>
     )
 }
