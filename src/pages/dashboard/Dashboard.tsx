@@ -32,15 +32,18 @@ function Dashboard() {
     const { localization } = useContext(LocalizationContext)
 
     return (
-        <div className={dashboardCSS.dashboardGrid}>
+        <div className={`${isProjectSelected() ? dashboardCSS.dashboardGrid : dashboardCSS.dashboardEmpty}`}>
             <motion.div className={dashboardCSS.dashboardSidebar} initial={{ opacity: 0 }} animate='visible' variants={dashboardSidebarVariant}>
                 <Projects onProjectChange={handleProjectChange} />
                 <MyTeam />
             </motion.div>
-            <div className={dashboardCSS.dashboardHeader}>
-                <SelectedProject name={project.name} image={project.image} tasks={project.tasks} />
-                <Participants participants={project.participants} />
-            </div>
+            {
+                isProjectSelected() &&
+                    <div className={dashboardCSS.dashboardHeader}>
+                        <SelectedProject name={project.name} image={project.image} tasks={project.tasks} />
+                        <Participants participants={project.participants} />
+                    </div>
+            }
             <div className={dashboardCSS.dashboardSubheader}>
 
             </div>

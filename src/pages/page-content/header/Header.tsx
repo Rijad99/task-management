@@ -35,7 +35,7 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
                 <div className={headerCSS.actions}>
                     <LanguageSelect />
                     <Messages />
-                    <Notifications />
+                    <Notifications notifications={[]} />
                 </div>
                 <User firstName={user.firstName} lastName={user.lastName} email={user.email} photo={user.photo} status={user.status} />
             </div>

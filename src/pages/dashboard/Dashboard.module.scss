@@ -14,6 +14,16 @@
     height: 100%;
 }
 
+.dashboardEmpty {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "d-sidebar d-content"
+    ;
+    height: 100%;
+}
+
 .dashboardSidebar {
     grid-area: d-sidebar;
     padding: 3rem 2rem;

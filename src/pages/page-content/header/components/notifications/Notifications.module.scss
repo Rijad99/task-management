@@ -5,14 +5,12 @@
 .notification {
     position: relative;
 
-    &::before {
-        content: '';
-        display: block;
+    .notificationCircle {
         position: absolute;
-        top: 2px;
-        right: 1px;
-        width: 6px;
-        height: 6px;
+        top: 1px;
+        right: 2px;
+        width: 7px;
+        height: 7px;
         border-radius: 50%;
         background-color: $red;
         border: 1px solid $white;

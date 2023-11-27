@@ -18,7 +18,7 @@ function useTooltipHook(text: string, position: string) {
 
             case TooltipPosition.TOP:
             case TooltipPosition.BOTTOM:
-                tooltipRef.current!.style[position] = `-${30}px`
+                tooltipRef.current!.style[position] = `-${35}px`
                 tooltipRef.current!.style.left= `50%`
                 tooltipRef.current!.style.transform = 'translateX(-50%)'
                 break
