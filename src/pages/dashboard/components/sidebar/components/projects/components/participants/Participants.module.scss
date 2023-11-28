@@ -1,0 +1,39 @@
+@import 'src/common/scss/variables';
+
+
+
+.participants {
+    display: flex;
+}
+
+.addParticipantTooltipContainer {
+    margin-left: 0.5rem;
+}
+
+.addParticipantButton {
+    width: 31px;
+    height: 31px;
+    padding: unset;
+    border: 1px solid $black10;
+    border-radius: 50%;
+}
+
+.addParticipantTooltip {
+    color: $green;
+    background-color: $green5;
+}
+
+.restOfParticipants {
+    width: 31px;
+    height: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: -10px;
+    font-size: $smallestCaption;
+    font-weight: $medium;
+    color: $neutral;
+    background-color: $black2_5;
+    border-radius: 50%;
+}

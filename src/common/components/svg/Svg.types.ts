@@ -19,7 +19,8 @@ export enum SvgColors {
     NEUTRAL = 'neutral',
     LIGHT_GRAY = 'lightGray',
     BLACK = 'black',
-    ORANGE = 'orange'
+    ORANGE = 'orange',
+    WHITE = 'white'
 }
 
 export enum SvgFillRule {

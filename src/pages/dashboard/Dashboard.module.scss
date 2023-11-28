@@ -44,6 +44,9 @@
 
 .dashboardSubheader {
     grid-area: d-subheader;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
 }
 
 .dashboardContent {

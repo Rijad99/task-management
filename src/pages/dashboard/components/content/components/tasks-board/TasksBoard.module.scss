@@ -1,0 +1,12 @@
+@import 'src/common/scss/variables';
+
+
+
+.tasksBoardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 450px);
+    place-content: start center;
+    background-color: rgba($black, 0.025);
+    padding: 2rem 1rem;
+    height: 100%;
+}

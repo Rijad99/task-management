@@ -1,0 +1,9 @@
+@import '../../../../common/scss/variables';
+
+
+.addNewButton {
+  font-size: $caption;
+  background-color: $green;
+  color: $white;
+  border-radius: 12px;
+}

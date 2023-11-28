@@ -1,6 +1,6 @@
 // Types
-import { Participant } from "./components/tasks-board/TasksBoard.types"
-import { Tasks } from "./components/tasks-board/TasksBoard.types"
+import { Participant } from "./components/content/components/tasks-board/TasksBoard.types"
+import { Tasks } from "./components/content/components/tasks-board/TasksBoard.types"
 
 
 

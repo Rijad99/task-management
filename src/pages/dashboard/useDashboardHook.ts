@@ -44,7 +44,7 @@ function useDashboardHook() {
 
         if (projectName) {
 
-            getData(`../../../src/pages/dashboard/components/projects/data/${projectName}.json`)
+            getData(`../../../src/pages/dashboard/components/sidebar/components/projects/data/${projectName}.json`)
                 .then(data => setProject(data))
         }
     }, [])
@@ -52,7 +52,7 @@ function useDashboardHook() {
     const handleProjectChange = (project: Project) => {
         navigate(`${Paths.DASHBOARD}/${project.name.toLowerCase()}`)
 
-        getData(`../../../src/pages/dashboard/components/projects/data/${project.name.toLowerCase()}.json`)
+        getData(`../../../src/pages/dashboard/components/sidebar/components/projects/data/${project.name.toLowerCase()}.json`)
             .then(data => setProject(data))
     }
 

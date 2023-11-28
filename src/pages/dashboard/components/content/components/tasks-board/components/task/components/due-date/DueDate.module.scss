@@ -1,0 +1,21 @@
+@import 'src/common/scss/variables';
+
+
+
+.dueDate {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+    font-size: $caption;
+    font-weight: $medium;
+}
+
+.deadline {
+    color: $orange;
+    margin-left: 0.25rem;
+}
+
+.date {
+    color: $neutral;
+    margin-left: 0.25rem;
+}
