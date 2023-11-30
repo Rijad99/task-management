@@ -4,24 +4,36 @@
 
 .header {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 2.5rem;
+    justify-content: space-between;
+    padding: 0 1.4rem 0 2.5rem;
 }
 
-.title {
-    font-size: $bodyOne;
-}
-
-.tasksNumber {
-    width: 37px;
-    height: 37px;
+.tasksCategory {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: $black5;
-    margin-left: 1rem;
+
+    .title {
+        font-size: $bodyOne;
+    }
+
+    .tasksNumber {
+        width: 37px;
+        height: 37px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $black5;
+        margin-left: 1rem;
+        border-radius: 50%;
+        font-size: $bodyThree;
+        font-weight: $bold;
+    }
+}
+
+.addNewButton {
+    padding: unset;
+    width: 37px;
+    height: 37px;
+    background-color: $green;
     border-radius: 50%;
-    font-size: $bodyThree;
-    font-weight: $bold;
 }

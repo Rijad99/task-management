@@ -27,7 +27,7 @@ function Dashboard() {
                 <Header isProjectSelected={isProjectSelected} name={project.name} image={project.image} tasks={project.tasks} participants={project.participants} />
             </div>
             <div className={dashboardCSS.dashboardSubheader}>
-                <SubHeader />
+                <SubHeader isSelectedProject={isProjectSelected} />
             </div>
             <div className={dashboardCSS.dashboardContent}>
                 <Content isProjectSelected={isProjectSelected} tasks={project.tasks} />

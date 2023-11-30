@@ -29,7 +29,7 @@ function TasksBoard({ tasks }: TasksBoardProps) {
                     const tasksByCategory = tasks[key as keyof typeof tasks] as unknown as Task[]
                     
                     return (
-                        <TasksColumn key={index} title={title} tasks={tasksByCategory} />
+                        <TasksColumn key={index} title={title} tasks={tasksByCategory} category={key} />
                     )
                 })
             }

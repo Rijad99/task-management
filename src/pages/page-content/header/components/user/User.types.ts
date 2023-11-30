@@ -12,7 +12,7 @@ export interface User {
     lastName: string
     email: string
     photo: string
-    status: string
+    status: UserStatus
 }
 
 export enum UserStatus {

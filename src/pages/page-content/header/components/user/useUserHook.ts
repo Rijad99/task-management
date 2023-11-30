@@ -1,8 +1,5 @@
 // React
-import { createRef, useContext } from 'react'
-
-// CSS
-import dropdownCSS from '../../../../../common/components/dropdown/Dropdown.module.scss'
+import {createRef, useContext, useState} from 'react'
 
 // Types
 import { DropdownItem } from '../../../../../common/components/dropdown/components/dropdown-item/DropdownItem.types'
@@ -13,9 +10,9 @@ import { UserContext } from '../../../../../common/context/user-context/UserCont
 
 
 function useUserHook() {
-    const { user, setUser } = useContext(UserContext) 
+    const [isUserStatusDropdownOpen, setIsUserStatusDropdownOpen] = useState<boolean>(false)
 
-    const dropdownRef = createRef<HTMLDivElement>()
+    const { user, setUser } = useContext(UserContext)
 
     const handleChangeStatus = (item: DropdownItem) => {
         setUser({
@@ -23,14 +20,14 @@ function useUserHook() {
             status: item.actionName
         })
 
-        dropdownRef.current?.classList.remove(dropdownCSS.dropdownVisible)
+        setIsUserStatusDropdownOpen(false)
     }
 
     const handleStatusDropdownOpen = () => {
-        dropdownRef.current?.classList.toggle(dropdownCSS.dropdownVisible)
+        setIsUserStatusDropdownOpen(!isUserStatusDropdownOpen)
     }
 
-    return { dropdownRef, handleChangeStatus, handleStatusDropdownOpen }
+    return { isUserStatusDropdownOpen, setIsUserStatusDropdownOpen, handleChangeStatus, handleStatusDropdownOpen }
 }
 
 export default useUserHook

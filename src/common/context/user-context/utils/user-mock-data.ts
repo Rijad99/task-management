@@ -1,5 +1,5 @@
 // Types
-import { User } from "../../../../pages/page-content/header/components/user/User.types"
+import {User, UserStatus} from "../../../../pages/page-content/header/components/user/User.types"
 
 // User photo
 import userPhoto from '../../../images/profile-photos/Profile.png'
@@ -12,5 +12,5 @@ export const loggedInUser: User = {
     lastName: 'Doe',
     email: 'johndoe@gmail.com',
     photo: userPhoto,
-    status: 'online'
+    status: UserStatus.ONLINE
 }

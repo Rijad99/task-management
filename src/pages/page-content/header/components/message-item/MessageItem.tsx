@@ -14,7 +14,7 @@ import { messageIcon } from "../../../../../common/icons/icons"
 
 
 
-function Messages() {
+function MessageItem() {
 
     return (
         <Button size={ButtonSize.SMALLEST} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={utilsCSS.mr1_5}>
@@ -23,4 +23,4 @@ function Messages() {
     )
 }
 
-export default Messages
+export default MessageItem

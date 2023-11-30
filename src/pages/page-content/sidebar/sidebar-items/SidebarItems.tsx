@@ -40,7 +40,7 @@ function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
                 </div>
                 <SidebarItem sidebarLink={logoutLink} color={SvgColors.RED} onRouteChange={() => handleNavigateTo(logoutLink.linkTo)} />
             </div>
-            <Button size={ButtonSize.SMALL} type={ButtonType.PRIMARY} additionalClasses={sidebarCSS.expandSidebarButton} onClick={handleOpenSidebar}>
+            <Button size={ButtonSize.SMALLEST} type={ButtonType.PRIMARY} additionalClasses={sidebarCSS.expandSidebarButton} onClick={handleOpenSidebar}>
                 <Svg path={arrowIcon} width='8' height='6' strokeWidth='1.5' viewBox='0 0 12 7' stroke={SvgColors.BLACK} strokeLinecap={SvgStrokeLineCap.ROUND} strokeLinejoin={SvgStrokeLineJoin.ROUND} additionalClasses={sidebarCSS.leftArrow} />
                 <Svg path={arrowIcon} width='8' height='6' strokeWidth='1.5' viewBox='0 0 12 7' stroke={SvgColors.BLACK} strokeLinecap={SvgStrokeLineCap.ROUND} strokeLinejoin={SvgStrokeLineJoin.ROUND} additionalClasses={sidebarCSS.rightArrow} />
             </Button>

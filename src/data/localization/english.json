@@ -26,5 +26,15 @@
     "highPriority": "High Priority",
     "todo": "To Do",
     "inprogress": "In Progress",
-    "done": "Done"
+    "done": "Done",
+    "addParticipant": "Add Participant",
+    "new": "New",
+    "completed": "Completed",
+    "notifications": "Notifications",
+    "markAllAsRead": "Mark all as read",
+    "wantsToEdit": "wants to edit",
+    "addedAFile": "added a file",
+    "mentionedYouIn": "mentioned you in",
+    "accept": "Accept",
+    "deny": "Deny"
 }

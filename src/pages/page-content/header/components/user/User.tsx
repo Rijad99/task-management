@@ -4,10 +4,10 @@ import { useContext } from 'react'
 // CSS
 import userCSS from './User.module.scss'
 import utilsCSS from '../../../../../common/scss/utils.module.scss'
-import statusCSS from '../../../../../common/components/status/UserStatus.module.scss'
+import statusCSS from '../../../../../common/components/user-status/UserStatus.module.scss'
 
 // Components
-import UserStatus from '../../../../../common/components/status/UserStatus'
+import UserStatus from '../../../../../common/components/user-status/UserStatus'
 import Dropdown from '../../../../../common/components/dropdown/Dropdown'
 import Tooltip from '../../../../../common/components/tooltip/Tooltip'
 
@@ -18,7 +18,7 @@ import { TooltipPosition } from '../../../../../common/components/tooltip/Toolti
 import { UserProps } from './User.types'
 
 // Data
-import { userStatusData } from '../../../../../common/components/status/utils/user-status-mock-data'
+import { userStatusData } from '../../../../../common/components/user-status/utils/user-status-mock-data'
 
 // User hook
 import useUserHook from './useUserHook'
@@ -29,7 +29,7 @@ import { LocalizationContext } from '../../../../../common/context/LocalizationC
 
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
-    const { dropdownRef, handleChangeStatus, handleStatusDropdownOpen } = useUserHook()
+    const { isUserStatusDropdownOpen, setIsUserStatusDropdownOpen, handleChangeStatus, handleStatusDropdownOpen } = useUserHook()
 
     const { localization } = useContext(LocalizationContext)
 
@@ -44,7 +44,7 @@ function User({ firstName, lastName, email, photo, status }: UserProps) {
                     </Tooltip>
                 </span>
                 <span className={userCSS.email}>{email}</span>
-                <Dropdown ref={dropdownRef} items={userStatusData} onActionChange={handleChangeStatus} />
+                <Dropdown isDropdownOpen={isUserStatusDropdownOpen} items={userStatusData} onActionChange={handleChangeStatus} onOutsideClickDropdownClose={() => setIsUserStatusDropdownOpen(false)} />
             </div>
         </div>
     )

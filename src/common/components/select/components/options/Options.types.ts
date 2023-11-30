@@ -1,5 +1,6 @@
 export interface OptionsProps {
     options: Option[]
+    isSelectOpen: boolean
     onOptionChange: (option: Option) => void
 }
 

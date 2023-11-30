@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 // Helpers
-import { setTitle } from './utils'
+import { setTitle } from './utils/utils'
 
 
 

@@ -1,3 +1,6 @@
+// React
+import {useContext} from "react"
+
 // CSS
 import taskParticipantsCSS from './Participants.module.scss'
 
@@ -18,9 +21,14 @@ import { SvgColors } from '../../../../../../../../common/components/svg/Svg.typ
 import { ButtonSize, ButtonType } from '../../../../../../../../common/components/button/Button.types'
 import { TooltipPosition } from '../../../../../../../../common/components/tooltip/Tooltip.types'
 
+// Context
+import {LocalizationContext} from "../../../../../../../../common/context/LocalizationContext"
+
 
 
 function Participants({ participants }: TaskParticipantsProps) {
+    const { localization } = useContext(LocalizationContext)
+
     const firstThreeParticipants = participants.slice(0, 3)
     const restOfParticipantsNumber = participants.slice(3, participants.length).length
 
@@ -40,7 +48,7 @@ function Participants({ participants }: TaskParticipantsProps) {
                         {`+${restOfParticipantsNumber}`}
                     </div>
             }
-            <Tooltip text='Add participant' position={TooltipPosition.TOP} tooltipContainerClasses={taskParticipantsCSS.addParticipantTooltipContainer} tooltipClasses={taskParticipantsCSS.addParticipantTooltip}>
+            <Tooltip text={localization.addParticipant} position={TooltipPosition.TOP} tooltipContainerClasses={taskParticipantsCSS.addParticipantTooltipContainer} tooltipClasses={taskParticipantsCSS.addParticipantTooltip}>
                 <Button type={ButtonType.PRIMARY} size={ButtonSize.SMALL} additionalClasses={taskParticipantsCSS.addParticipantButton} onClick={() => null}>
                     <Svg path={plusIcon} width="10" height="11" viewBox="0 0 13 12" color={SvgColors.LIGHT_GRAY} />
                 </Button>

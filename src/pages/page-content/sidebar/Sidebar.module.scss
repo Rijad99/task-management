@@ -65,8 +65,7 @@
     width: 28px;
     height: 28px;
     background-color: $white;
-    border: 1px solid $black10;
-    padding: unset !important;
+    border-color: $black10 !important;
 
     &:hover {
         box-shadow: 0 0  10px $black5;

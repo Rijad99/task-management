@@ -4,20 +4,36 @@ import { useEffect, useRef } from 'react'
 // Types
 import { DropdownItem } from './components/dropdown-item/DropdownItem.types'
 
-// CSS
-import dropdownCSS from './Dropdown.module.scss'
 
 
-
-function useDropdownHook(onActionChange: (item: DropdownItem) => void) {
+function useDropdownHook(onActionChange: (item: DropdownItem) => void, onOutsideClickDropdownClose: () => void) {
     const dropdownRef = useRef<HTMLDivElement>(null)
+
+    const dropdownVariant = {
+        visible: {
+            opacity: 1,
+            visibility: 'visible',
+            transform: "translateY(10px) scale(1)",
+            transition: {
+                duration: 0.25
+            }
+        },
+        hidden: {
+            opacity: 0,
+            visibility: 'hidden',
+            transform: "translateY(-20px) scale(0.8)",
+            transition: {
+                duration: 0.25
+            }
+        }
+    }
 
     useEffect(() => {
 
         const handleClickOutside = (e: MouseEvent) => {
 
             if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-                dropdownRef.current.classList.remove(dropdownCSS.dropdownVisible)
+                onOutsideClickDropdownClose()
             }
         }
 
@@ -32,7 +48,7 @@ function useDropdownHook(onActionChange: (item: DropdownItem) => void) {
         onActionChange(item)
     }
 
-    return { dropdownRef, handleActionChange }
+    return { dropdownRef, dropdownVariant, handleActionChange }
 }
 
 export default useDropdownHook

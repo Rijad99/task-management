@@ -1,5 +1,5 @@
 // React
-import { useEffect } from 'react'
+import {useContext, useEffect} from 'react'
 
 // Framer motion
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion'
@@ -10,9 +10,14 @@ import projectProgressBarCSS from './ProjectProgressBar.module.scss'
 // Types
 import { ProjectProgressBarProps } from './ProjectProgressBar.types'
 
+// Context
+import {LocalizationContext} from "../../../../../../../../common/context/LocalizationContext";
+
 
 
 function ProjectProgressBar({ completionPercentage }: ProjectProgressBarProps) {
+    const { localization } = useContext(LocalizationContext)
+
     const count = useMotionValue(0)
     const rounded = useTransform(count, completionPercentage => Math.round(completionPercentage))
 
@@ -27,7 +32,7 @@ function ProjectProgressBar({ completionPercentage }: ProjectProgressBarProps) {
 
     const progressBarVariant = {
         visible: {
-            width: `${completionPercentage}%`,
+            width: `${completionPercentage ? completionPercentage : 0}%`,
             opacity: 1,
             transition: {
                 duration: 0.5
@@ -35,7 +40,7 @@ function ProjectProgressBar({ completionPercentage }: ProjectProgressBarProps) {
         }
     }
 
-    const percetangeVariant = {
+    const percentageVariant = {
         visible: {
             opacity: 1,
             transition: {
@@ -51,8 +56,8 @@ function ProjectProgressBar({ completionPercentage }: ProjectProgressBarProps) {
                 <motion.div initial={{ opacity: 0, width: 0 }} animate='visible' variants={progressBarVariant} className={projectProgressBarCSS.progress}></motion.div>
             </div>
             <div className={projectProgressBarCSS.progressPercentage}>
-                <motion.span initial={{ opacity: 0 }} animate='visible' variants={percetangeVariant}>{rounded}</motion.span>
-                <motion.span initial={{ opacity: 0 }} animate='visible' variants={percetangeVariant}>% Complete</motion.span>
+                <motion.span initial={{ opacity: 0 }} animate='visible' variants={percentageVariant}>{rounded}</motion.span>
+                <motion.span initial={{ opacity: 0 }} animate='visible' variants={percentageVariant}>% {localization.completed}</motion.span>
             </div>
         </div>
     )

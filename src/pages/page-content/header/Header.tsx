@@ -8,8 +8,11 @@ import headerCSS from './Header.module.scss'
 import Search from './components/search/Search'
 import User from './components/user/User'
 import LanguageSelect from './components/language-select/LanguageSelect'
-import Notifications from './components/notifications/Notifications'
-import Messages from './components/messages/Messages'
+import NotificationItem from "./components/notification-item/NotificationItem";
+import MessageItem from './components/message-item/MessageItem'
+
+// Data
+import {notificationsData} from "./components/notification-item/components/notifications/utils/notifications-mock-data";
 
 // Custom hooks
 import useHeaderHook from './useHeaderHook'
@@ -17,7 +20,6 @@ import useHeaderHook from './useHeaderHook'
 // Context
 import { UserContext } from '../../../common/context/user-context/UserContext'
 import { LocalizationContext } from '../../../common/context/LocalizationContext'
-
 
 
 
@@ -34,8 +36,8 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
             <div className={headerCSS.headerRightSide}>
                 <div className={headerCSS.actions}>
                     <LanguageSelect />
-                    <Messages />
-                    <Notifications notifications={[]} />
+                    <MessageItem />
+                    <NotificationItem notifications={notificationsData} />
                 </div>
                 <User firstName={user.firstName} lastName={user.lastName} email={user.email} photo={user.photo} status={user.status} />
             </div>

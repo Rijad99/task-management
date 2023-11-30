@@ -26,5 +26,15 @@
     "highPriority": "Hohe Priorität",
     "todo": "Machen",
     "inprogress": "Im Gange",
-    "done": "Erledigt"
+    "done": "Erledigt",
+    "addParticipant": "Teilnehmer hinzufügen",
+    "new": "Neu",
+    "completed": "Vollendet",
+    "notifications": "Benachrichtigungen",
+    "markAllAsRead": "Alles als gelesen markieren",
+    "wantsToEdit": "möchte bearbeiten",
+    "addedAFile": "eine Datei hinzugefügt",
+    "mentionedYouIn": "habe dich erwähnt",
+    "accept": "Akzeptieren",
+    "deny": "Leugnen"
 }

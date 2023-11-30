@@ -1,3 +1,6 @@
+// React
+import {useContext} from "react";
+
 // Components
 import Button from "../../../../common/components/button/Button"
 import Svg from "../../../../common/components/svg/Svg"
@@ -13,17 +16,25 @@ import {plusIcon} from "../../../../common/icons/icons"
 import {ButtonSize, ButtonType} from "../../../../common/components/button/Button.types"
 import {SvgColors} from "../../../../common/components/svg/Svg.types"
 
+// Context
+import {LocalizationContext} from "../../../../common/context/LocalizationContext";
+
+// Types
+import {SubHeaderProps} from "./SubHeader.types";
 
 
-function SubHeader() {
+
+function SubHeader({ isSelectedProject }: SubHeaderProps) {
+    const { localization } = useContext(LocalizationContext)
 
     return (
-        <>
-            <Button size={ButtonSize.SMALL} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={subHeaderCSS.addNewButton}>
-                <Svg path={plusIcon} width="16" height="11" viewBox="0 0 13 12" color={SvgColors.WHITE} additionalClasses={utilsCSS.mr05} />
-                New
-            </Button>
-        </>
+        isSelectedProject() &&
+            <>
+                <Button size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={subHeaderCSS.addNewButton}>
+                    <Svg path={plusIcon} width="16" height="11" viewBox="0 0 13 12" color={SvgColors.WHITE} additionalClasses={utilsCSS.mr05} />
+                    {localization.new}
+                </Button>
+            </>
     )
 }
 

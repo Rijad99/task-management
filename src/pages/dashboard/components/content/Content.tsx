@@ -3,7 +3,7 @@ import {useContext} from "react"
 
 // Components
 import TasksBoard from "./components/tasks-board/TasksBoard"
-import Popup from "../../../../common/components/popup/Popup"
+import InformationBox from "../../../../common/components/information-box/InformationBox"
 
 // Types
 import {Task} from "./components/tasks-board/TasksBoard.types"
@@ -21,7 +21,7 @@ function Content({ isProjectSelected, tasks }: ContentProps) {
     return (
         isProjectSelected() ?
             <TasksBoard tasks={tasks as unknown as Task[]} /> :
-            <Popup title={localization.info} description={localization.noProjectSelected} />
+            <InformationBox title={localization.info} description={localization.noProjectSelected} />
     )
 }
 

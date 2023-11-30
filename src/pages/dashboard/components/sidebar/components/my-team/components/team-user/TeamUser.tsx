@@ -15,7 +15,7 @@ import { SvgStrokeLineCap, SvgStrokeLineJoin } from '../../../../../../../../com
 
 // Icons
 import { arrowIcon } from '../../../../../../../../common/icons/icons'
-import UserStatus from '../../../../../../../../common/components/status/UserStatus'
+import UserStatus from '../../../../../../../../common/components/user-status/UserStatus'
 
 
 

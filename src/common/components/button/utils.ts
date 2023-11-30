@@ -12,8 +12,16 @@ export const getButtonCSS = (size: ButtonSize, type: ButtonType) => {
 
     switch (size) {
 
+        case 'smallest':
+            buttonSize = ButtonSize.SMALLEST
+            break
+
         case 'small':
             buttonSize = ButtonSize.SMALL
+            break
+
+        case 'medium':
+            buttonSize = ButtonSize.MEDIUM
             break
 
         case 'large':

@@ -1,5 +1,5 @@
 // React
-import { useContext } from 'react'
+import {useContext} from 'react'
 
 // Types
 import { Option } from '../../../../../common/components/select/components/options/Options.types'
@@ -10,6 +10,7 @@ import { Language, LocalizationContext } from '../../../../../common/context/Loc
 
 
 function useLanguageSelectHook() {
+
     const { userLanguage, setUserLanguage } = useContext(LocalizationContext)
 
     const handleLanguageChange = (option: Option) => {

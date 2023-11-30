@@ -1,9 +1,5 @@
-// React
-import { createRef } from 'react'
-
 // CSS
 import selectCSS from './Select.module.scss'
-import optionsCSS from './components/options/Options.module.scss'
 
 // Components
 import SelectedOption from './components/selected-option/SelectedOption'
@@ -11,27 +7,19 @@ import Options from './components/options/Options'
 
 // Types
 import { SelectProps } from './Select.types'
-import { Option } from './components/options/Options.types'
+
+// Select hook
+import useSelectHook from "./useSelectHook"
 
 
 
 function Select({ selectedOption, placeholder, options, selectedOptionAdditionalClasses, additionalClasses, onOptionChange }: SelectProps) {
-    const optionsRef = createRef<HTMLUListElement>()
-
-    const handleSelectOpen = () => {
-        optionsRef.current?.classList.toggle(optionsCSS.optionsListVisible)
-    }
-
-    const handleOptionChange = (option: Option) => {
-        onOptionChange(option)
-
-        optionsRef.current?.classList.remove(optionsCSS.optionsListVisible)
-    }
+    const { optionsRef, isSelectOpen, handleSelectOpen, handleOptionChange } = useSelectHook(onOptionChange)
 
     return (
         <div className={`${selectCSS.selectContainer} ${additionalClasses && additionalClasses}`}>
-            <SelectedOption selectedOption={selectedOption} placeholder={placeholder} selectedOptionAdditionalClasses={selectedOptionAdditionalClasses} onSelectOpen={handleSelectOpen} />
-            <Options ref={optionsRef} options={options} onOptionChange={handleOptionChange} />
+            <SelectedOption isSelectOpen={isSelectOpen} selectedOption={selectedOption} placeholder={placeholder} selectedOptionAdditionalClasses={selectedOptionAdditionalClasses} onSelectOpen={handleSelectOpen} />
+            <Options ref={optionsRef} isSelectOpen={isSelectOpen} options={options} onOptionChange={handleOptionChange} />
         </div>
     )
 }

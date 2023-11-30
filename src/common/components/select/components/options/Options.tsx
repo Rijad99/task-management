@@ -1,60 +1,36 @@
 // React
-import { forwardRef, useRef, useImperativeHandle, useEffect } from 'react'
+import { forwardRef } from 'react'
 
 // CSS
 import optionsCSS from './Options.module.scss'
-import selectedOptionCSS from '../selected-option/SelectedOption.module.scss'
 
 // Types
-import { Option, OptionsProps } from './Options.types'
+import { OptionsProps } from './Options.types'
+
+// Framer motion
+import {motion} from "framer-motion"
+
+// Options hook
+import useOptionsHook from "./useOptionsHook"
 
 
 
-const Options = forwardRef<HTMLUListElement, OptionsProps>((props, outerRef) => {
-    const listRef = useRef<HTMLUListElement>(null)
+const Options = forwardRef<HTMLUListElement, OptionsProps>((props, ref) => {
+    const { optionsVariant, handleOptionChange } = useOptionsHook(props.onOptionChange)
 
-    useImperativeHandle(outerRef, () => listRef.current!, []);
-
-    const handleOptionChange = (option: Option, e?: React.MouseEvent<HTMLLIElement>) => {
-        const arrow = e?.currentTarget.parentElement?.parentElement?.firstChild?.firstChild?.lastChild as SVGSVGElement
- 
-        props.onOptionChange(option)
-
-        arrow.classList.remove(selectedOptionCSS.rotateArrow)
-    }
-
-    useEffect(() => {
-
-        const handleClickOutside = (e: MouseEvent) => {
-
-            if (listRef.current && !listRef.current.contains(e.target as Node)) {
-                listRef.current.classList.remove(optionsCSS.optionsListVisible)
-                
-                const arrow = listRef.current.parentElement?.firstChild?.firstChild?.lastChild as SVGSVGElement
-                arrow.classList.remove(selectedOptionCSS.rotateArrow)
-            }
-        }
-
-        document.addEventListener('click', handleClickOutside, true)
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside, true)
-        }
-    }, [])
-
-    return (   
-        <ul ref={listRef} className={optionsCSS.optionsList}>
+    return (
+        <motion.ul ref={ref} className={optionsCSS.optionsList} initial={{ visibility: 'hidden', opacity: 0, transform: "translateY(-20px)" }} animate={props.isSelectOpen ? optionsVariant.visible : optionsVariant.hidden}>
 
             {
                 props.options.map(option => {
 
                     return (
-                        <li key={option.id} className={optionsCSS.option} onClick={(e) => handleOptionChange(option, e)}>{option?.icon && <img src={option.icon} />} {option.value}</li>
+                        <li key={option.id} className={optionsCSS.option} onClick={() => handleOptionChange(option)}>{option?.icon && <img src={option.icon} />} {option.value}</li>
                     )
                 })
             }
 
-        </ul>
+        </motion.ul>
     )
 })
 

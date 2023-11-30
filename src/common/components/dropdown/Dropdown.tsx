@@ -1,6 +1,3 @@
-// React
-import { forwardRef, useImperativeHandle } from 'react'
-
 // CSS
 import dropdownCSS from './Dropdown.module.scss'
 
@@ -12,18 +9,18 @@ import { DropdownProps } from './Dropdown.types'
 // Dropdown hook
 import useDropdownHook from './useDropdownHook'
 
+// Framer motion
+import {motion} from "framer-motion"
 
 
-const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, outerRef) => {
-    const { dropdownRef, handleActionChange } = useDropdownHook(props.onActionChange)
-
-    useImperativeHandle(outerRef, () => dropdownRef.current!, []);
+function Dropdown({ items, isDropdownOpen, onActionChange, onOutsideClickDropdownClose }: DropdownProps) {
+    const { dropdownRef, dropdownVariant, handleActionChange } = useDropdownHook(onActionChange, onOutsideClickDropdownClose)
 
     return (
-        <div ref={dropdownRef} className={dropdownCSS.dropdown}>
+        <motion.div ref={dropdownRef} className={dropdownCSS.dropdown} initial={{ visibility: 'hidden', opacity: 0, transform: "translateY(-20px)" }} animate={isDropdownOpen ? dropdownVariant.visible : dropdownVariant.hidden}>
             <ul>
                 {
-                    props.items.map(item => {
+                    items.map(item => {
 
                         return (
                             <DropdownItem key={item.id} item={item} onActionChange={handleActionChange} />
@@ -31,8 +28,8 @@ const Dropdown = forwardRef<HTMLDivElement, DropdownProps>((props, outerRef) => 
                     })
                 }
             </ul>
-        </div>
+        </motion.div>
     )
-})
+}
 
 export default Dropdown

@@ -25,7 +25,7 @@ function SidebarItem({ sidebarLink, color, activeRoute, onRouteChange }: Sidebar
     const { localization } = useContext(LocalizationContext)
 
     return (
-        <Button additionalClasses={`${sidebarLink.linkTo !== Paths.LOGOUT && sidebarItemCSS.sidebarItem} ${activeRoute ? sidebarItemCSS.active : ''} ${sidebarLink.linkTo === Paths.LOGOUT && sidebarItemCSS.logoutSidebarItem}`} size={ButtonSize.SMALL} type={ButtonType.PRIMARY} onClick={onRouteChange} >
+        <Button additionalClasses={`${sidebarLink.linkTo !== Paths.LOGOUT && sidebarItemCSS.sidebarItem} ${activeRoute ? sidebarItemCSS.active : ''} ${sidebarLink.linkTo === Paths.LOGOUT && sidebarItemCSS.logoutSidebarItem}`} size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} onClick={onRouteChange} >
             <Svg path={sidebarLink.icon} width='21' height='19' viewBox='0 -1 19 22' color={color} fillRule={SvgFillRule.EVENODD} clipRule={SvgClipRule.EVENODD} />
             <span className={sidebarItemCSS.name}>{localization[sidebarLink.name]}</span>
         </Button>

@@ -5,22 +5,12 @@
 .optionsList {
     width: 100%;
     position: absolute;
-    top: 40px;
     border: 1px solid $black5;
     border-radius: 8px;
     background-color: $white;
     padding: 0.5rem;
     box-shadow: 0 0 15px rgba($black, 0.05);
-    transition: all 200ms ease;
-    transform: translateY(-10px);
-    opacity: 0;
-    visibility: hidden;
-}
-
-.optionsListVisible {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0px);
+    z-index: 9999;
 }
 
 .option {
