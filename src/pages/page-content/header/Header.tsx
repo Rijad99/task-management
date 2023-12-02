@@ -34,8 +34,8 @@ const Header = forwardRef<HTMLDivElement>((_, ref) => {
             <span className={headerCSS.title}>{localization[currentTitle!]}</span>
             <Search />
             <div className={headerCSS.headerRightSide}>
+                <LanguageSelect />
                 <div className={headerCSS.actions}>
-                    <LanguageSelect />
                     <MessageItem />
                     <NotificationItem notifications={notificationsData} />
                 </div>

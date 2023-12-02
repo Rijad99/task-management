@@ -42,7 +42,7 @@ function NotificationItem({ notifications }: NotificationItemProps) {
 
     return (
         <div className={notificationItemCSS.notificationItem}>
-            <Tooltip text={`${newNotifications.length} ${localization.newNotifications}`} position={TooltipPosition.RIGHT} tooltipClasses={`${notificationItemCSS.notificationTooltip} ${utilsCSS.mr1}`}>
+            <Tooltip text={`${newNotifications.length} ${localization.newNotifications}`} position={TooltipPosition.BOTTOM} tooltipClasses={`${notificationItemCSS.notificationTooltip} ${utilsCSS.mr1}`}>
                 <Button size={ButtonSize.SMALLEST} type={ButtonType.PRIMARY} onClick={handleShowNotificationsPopup} additionalClasses={notificationItemCSS.notificationButton}>
                     <Svg path={notificationIcon} width='21' height='19' viewBox='0 -1 19 22' color={SvgColors.NEUTRAL} fillRule={SvgFillRule.EVENODD} clipRule={SvgClipRule.EVENODD} />
                     {

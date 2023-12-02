@@ -19,7 +19,7 @@ const Options = forwardRef<HTMLUListElement, OptionsProps>((props, ref) => {
     const { optionsVariant, handleOptionChange } = useOptionsHook(props.onOptionChange)
 
     return (
-        <motion.ul ref={ref} className={optionsCSS.optionsList} initial={{ visibility: 'hidden', opacity: 0, transform: "translateY(-20px)" }} animate={props.isSelectOpen ? optionsVariant.visible : optionsVariant.hidden}>
+        <motion.ul ref={ref} className={optionsCSS.optionsList} initial={{ opacity: 0, transform: "translateY(-20px)" }} animate={props.isSelectOpen ? optionsVariant.visible : optionsVariant.hidden}>
 
             {
                 props.options.map(option => {

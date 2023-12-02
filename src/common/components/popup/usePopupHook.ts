@@ -1,15 +1,19 @@
 // React
-import {useEffect, useRef} from "react"
+import {useRef} from "react"
+
+// Custom Hooks
+import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 
 
 
 function usePopupHook(onOutsideClickPopupClose: () => void) {
-    const popupRef = useRef<HTMLDivElement>(null)
+    const popupRef = useRef<HTMLElement>(null)
+
+    useOutsideClickHook(popupRef, onOutsideClickPopupClose)
 
     const popupVariant = {
         visible: {
             opacity: 1,
-            visibility: 'visible',
             transform: "translateY(0px) scale(1)",
             transition: {
                 duration: 0.25
@@ -17,29 +21,12 @@ function usePopupHook(onOutsideClickPopupClose: () => void) {
         },
         hidden: {
             opacity: 0,
-            visibility: 'hidden',
             transform: "translateY(-10px) scale(0.8)",
             transition: {
                 duration: 0.25
             }
         }
     }
-
-    useEffect(() => {
-
-        const handleClickOutside = (e: MouseEvent) => {
-
-            if (popupRef.current && !popupRef.current.contains(e.target as Node)) {
-                onOutsideClickPopupClose()
-            }
-        }
-
-        document.addEventListener('click', handleClickOutside, true)
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside, true)
-        }
-    }, [])
 
     return { popupRef, popupVariant }
 }

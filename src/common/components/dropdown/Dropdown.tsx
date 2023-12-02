@@ -17,7 +17,7 @@ function Dropdown({ items, isDropdownOpen, onActionChange, onOutsideClickDropdow
     const { dropdownRef, dropdownVariant, handleActionChange } = useDropdownHook(onActionChange, onOutsideClickDropdownClose)
 
     return (
-        <motion.div ref={dropdownRef} className={dropdownCSS.dropdown} initial={{ visibility: 'hidden', opacity: 0, transform: "translateY(-20px)" }} animate={isDropdownOpen ? dropdownVariant.visible : dropdownVariant.hidden}>
+        <motion.div ref={dropdownRef} className={dropdownCSS.dropdown} initial={{ opacity: 0, transform: "translateY(-20px)" }} animate={isDropdownOpen ? dropdownVariant.visible : dropdownVariant.hidden}>
             <ul>
                 {
                     items.map(item => {

@@ -1,16 +1,20 @@
 // React
-import {createRef, useEffect, useState} from "react"
+import {createRef, useState} from "react"
 
 // Types
 import {Option} from "./components/options/Options.types"
 
+// Custom Hooks
+import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
+
 
 
 function useSelectHook(onOptionChange: (option: Option) => void) {
-
     const [isSelectOpen, setIsSelectOpen] = useState<boolean>(false)
 
-    const optionsRef = createRef<HTMLUListElement>()
+    const optionsRef = createRef<HTMLElement>()
+
+    useOutsideClickHook(optionsRef, setIsSelectOpen)
 
     const handleSelectOpen = () => {
         setIsSelectOpen(!isSelectOpen)
@@ -21,22 +25,6 @@ function useSelectHook(onOptionChange: (option: Option) => void) {
 
         setIsSelectOpen(false)
     }
-
-    useEffect(() => {
-
-        const handleClickOutside = (e: MouseEvent) => {
-
-            if (optionsRef.current && !optionsRef.current.contains(e.target as Node)) {
-                setIsSelectOpen(false)
-            }
-        }
-
-        document.addEventListener('click', handleClickOutside, true)
-
-        return () => {
-            document.removeEventListener('click', handleClickOutside, true)
-        }
-    }, [])
 
     return { optionsRef, isSelectOpen, handleSelectOpen, handleOptionChange }
 }

@@ -17,7 +17,7 @@ function Popup(props: PropsWithChildren<PopupProps>) {
     const { popupRef, popupVariant } = usePopupHook(props.onOutsideClickPopupClose)
 
     return (
-        <motion.div ref={popupRef} className={popupCSS.popupContainer} initial={{ visibility: 'hidden', opacity: 0, transform: "translateY(-10px) scale(0.8)" }} animate={props.isPopupShown ? popupVariant.visible : popupVariant.hidden} variants={popupVariant}>
+        <motion.div ref={popupRef} className={popupCSS.popupContainer} initial={{ opacity: 0, transform: "translateY(-10px) scale(0.8)" }} animate={props.isPopupShown ? popupVariant.visible : popupVariant.hidden} variants={popupVariant}>
             {props.children}
         </motion.div>
     )
