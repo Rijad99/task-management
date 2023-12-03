@@ -10,7 +10,7 @@ import subHeaderCSS from "./SubHeader.module.scss"
 import utilsCSS from "../../../../common/scss/utils.module.scss"
 
 // Icons
-import {plusIcon} from "../../../../common/icons/icons"
+import {plusIcon, sortIcon} from "../../../../common/icons/icons"
 
 // ENUMS
 import {ButtonSize, ButtonType} from "../../../../common/components/button/Button.types"
@@ -33,6 +33,10 @@ function SubHeader({ isSelectedProject }: SubHeaderProps) {
                 <Button size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={subHeaderCSS.addNewButton}>
                     <Svg path={plusIcon} width="16" height="11" viewBox="0 0 13 12" color={SvgColors.WHITE} additionalClasses={utilsCSS.mr05} />
                     {localization.new}
+                </Button>
+                <Button size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={subHeaderCSS.sortButton}>
+                    {localization.sortBy}
+                    <Svg path={sortIcon} width="16" height="11" viewBox="0 0 13 12" color={SvgColors.NEUTRAL} additionalClasses={utilsCSS.ml05} />
                 </Button>
             </>
     )

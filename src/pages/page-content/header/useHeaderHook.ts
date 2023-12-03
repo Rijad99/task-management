@@ -8,7 +8,6 @@ import { setTitle } from './utils/utils'
 
 
 function useHeaderHook() {
-
     const [currentTitle, setCurrentTitle] = useState<string | null>(null)
 
     const location = useLocation()

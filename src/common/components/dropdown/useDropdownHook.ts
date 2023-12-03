@@ -10,7 +10,7 @@ import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 
 
 function useDropdownHook(onActionChange: (item: DropdownItem) => void, onOutsideClickDropdownClose: () => void) {
-    const dropdownRef = useRef<HTMLElement>(null)
+    const dropdownRef = useRef<HTMLDivElement>(null as HTMLDivElement)
 
     useOutsideClickHook(dropdownRef, onOutsideClickDropdownClose)
 

@@ -12,7 +12,7 @@ import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 function useSelectHook(onOptionChange: (option: Option) => void) {
     const [isSelectOpen, setIsSelectOpen] = useState<boolean>(false)
 
-    const optionsRef = createRef<HTMLElement>()
+    const optionsRef = createRef<HTMLUListElement>()
 
     useOutsideClickHook(optionsRef, setIsSelectOpen)
 

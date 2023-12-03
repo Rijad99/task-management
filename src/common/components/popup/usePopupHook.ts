@@ -7,7 +7,7 @@ import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 
 
 function usePopupHook(onOutsideClickPopupClose: () => void) {
-    const popupRef = useRef<HTMLElement>(null)
+    const popupRef = useRef<HTMLDivElement>(null as HTMLDivElement)
 
     useOutsideClickHook(popupRef, onOutsideClickPopupClose)
 
