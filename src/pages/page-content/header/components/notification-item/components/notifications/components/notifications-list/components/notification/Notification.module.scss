@@ -1,6 +1,4 @@
-@import '../../../../../../../../../../../common/scss/variables';
-
-
+@import "../../../../../../../../../../../common/scss/variables";
 
 .notification {
   display: flex;
@@ -32,8 +30,8 @@
 
   .circle {
     position: relative;
-      width: 37px;
-      height: 37px;
+    width: 37px;
+    height: 37px;
 
     img {
       width: 100%;
@@ -79,7 +77,8 @@
       font-size: $bodyThree;
       white-space: nowrap;
 
-      .user, .task {
+      .user,
+      .task {
         font-weight: $medium;
       }
     }

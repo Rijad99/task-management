@@ -1,36 +1,34 @@
-@import '../../../common/scss/variables.scss';
-
-
+@import "../../../common/scss/variables.scss";
 
 .informationBoxContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .informationBox {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background-color: $white;
-    border: 1px solid $black5;
-    border-radius: 24px;
-    box-shadow: 0 0 15px rgba($black5, 0.25);
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: $white;
+  border: 1px solid $black5;
+  border-radius: 24px;
+  box-shadow: 0 0 15px rgba($black5, 0.25);
 }
 
 .title {
-    font-size: $headingThree;
-    font-weight: $medium;
+  font-size: $headingThree;
+  font-weight: $medium;
 }
 
 .description {
-    margin-top: 0.5rem;
-    font-size: $bodyTwo;
-    font-weight: $medium;
-    color: $neutral;
+  margin-top: 0.5rem;
+  font-size: $bodyTwo;
+  font-weight: $medium;
+  color: $neutral;
 }

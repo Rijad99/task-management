@@ -1,4 +1,4 @@
 export interface AccordionHeaderProps {
-    title: string
-    onShowHideContent: () => void
+  title: string;
+  onShowHideContent: () => void;
 }

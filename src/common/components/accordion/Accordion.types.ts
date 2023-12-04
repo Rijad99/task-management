@@ -1,3 +1,3 @@
 export interface AccordionProps {
-    title: string
+  title: string;
 }

@@ -1,28 +1,26 @@
 // React
-import { useContext } from 'react'
+import { useContext } from "react";
 
 // CSS
-import taskStatusCSS from './TaskStatus.module.scss'
+import taskStatusCSS from "./TaskStatus.module.scss";
 
 // Types
-import { TaskStatusProps } from './TaskStatus.types'
+import { TaskStatusProps } from "./TaskStatus.types";
 
 // Context
-import { LocalizationContext } from '../../../../../../../../../../common/context/LocalizationContext'
-
-
+import { LocalizationContext } from "../../../../../../../../../../common/context/LocalizationContext";
 
 function TaskStatus({ status }: TaskStatusProps) {
-    const { localization } = useContext(LocalizationContext)
+  const { localization } = useContext(LocalizationContext);
 
-    const statusStyle = status.split(' ').join('').toLowerCase()
-    const taskStatus = status.split(' ').join('').toLowerCase()
+  const statusStyle = status.split(" ").join("").toLowerCase();
+  const taskStatus = status.split(" ").join("").toLowerCase();
 
-    return ( 
-        <div className={`${taskStatusCSS.status} ${taskStatusCSS[statusStyle]}`}>
-            {localization[taskStatus]}
-        </div>
-        )
+  return (
+    <div className={`${taskStatusCSS.status} ${taskStatusCSS[statusStyle]}`}>
+      {localization[taskStatus]}
+    </div>
+  );
 }
 
-export default TaskStatus
+export default TaskStatus;

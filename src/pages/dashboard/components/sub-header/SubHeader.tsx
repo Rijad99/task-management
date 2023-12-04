@@ -1,45 +1,71 @@
 // React
-import {useContext} from "react";
+import { useContext } from "react";
 
 // Components
-import Button from "../../../../common/components/button/Button"
-import Svg from "../../../../common/components/svg/Svg"
+import Button from "../../../../common/components/button/Button";
+import Svg from "../../../../common/components/svg/Svg";
 
 // CSS
-import subHeaderCSS from "./SubHeader.module.scss"
-import utilsCSS from "../../../../common/scss/utils.module.scss"
+import subHeaderCSS from "./SubHeader.module.scss";
+import utilsCSS from "../../../../common/scss/utils.module.scss";
 
 // Icons
-import {plusIcon, sortIcon} from "../../../../common/icons/icons"
+import { plusIcon, sortIcon } from "../../../../common/icons/icons";
 
 // ENUMS
-import {ButtonSize, ButtonType} from "../../../../common/components/button/Button.types"
-import {SvgColors} from "../../../../common/components/svg/Svg.types"
+import {
+  ButtonSize,
+  ButtonType,
+} from "../../../../common/components/button/Button.types";
+import { SvgColors } from "../../../../common/components/svg/Svg.types";
 
 // Context
-import {LocalizationContext} from "../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../common/context/LocalizationContext";
 
 // Types
-import {SubHeaderProps} from "./SubHeader.types";
-
-
+import { SubHeaderProps } from "./SubHeader.types";
 
 function SubHeader({ isSelectedProject }: SubHeaderProps) {
-    const { localization } = useContext(LocalizationContext)
+  const { localization } = useContext(LocalizationContext);
 
-    return (
-        isSelectedProject() &&
-            <>
-                <Button size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={subHeaderCSS.addNewButton}>
-                    <Svg path={plusIcon} width="16" height="11" viewBox="0 0 13 12" color={SvgColors.WHITE} additionalClasses={utilsCSS.mr05} />
-                    {localization.new}
-                </Button>
-                <Button size={ButtonSize.MEDIUM} type={ButtonType.PRIMARY} onClick={() => null} additionalClasses={subHeaderCSS.sortButton}>
-                    {localization.sortBy}
-                    <Svg path={sortIcon} width="16" height="11" viewBox="0 0 13 12" color={SvgColors.NEUTRAL} additionalClasses={utilsCSS.ml05} />
-                </Button>
-            </>
+  return (
+    isSelectedProject() && (
+      <>
+        <Button
+          size={ButtonSize.MEDIUM}
+          type={ButtonType.PRIMARY}
+          onClick={() => null}
+          additionalClasses={subHeaderCSS.addNewButton}
+        >
+          <Svg
+            path={plusIcon}
+            width="16"
+            height="11"
+            viewBox="0 0 13 12"
+            color={SvgColors.WHITE}
+            additionalClasses={utilsCSS.mr05}
+          />
+          {localization.new}
+        </Button>
+        <Button
+          size={ButtonSize.MEDIUM}
+          type={ButtonType.PRIMARY}
+          onClick={() => null}
+          additionalClasses={subHeaderCSS.sortButton}
+        >
+          {localization.sortBy}
+          <Svg
+            path={sortIcon}
+            width="16"
+            height="11"
+            viewBox="0 0 13 12"
+            color={SvgColors.NEUTRAL}
+            additionalClasses={utilsCSS.ml05}
+          />
+        </Button>
+      </>
     )
+  );
 }
 
-export default SubHeader
+export default SubHeader;

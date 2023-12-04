@@ -1,5 +1,5 @@
 export interface TaskHeaderProps {
-    title: string
-    priority: number
-    status: string
+  title: string;
+  priority: number;
+  status: string;
 }

@@ -1,79 +1,79 @@
-@import '../../scss/variables.scss';
-
-
+@import "../../scss/variables.scss";
 
 .statusContainer {
+  display: flex;
+  align-items: center;
+
+  .status {
+    width: 8px;
+    height: 8px;
     display: flex;
     align-items: center;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-    .status {
-        width: 8px;
-        height: 8px;
-        display: flex;
-        align-items: center;
-        position: relative;
-        border-radius: 50%;
-        cursor: pointer;
-    }
-
-    .statusText {
-        color: $neutral;
-        font-weight: $medium;
-        margin-left: 0.25rem;
-    }
+  .statusText {
+    color: $neutral;
+    font-weight: $medium;
+    margin-left: 0.25rem;
+  }
 }
 
 .green {
-    background-color: $green;
+  background-color: $green;
 }
 
 .red {
-    background-color: $red;
+  background-color: $red;
 }
 
 .gray {
-    background-color: $neutral;
+  background-color: $neutral;
 }
 
 .orange {
-    background-color: $orange;
+  background-color: $orange;
 }
 
 .purple {
-    background-color: $purple;
+  background-color: $purple;
 }
 
 .gray {
-    background-color: $neutral;
+  background-color: $neutral;
 }
 
 .online {
-    background-color: $green10;
-    color: $green;
+  background-color: $green10;
+  color: $green;
 }
 
 .offline {
-    background-color: $black10;
-    color: $black;
+  background-color: $black10;
+  color: $black;
 }
 
 .away {
-    background-color: $orange10;
-    color: $orange;
+  background-color: $orange10;
+  color: $orange;
 }
 
 .outofoffice {
-    background-color: $purple10;
-    color: $purple;
+  background-color: $purple10;
+  color: $purple;
 }
 
-.donotdisturb, .busy, .inameeting {
-    background-color: $red5;
-    color: $red;
+.donotdisturb,
+.busy,
+.inameeting {
+  background-color: $red5;
+  color: $red;
 }
 
 .circle {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
 }

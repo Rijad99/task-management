@@ -1,17 +1,11 @@
 {
-    "id": 2,
-    "name": "ProjectA",
-    "image": "/src/common/images/projects/project-large.png",
-    "participants": [],
-    "tasks": {
-        "todoTasks": [
-        
-        ],
-        "inProgressTasks": [
-
-        ],
-        "completedTasks": [
-            
-        ]
-    }
+  "id": 2,
+  "name": "ProjectA",
+  "image": "/src/common/images/projects/project-large.png",
+  "participants": [],
+  "tasks": {
+    "todoTasks": [],
+    "inProgressTasks": [],
+    "completedTasks": []
+  }
 }

@@ -1,6 +1,6 @@
 export interface StatusProps {
-    status: string
-    showStatusText?: boolean
-    additionalClasses?: string
-    onStatusDropdownOpen?: () => void
+  status: string;
+  showStatusText?: boolean;
+  additionalClasses?: string;
+  onStatusDropdownOpen?: () => void;
 }

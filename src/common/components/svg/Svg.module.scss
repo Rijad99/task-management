@@ -1,35 +1,33 @@
-@import '../../scss/variables.scss';
-
-
+@import "../../scss/variables.scss";
 
 .svg {
-    transition: all 300ms ease;
+  transition: all 300ms ease;
 
-    .green {
-        fill: $green;
-    }
+  .green {
+    fill: $green;
+  }
 
-    .red {
-        fill: $red;
-    }
+  .red {
+    fill: $red;
+  }
 
-    .neutral {
-        fill: $neutral;
-    }
+  .neutral {
+    fill: $neutral;
+  }
 
-    .lightGray {
-        fill: $black10;
-    }
+  .lightGray {
+    fill: $black10;
+  }
 
-    .black {
-        stroke: $black;
-    }
+  .black {
+    stroke: $black;
+  }
 
-    .orange {
-        fill: $orange;
-    }
+  .orange {
+    fill: $orange;
+  }
 
-    .white {
-        fill: $white;
-    }
+  .white {
+    fill: $white;
+  }
 }

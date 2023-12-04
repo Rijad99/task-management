@@ -1,11 +1,9 @@
-@import 'src/common/scss/variables';
-
-
+@import "src/common/scss/variables";
 
 .tasksContainer {
-    margin-top: 3rem;
-    max-height: calc(100vh - 430px);
-    overflow-x: hidden;
-    overflow-y: scroll;
-    padding: 1rem 1rem 1rem 2.5rem;
+  margin-top: 3rem;
+  max-height: calc(100vh - 430px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 1rem 1rem 1rem 2.5rem;
 }

@@ -1,3 +1,3 @@
 export interface SubHeaderProps {
-    isSelectedProject: () => boolean
+  isSelectedProject: () => boolean;
 }

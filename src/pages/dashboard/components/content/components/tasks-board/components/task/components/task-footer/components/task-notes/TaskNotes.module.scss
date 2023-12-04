@@ -1,28 +1,23 @@
-@import 'src/common/scss/variables';
-
-
+@import "src/common/scss/variables";
 
 .notesButton {
-
-    &:hover {
-
-        svg {
-
-            path {
-                fill: $black20;
-            }
-        }
-
-        .number {
-            color: $black30;
-        }
+  &:hover {
+    svg {
+      path {
+        fill: $black20;
+      }
     }
+
+    .number {
+      color: $black30;
+    }
+  }
 }
 
 .number {
-    font-size: $smallestCaption;
-    font-weight: $medium;
-    color: $black20;
-    position: relative;
-    left: -2px;
+  font-size: $smallestCaption;
+  font-weight: $medium;
+  color: $black20;
+  position: relative;
+  left: -2px;
 }

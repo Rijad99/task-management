@@ -1,6 +1,6 @@
 export interface InformationBoxProps {
-    title: string
-    description: string
-    onProceed?: () => void
-    onDismiss?: () => void
+  title: string;
+  description: string;
+  onProceed?: () => void;
+  onDismiss?: () => void;
 }

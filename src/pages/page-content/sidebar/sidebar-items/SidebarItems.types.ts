@@ -1,3 +1,3 @@
 export interface SidebarItemsProps {
-    onPageContentWidthChange: () => void
+  onPageContentWidthChange: () => void;
 }

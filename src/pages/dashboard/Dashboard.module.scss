@@ -1,55 +1,50 @@
-@import '../../common/scss/variables.scss';
-
-
+@import "../../common/scss/variables.scss";
 
 .dashboardGrid {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 87px 75px 1fr;
-    grid-template-areas: 
-        "d-sidebar d-header"
-        "d-sidebar d-subheader"
-        "d-sidebar d-content"
-    ;
-    height: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 87px 75px 1fr;
+  grid-template-areas:
+    "d-sidebar d-header"
+    "d-sidebar d-subheader"
+    "d-sidebar d-content";
+  height: 100%;
 }
 
 .dashboardEmpty {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-        "d-sidebar d-content"
-    ;
-    height: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "d-sidebar d-content";
+  height: 100%;
 }
 
 .dashboardSidebar {
-    grid-area: d-sidebar;
-    padding: 3rem 2rem;
-    border-right: 1px solid $black5;
-    max-height: calc(100vh - 87px);
-    overflow-x: hidden;
-    overflow-y: scroll;
+  grid-area: d-sidebar;
+  padding: 3rem 2rem;
+  border-right: 1px solid $black5;
+  max-height: calc(100vh - 87px);
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .dashboardHeader {
-    grid-area: d-header;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid $black5;
-    padding: 0 6rem 0 1rem;
+  grid-area: d-header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $black5;
+  padding: 0 6rem 0 1rem;
 }
 
 .dashboardSubheader {
-    grid-area: d-subheader;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6rem 0 1rem;
+  grid-area: d-subheader;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem 0 1rem;
 }
 
 .dashboardContent {
-    grid-area: d-content;
+  grid-area: d-content;
 }

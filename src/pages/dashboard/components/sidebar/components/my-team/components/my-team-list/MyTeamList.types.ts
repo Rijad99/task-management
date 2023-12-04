@@ -1,8 +1,6 @@
 // Types
-import { User } from "../../../../../../../page-content/header/components/user/User.types"
-
-
+import { User } from "../../../../../../../page-content/header/components/user/User.types";
 
 export interface MyTeamListProps {
-    myTeam: User[]
+  myTeam: User[];
 }
