@@ -1,5 +1,5 @@
 // Types
-import { Option } from "../../../../../common/components/select/components/options/Options.types";
+import { Option } from "../../../../../common/components/select/components/options/Options.types"
 
 export const languageOptions: Option[] = [
   {
@@ -12,4 +12,4 @@ export const languageOptions: Option[] = [
     value: "German",
     icon: "/src/common/images/flags/german.png",
   },
-];
+]

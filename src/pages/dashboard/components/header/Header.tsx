@@ -1,9 +1,9 @@
 // Components
-import SelectedProject from "./components/selected-project/SelectedProject";
-import Participants from "../sidebar/components/projects/components/participants/Participants";
+import SelectedProject from "./components/selected-project/SelectedProject"
+import Participants from "../sidebar/components/projects/components/participants/Participants"
 
 // Types
-import { HeaderProps } from "./Header.types";
+import { HeaderProps } from "./Header.types"
 
 function Header({
   isProjectSelected,
@@ -19,7 +19,7 @@ function Header({
         <Participants participants={participants} />
       </>
     )
-  );
+  )
 }
 
-export default Header;
+export default Header

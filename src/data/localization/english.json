@@ -37,5 +37,7 @@
   "mentionedYouIn": "mentioned you in",
   "accept": "Accept",
   "deny": "Deny",
-  "sortBy": "Sort by"
+  "sortBy": "Sort by",
+  "dateAscending": "Date ascending",
+  "dateDescending": "Date descending"
 }

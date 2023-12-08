@@ -1,19 +1,19 @@
 // CSS
-import selectedOptionCSS from "./SelectedOption.module.scss";
+import selectedOptionCSS from "./SelectedOption.module.scss"
 
 // Types
-import { SelectedOptionProps } from "./SelectedOption.types";
+import { SelectedOptionProps } from "./SelectedOption.types"
 
 // Icons
-import { arrowIcon } from "../../../../icons/icons";
+import { arrowIcon } from "../../../../icons/icons"
 
 // Components
-import Svg from "../../../svg/Svg";
+import Svg from "../../../svg/Svg"
 import {
   SvgColors,
   SvgStrokeLineCap,
   SvgStrokeLineJoin,
-} from "../../../svg/Svg.types";
+} from "../../../svg/Svg.types"
 
 function SelectedOption({
   selectedOption,
@@ -23,8 +23,8 @@ function SelectedOption({
   onSelectOpen,
 }: SelectedOptionProps) {
   const handleSelectOpen = () => {
-    onSelectOpen();
-  };
+    onSelectOpen()
+  }
 
   return (
     <div
@@ -59,7 +59,7 @@ function SelectedOption({
         />
       </span>
     </div>
-  );
+  )
 }
 
-export default SelectedOption;
+export default SelectedOption

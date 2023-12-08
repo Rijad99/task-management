@@ -1,11 +1,11 @@
 // CSS
-import tooltipCSS from "./Tooltip.module.scss";
+import tooltipCSS from "./Tooltip.module.scss"
 
 // Types
-import { TooltipProps } from "./Tooltip.types";
+import { TooltipProps } from "./Tooltip.types"
 
 // Tooltip hook
-import useTooltipHook from "./useTooltipHook";
+import useTooltipHook from "./useTooltipHook"
 
 function Tooltip({
   text,
@@ -17,7 +17,7 @@ function Tooltip({
   const { tooltipRef, handleShowTooltip, handleHideTooltip } = useTooltipHook(
     text,
     position,
-  );
+  )
 
   return (
     <div
@@ -37,7 +37,7 @@ function Tooltip({
         {text}
       </div>
     </div>
-  );
+  )
 }
 
-export default Tooltip;
+export default Tooltip

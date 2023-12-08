@@ -1,5 +1,5 @@
 // Types
-import { User } from "../../../../../../../user/User.types";
+import { User } from "../../../../../../../user/User.types"
 
 export enum NotificationTypes {
   COMPLETION = "completion",
@@ -14,14 +14,14 @@ export enum NotificationState {
 }
 
 export interface NotificationProps {
-  notification: Notification;
+  notification: Notification
 }
 
 export interface Notification {
-  id: string | number;
-  user: User;
-  task: string;
-  type: NotificationTypes;
-  sentDate: string;
-  state: NotificationState;
+  id: string | number
+  user: User
+  task: string
+  type: NotificationTypes
+  sentDate: string
+  state: NotificationState
 }

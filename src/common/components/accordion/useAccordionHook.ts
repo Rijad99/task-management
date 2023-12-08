@@ -1,15 +1,15 @@
 // React
-import { useState } from "react";
+import { useState } from "react"
 
 // Framer motion
-import { useAnimate } from "framer-motion";
+import { useAnimate } from "framer-motion"
 
 function useAccordionHook() {
-  const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(true);
+  const [isAccordionOpen, setIsAccordionOpen] = useState<boolean>(true)
 
   const [accordionContentScope, animateAccordionContentScope] =
-    useAnimate<HTMLDivElement>();
-  const [arrow, animateArrow] = useAnimate<SVGSVGElement>();
+    useAnimate<HTMLDivElement>()
+  const [arrow, animateArrow] = useAnimate<SVGSVGElement>()
 
   const accordionContentVariant = {
     open: {
@@ -20,7 +20,7 @@ function useAccordionHook() {
       opacity: 0,
       height: 0,
     },
-  };
+  }
 
   const arrowVariant = {
     rotate: {
@@ -35,7 +35,7 @@ function useAccordionHook() {
         duration: 0.25,
       },
     },
-  };
+  }
 
   return {
     isAccordionOpen,
@@ -46,7 +46,7 @@ function useAccordionHook() {
     setIsAccordionOpen,
     animateAccordionContentScope,
     animateArrow,
-  };
+  }
 }
 
-export default useAccordionHook;
+export default useAccordionHook

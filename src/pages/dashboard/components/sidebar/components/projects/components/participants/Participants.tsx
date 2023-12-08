@@ -1,50 +1,50 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // CSS
-import taskParticipantsCSS from "./Participants.module.scss";
+import taskParticipantsCSS from "./Participants.module.scss"
 
 // Types
-import { TaskParticipantsProps } from "./Participants.types";
+import { TaskParticipantsProps } from "./Participants.types"
 
 // Components
-import Participant from "./components/task-participant/Participant";
-import Svg from "../../../../../../../../common/components/svg/Svg";
-import Button from "../../../../../../../../common/components/button/Button";
-import Tooltip from "../../../../../../../../common/components/tooltip/Tooltip";
+import Participant from "./components/task-participant/Participant"
+import Svg from "../../../../../../../../common/components/svg/Svg"
+import Button from "../../../../../../../../common/components/button/Button"
+import Tooltip from "../../../../../../../../common/components/tooltip/Tooltip"
 
 // Icons
-import { plusIcon } from "../../../../../../../../common/icons/icons";
+import { plusIcon } from "../../../../../../../../common/icons/icons"
 
 // ENUMS
-import { SvgColors } from "../../../../../../../../common/components/svg/Svg.types";
+import { SvgColors } from "../../../../../../../../common/components/svg/Svg.types"
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../../../../common/components/button/Button.types";
-import { TooltipPosition } from "../../../../../../../../common/components/tooltip/Tooltip.types";
+} from "../../../../../../../../common/components/button/Button.types"
+import { TooltipPosition } from "../../../../../../../../common/components/tooltip/Tooltip.types"
 
 // Context
-import { LocalizationContext } from "../../../../../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../../../../../common/context/LocalizationContext"
 
 function Participants({ participants }: TaskParticipantsProps) {
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
-  const firstThreeParticipants = participants.slice(0, 3);
+  const firstThreeParticipants = participants.slice(0, 3)
   const restOfParticipantsNumber = participants.slice(
     3,
     participants.length,
-  ).length;
+  ).length
 
   return (
     <div className={taskParticipantsCSS.participants}>
-      {firstThreeParticipants.map((participant) => {
-        return <Participant key={participant.id} participant={participant} />;
+      {firstThreeParticipants.map(participant => {
+        return <Participant key={participant.id} participant={participant} />
       })}
       {restOfParticipantsNumber !== 0 && (
-        <div className={taskParticipantsCSS.restOfParticipants}>
-          {`+${restOfParticipantsNumber}`}
-        </div>
+        <div
+          className={taskParticipantsCSS.restOfParticipants}
+        >{`+${restOfParticipantsNumber}`}</div>
       )}
       <Tooltip
         text={localization.addParticipant}
@@ -70,7 +70,7 @@ function Participants({ participants }: TaskParticipantsProps) {
         </Button>
       </Tooltip>
     </div>
-  );
+  )
 }
 
-export default Participants;
+export default Participants

@@ -1,10 +1,10 @@
 // Types
-import { Option } from "./Options.types";
+import { Option } from "./Options.types"
 
 function useOptionsHook(onOptionChange: (option: Option) => void) {
   const handleOptionChange = (option: Option) => {
-    onOptionChange(option);
-  };
+    onOptionChange(option)
+  }
 
   const optionsVariant = {
     visible: {
@@ -21,9 +21,12 @@ function useOptionsHook(onOptionChange: (option: Option) => void) {
         duration: 0.25,
       },
     },
-  };
+  }
 
-  return { optionsVariant, handleOptionChange };
+  return {
+    optionsVariant,
+    handleOptionChange,
+  }
 }
 
-export default useOptionsHook;
+export default useOptionsHook

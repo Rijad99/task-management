@@ -1,23 +1,23 @@
 // Components
-import Button from "../../../../../common/components/button/Button";
-import Svg from "../../../../../common/components/svg/Svg";
+import Button from "../../../../../common/components/button/Button"
+import Svg from "../../../../../common/components/svg/Svg"
 
 // CSS
-import utilsCSS from "../../../../../common/scss/utils.module.scss";
+import utilsCSS from "../../../../../common/scss/utils.module.scss"
 
 // ENUMS
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../common/components/button/Button.types";
+} from "../../../../../common/components/button/Button.types"
 import {
   SvgColors,
   SvgFillRule,
   SvgClipRule,
-} from "../../../../../common/components/svg/Svg.types";
+} from "../../../../../common/components/svg/Svg.types"
 
 // Icons
-import { messageIcon } from "../../../../../common/icons/icons";
+import { messageIcon } from "../../../../../common/icons/icons"
 
 function MessageItem() {
   return (
@@ -37,7 +37,7 @@ function MessageItem() {
         clipRule={SvgClipRule.EVENODD}
       />
     </Button>
-  );
+  )
 }
 
-export default MessageItem;
+export default MessageItem

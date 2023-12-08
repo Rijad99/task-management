@@ -1,18 +1,18 @@
 // CSS
-import projectItemCSS from "./ProjectItem.module.scss";
+import projectItemCSS from "./ProjectItem.module.scss"
 
 // Types
-import { ProjectItemProps } from "./ProjectItem.types";
-import { Project } from "../../../../../../Dashboard.types";
+import { ProjectItemProps } from "./ProjectItem.types"
+import { Project } from "../../../../../../Dashboard.types"
 
 // Components
-import Button from "../../../../../../../../common/components/button/Button";
+import Button from "../../../../../../../../common/components/button/Button"
 
 // ENUMS
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../../../../common/components/button/Button.types";
+} from "../../../../../../../../common/components/button/Button.types"
 
 function ProjectItem({
   project,
@@ -20,8 +20,8 @@ function ProjectItem({
   onProjectChange,
 }: ProjectItemProps) {
   const handleProjectChange = (project: Project) => {
-    onProjectChange(project);
-  };
+    onProjectChange(project)
+  }
 
   return (
     <Button
@@ -37,7 +37,7 @@ function ProjectItem({
         <span className={projectItemCSS.name}>{project.name}</span>
       </div>
     </Button>
-  );
+  )
 }
 
-export default ProjectItem;
+export default ProjectItem

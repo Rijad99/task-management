@@ -1,16 +1,16 @@
 export interface SvgProps {
-  width: string;
-  height: string;
-  viewBox: string;
-  path: string;
-  color?: string;
-  clipRule?: string | number | undefined;
-  fillRule?: "inherit" | "evenodd" | "nonzero" | undefined;
-  stroke?: string;
-  strokeWidth?: string;
-  strokeLinecap?: "inherit" | "round" | "butt" | "square" | undefined;
-  strokeLinejoin?: "inherit" | "miter" | "round" | "bevel" | undefined;
-  additionalClasses?: string;
+  width: string
+  height: string
+  viewBox: string
+  path: string
+  color?: string
+  clipRule?: string | number | undefined
+  fillRule?: "inherit" | "evenodd" | "nonzero" | undefined
+  stroke?: string
+  strokeWidth?: string
+  strokeLinecap?: "inherit" | "round" | "butt" | "square" | undefined
+  strokeLinejoin?: "inherit" | "miter" | "round" | "bevel" | undefined
+  additionalClasses?: string
 }
 
 export enum SvgColors {

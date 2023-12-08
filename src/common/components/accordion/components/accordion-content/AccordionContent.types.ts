@@ -1,3 +1,3 @@
 export interface AccordionContentProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }

@@ -1,23 +1,23 @@
 // CSS
-import taskNotesCSS from "./TaskNotes.module.scss";
+import taskNotesCSS from "./TaskNotes.module.scss"
 
 // Components
-import Button from "../../../../../../../../../../../../common/components/button/Button";
-import Svg from "../../../../../../../../../../../../common/components/svg/Svg";
+import Button from "../../../../../../../../../../../../common/components/button/Button"
+import Svg from "../../../../../../../../../../../../common/components/svg/Svg"
 
 // ENUMS
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../../../../../../../../common/components/button/Button.types";
+} from "../../../../../../../../../../../../common/components/button/Button.types"
 import {
   SvgColors,
   SvgFillRule,
   SvgClipRule,
-} from "../../../../../../../../../../../../common/components/svg/Svg.types";
+} from "../../../../../../../../../../../../common/components/svg/Svg.types"
 
 // Icons
-import { messageIcon } from "../../../../../../../../../../../../common/icons/icons";
+import { messageIcon } from "../../../../../../../../../../../../common/icons/icons"
 
 function TaskNotes() {
   return (
@@ -38,7 +38,7 @@ function TaskNotes() {
       />
       <span className={taskNotesCSS.number}>3</span>
     </Button>
-  );
+  )
 }
 
-export default TaskNotes;
+export default TaskNotes

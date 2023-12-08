@@ -1,8 +1,8 @@
 export interface ButtonProps {
-  size: ButtonSize;
-  type: ButtonType;
-  additionalClasses?: string;
-  onClick: (e?: any) => void;
+  size: ButtonSize
+  type: ButtonType
+  additionalClasses?: string
+  onClick: (e?: any) => void
 }
 
 export enum ButtonSize {

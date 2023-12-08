@@ -2,10 +2,10 @@
 import {
   User,
   UserStatus,
-} from "../../../../pages/page-content/header/components/user/User.types";
+} from "../../../../pages/page-content/header/components/user/User.types"
 
 // User photo
-import userPhoto from "../../../images/profile-photos/Profile.png";
+import userPhoto from "../../../images/profile-photos/Profile.png"
 
 export const loggedInUser: User = {
   id: 0,
@@ -14,4 +14,4 @@ export const loggedInUser: User = {
   email: "johndoe@gmail.com",
   photo: userPhoto,
   status: UserStatus.ONLINE,
-};
+}

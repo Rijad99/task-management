@@ -1,17 +1,17 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // Status hook
-import useUserStatusHook from "./useUserStatusHook";
+import useUserStatusHook from "./useUserStatusHook"
 
 // Types
-import { StatusProps } from "./UserStatus.types";
+import { StatusProps } from "./UserStatus.types"
 
 // CSS
-import statusCSS from "./UserStatus.module.scss";
+import statusCSS from "./UserStatus.module.scss"
 
 // Context
-import { LocalizationContext } from "../../context/LocalizationContext";
+import { LocalizationContext } from "../../context/LocalizationContext"
 
 function UserStatus({
   status,
@@ -19,11 +19,11 @@ function UserStatus({
   additionalClasses,
   onStatusDropdownOpen,
 }: StatusProps) {
-  const { getStatus } = useUserStatusHook();
+  const { getStatus } = useUserStatusHook()
 
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
-  const statusColor = getStatus(status);
+  const statusColor = getStatus(status)
 
   return (
     <div
@@ -41,7 +41,7 @@ function UserStatus({
         <span className={statusCSS.statusText}>{localization[status]}</span>
       )}
     </div>
-  );
+  )
 }
 
-export default UserStatus;
+export default UserStatus

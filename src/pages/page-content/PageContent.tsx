@@ -1,15 +1,15 @@
 // React
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom"
 
 // CSS
-import PageContentCSS from "./PageContent.module.scss";
+import PageContentCSS from "./PageContent.module.scss"
 
 // Components
-import Sidebar from "./sidebar/Sidebar";
-import Header from "./header/Header";
+import Sidebar from "./sidebar/Sidebar"
+import Header from "./header/Header"
 
 // Page content hook
-import usePageContentHook from "./usePageContentHook";
+import usePageContentHook from "./usePageContentHook"
 
 function PageContent() {
   const {
@@ -17,7 +17,7 @@ function PageContent() {
     headerRef,
     pageContentRef,
     handlePageContentWidthUpdate,
-  } = usePageContentHook();
+  } = usePageContentHook()
 
   return (
     <>
@@ -30,7 +30,7 @@ function PageContent() {
         <Outlet />
       </div>
     </>
-  );
+  )
 }
 
-export default PageContent;
+export default PageContent

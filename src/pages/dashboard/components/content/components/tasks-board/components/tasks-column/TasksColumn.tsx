@@ -1,12 +1,12 @@
 // CSS
-import tasksCSS from "./TasksColumn.module.scss";
+import tasksCSS from "./TasksColumn.module.scss"
 
 // Types
-import { TasksColumnProps } from "./TasksColumn.types";
+import { TasksColumnProps } from "./TasksColumn.types"
 
 // Components
-import TasksColumnHeader from "../tasks-column-header/TasksColumnHeader";
-import Tasks from "../tasks/Tasks";
+import TasksColumnHeader from "../tasks-column-header/TasksColumnHeader"
+import Tasks from "../tasks/Tasks"
 
 function TasksColumn({ tasks, title, category }: TasksColumnProps) {
   return (
@@ -14,7 +14,7 @@ function TasksColumn({ tasks, title, category }: TasksColumnProps) {
       <TasksColumnHeader title={title} tasks={tasks} category={category} />
       <Tasks tasks={tasks} />
     </div>
-  );
+  )
 }
 
-export default TasksColumn;
+export default TasksColumn

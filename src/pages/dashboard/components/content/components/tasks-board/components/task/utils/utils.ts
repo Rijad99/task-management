@@ -1,15 +1,15 @@
 // ENUMS
-import { SvgColors } from "../../../../../../../../../common/components/svg/Svg.types";
+import { SvgColors } from "../../../../../../../../../common/components/svg/Svg.types"
 
 export const getPriorityIconColor = (priority: number) => {
   switch (priority) {
     case 1:
-      return SvgColors.GREEN;
+      return SvgColors.GREEN
 
     case 2:
-      return SvgColors.ORANGE;
+      return SvgColors.ORANGE
 
     case 3:
-      return SvgColors.RED;
+      return SvgColors.RED
   }
-};
+}

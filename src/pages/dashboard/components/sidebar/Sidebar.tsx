@@ -1,9 +1,9 @@
 // Components
-import Projects from "./components/projects/Projects";
-import MyTeam from "./components/my-team/MyTeam";
+import Projects from "./components/projects/Projects"
+import MyTeam from "./components/my-team/MyTeam"
 
 // Types
-import { SidebarProps } from "./Sidebar.types";
+import { SidebarProps } from "./Sidebar.types"
 
 function Sidebar({ handleProjectChange }: SidebarProps) {
   return (
@@ -11,7 +11,7 @@ function Sidebar({ handleProjectChange }: SidebarProps) {
       <Projects onProjectChange={handleProjectChange} />
       <MyTeam />
     </>
-  );
+  )
 }
 
-export default Sidebar;
+export default Sidebar

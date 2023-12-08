@@ -1,31 +1,31 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // CSS
-import taskHeaderCSS from "./TaskHeader.module.scss";
+import taskHeaderCSS from "./TaskHeader.module.scss"
 
 // Types
-import { TaskHeaderProps } from "./TaskHeader.types";
-import { TooltipPosition } from "../../../../../../../../../../common/components/tooltip/Tooltip.types";
+import { TaskHeaderProps } from "./TaskHeader.types"
+import { TooltipPosition } from "../../../../../../../../../../common/components/tooltip/Tooltip.types"
 
 // Components
-import Svg from "../../../../../../../../../../common/components/svg/Svg";
-import Tooltip from "../../../../../../../../../../common/components/tooltip/Tooltip";
-import TaskStatus from "../task-status/TaskStatus";
+import Svg from "../../../../../../../../../../common/components/svg/Svg"
+import Tooltip from "../../../../../../../../../../common/components/tooltip/Tooltip"
+import TaskStatus from "../task-status/TaskStatus"
 
 // Icons
-import { priorityIcon } from "../../../../../../../../../../common/icons/icons";
+import { priorityIcon } from "../../../../../../../../../../common/icons/icons"
 
 // Utils
-import { getPriorityIconColor } from "../../utils/utils";
+import { getPriorityIconColor } from "../../utils/utils"
 
 // Context
-import { LocalizationContext } from "../../../../../../../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../../../../../../../common/context/LocalizationContext"
 
 function TaskHeader({ title, priority, status }: TaskHeaderProps) {
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
-  const priorityIconColor = getPriorityIconColor(priority);
+  const priorityIconColor = getPriorityIconColor(priority)
 
   const getPriorityText = () => {
     switch (priority) {
@@ -33,21 +33,21 @@ function TaskHeader({ title, priority, status }: TaskHeaderProps) {
         return {
           priority: "Low Priority",
           localization: localization.lowPriority,
-        };
+        }
 
       case 2:
         return {
           priority: "Medium Priority",
           localization: localization.mediumPriority,
-        };
+        }
 
       case 3:
         return {
           priority: "High Priority",
           localization: localization.highPriority,
-        };
+        }
     }
-  };
+  }
 
   return (
     <div className={taskHeaderCSS.header}>
@@ -72,7 +72,7 @@ function TaskHeader({ title, priority, status }: TaskHeaderProps) {
       <h4 className={taskHeaderCSS.title}>{title}</h4>
       <TaskStatus status={status} />
     </div>
-  );
+  )
 }
 
-export default TaskHeader;
+export default TaskHeader

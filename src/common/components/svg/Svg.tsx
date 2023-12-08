@@ -1,11 +1,11 @@
 // React
-import { forwardRef } from "react";
+import { forwardRef } from "react"
 
 // CSS
-import SvgCSS from "./Svg.module.scss";
+import SvgCSS from "./Svg.module.scss"
 
 // Types
-import { SvgProps } from "./Svg.types";
+import { SvgProps } from "./Svg.types"
 
 const Svg = forwardRef<SVGSVGElement, SvgProps>(
   (
@@ -47,8 +47,8 @@ const Svg = forwardRef<SVGSVGElement, SvgProps>(
           strokeLinecap={strokeLinecap}
         />
       </svg>
-    );
+    )
   },
-);
+)
 
-export default Svg;
+export default Svg

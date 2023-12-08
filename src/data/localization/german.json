@@ -37,5 +37,7 @@
   "mentionedYouIn": "habe dich erwähnt",
   "accept": "Akzeptieren",
   "deny": "Leugnen",
-  "sortBy": "Sortiere nach"
+  "sortBy": "Sortiere nach",
+  "dateAscending": "Datum aufsteigend",
+  "dateDescending": "Datum absteigend"
 }

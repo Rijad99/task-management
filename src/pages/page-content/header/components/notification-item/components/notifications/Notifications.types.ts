@@ -1,6 +1,6 @@
 // Types
-import { Notification } from "./components/notifications-list/components/notification/Notification.types";
+import { Notification } from "./components/notifications-list/components/notification/Notification.types"
 
 export interface NotificationsProps {
-  notifications: Notification[];
+  notifications: Notification[]
 }

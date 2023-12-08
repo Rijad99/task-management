@@ -1,17 +1,17 @@
 // React
-import { useEffect, Suspense, lazy } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useEffect, Suspense, lazy } from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 // Paths
-import { Paths } from "./common/utils/paths";
+import { Paths } from "./common/utils/paths"
 
 // Components
-import PageContent from "./pages/page-content/PageContent";
-const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"));
+import PageContent from "./pages/page-content/PageContent"
+const Dashboard = lazy(() => import("./pages/dashboard/Dashboard"))
 
 // Providers
-import { LocalizationProvider } from "./common/context/LocalizationContext";
-import { UserProvider } from "./common/context/user-context/UserContext";
+import { LocalizationProvider } from "./common/context/LocalizationContext"
+import { UserProvider } from "./common/context/user-context/UserContext"
 
 function App() {
   useEffect(() => {
@@ -22,9 +22,9 @@ function App() {
           value: "English",
           icon: "/src/common/images/flags/english.png",
         }),
-      );
+      )
     }
-  }, []);
+  }, [])
 
   return (
     <LocalizationProvider>
@@ -87,7 +87,7 @@ function App() {
         </BrowserRouter>
       </UserProvider>
     </LocalizationProvider>
-  );
+  )
 }
 
-export default App;
+export default App

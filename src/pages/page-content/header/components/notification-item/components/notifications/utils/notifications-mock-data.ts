@@ -3,13 +3,13 @@ import {
   Notification,
   NotificationState,
   NotificationTypes,
-} from "../components/notifications-list/components/notification/Notification.types";
-import { UserStatus } from "../../../../user/User.types";
+} from "../components/notifications-list/components/notification/Notification.types"
+import { UserStatus } from "../../../../user/User.types"
 
 // User Photos
-import userOnePhoto from "../../../../../../../../common/images/profile-photos/Profile5.jpg";
-import userThreePhoto from "../../../../../../../../common/images/profile-photos/Profile6.jpg";
-import userFourPhoto from "../../../../../../../../common/images/profile-photos/Profile7.jpg";
+import userOnePhoto from "../../../../../../../../common/images/profile-photos/Profile5.jpg"
+import userThreePhoto from "../../../../../../../../common/images/profile-photos/Profile6.jpg"
+import userFourPhoto from "../../../../../../../../common/images/profile-photos/Profile7.jpg"
 
 export const notificationsData: Notification[] = [
   {
@@ -72,4 +72,4 @@ export const notificationsData: Notification[] = [
     sentDate: "1:52pm",
     state: NotificationState.READ,
   },
-];
+]

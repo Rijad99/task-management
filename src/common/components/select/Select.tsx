@@ -1,15 +1,15 @@
 // CSS
-import selectCSS from "./Select.module.scss";
+import selectCSS from "./Select.module.scss"
 
 // Components
-import SelectedOption from "./components/selected-option/SelectedOption";
-import Options from "./components/options/Options";
+import SelectedOption from "./components/selected-option/SelectedOption"
+import Options from "./components/options/Options"
 
 // Types
-import { SelectProps } from "./Select.types";
+import { SelectProps } from "./Select.types"
 
 // Select hook
-import useSelectHook from "./useSelectHook";
+import useSelectHook from "./useSelectHook"
 
 function Select({
   selectedOption,
@@ -20,7 +20,7 @@ function Select({
   onOptionChange,
 }: SelectProps) {
   const { optionsRef, isSelectOpen, handleSelectOpen, handleOptionChange } =
-    useSelectHook(onOptionChange);
+    useSelectHook(onOptionChange)
 
   return (
     <div
@@ -42,7 +42,7 @@ function Select({
         onOptionChange={handleOptionChange}
       />
     </div>
-  );
+  )
 }
 
-export default Select;
+export default Select

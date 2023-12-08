@@ -1,31 +1,31 @@
 // Components
-import Button from "../../../../common/components/button/Button";
-import Svg from "../../../../common/components/svg/Svg";
-import SidebarItem from "./sidebar-item/SidebarItem";
+import Button from "../../../../common/components/button/Button"
+import Svg from "../../../../common/components/svg/Svg"
+import SidebarItem from "./sidebar-item/SidebarItem"
 
 // Types
-import { SidebarItemsProps } from "./SidebarItems.types";
+import { SidebarItemsProps } from "./SidebarItems.types"
 
 // ENUMS
 import {
   SvgColors,
   SvgStrokeLineCap,
   SvgStrokeLineJoin,
-} from "../../../../common/components/svg/Svg.types";
+} from "../../../../common/components/svg/Svg.types"
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../common/components/button/Button.types";
+} from "../../../../common/components/button/Button.types"
 
 // CSS
-import utilsCSS from "../../../../common/scss/utils.module.scss";
-import sidebarCSS from "../Sidebar.module.scss";
+import utilsCSS from "../../../../common/scss/utils.module.scss"
+import sidebarCSS from "../Sidebar.module.scss"
 
 // SidebarItems hook
-import useSidebarItemsHook from "./useSidebarItemsHook";
+import useSidebarItemsHook from "./useSidebarItemsHook"
 
 // Icons
-import { arrowIcon } from "../../../../common/icons/icons";
+import { arrowIcon } from "../../../../common/icons/icons"
 
 function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
   const {
@@ -35,7 +35,7 @@ function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
     handleNavigateTo,
     handleActiveRoute,
     handleOpenSidebar,
-  } = useSidebarItemsHook(onPageContentWidthChange);
+  } = useSidebarItemsHook(onPageContentWidthChange)
 
   return (
     <>
@@ -44,7 +44,7 @@ function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
         className={`${utilsCSS.max_height} ${utilsCSS.mt4} ${utilsCSS.flex} ${utilsCSS.flex_column} ${utilsCSS.jc_sb}`}
       >
         <div className={sidebarCSS.sidebarItems}>
-          {links.map((sidebarLink) => {
+          {links.map(sidebarLink => {
             return (
               <SidebarItem
                 key={sidebarLink.id}
@@ -53,7 +53,7 @@ function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
                 activeRoute={handleActiveRoute(sidebarLink.linkTo)}
                 onRouteChange={() => handleNavigateTo(sidebarLink.linkTo)}
               />
-            );
+            )
           })}
         </div>
         <SidebarItem
@@ -92,7 +92,7 @@ function SidebarItems({ onPageContentWidthChange }: SidebarItemsProps) {
         />
       </Button>
     </>
-  );
+  )
 }
 
-export default SidebarItems;
+export default SidebarItems

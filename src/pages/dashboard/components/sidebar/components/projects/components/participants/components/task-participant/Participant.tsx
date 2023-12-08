@@ -1,8 +1,8 @@
 // CSS
-import taskParticipantCSS from "./Participant.module.scss";
+import taskParticipantCSS from "./Participant.module.scss"
 
 // Types
-import { TaskParticipantProps } from "./Participant.types";
+import { TaskParticipantProps } from "./Participant.types"
 
 function Participant({ participant }: TaskParticipantProps) {
   return (
@@ -12,7 +12,7 @@ function Participant({ participant }: TaskParticipantProps) {
         className={taskParticipantCSS.participantPhoto}
       />
     </div>
-  );
+  )
 }
 
-export default Participant;
+export default Participant

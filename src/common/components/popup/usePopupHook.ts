@@ -1,13 +1,13 @@
 // React
-import { useRef } from "react";
+import { useRef } from "react"
 
 // Custom Hooks
-import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook";
+import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 
 function usePopupHook(onOutsideClickPopupClose: () => void) {
-  const popupRef = useRef<HTMLDivElement>(null as HTMLDivElement);
+  const popupRef = useRef<HTMLDivElement>(null as HTMLDivElement)
 
-  useOutsideClickHook(popupRef, onOutsideClickPopupClose);
+  useOutsideClickHook(popupRef, onOutsideClickPopupClose)
 
   const popupVariant = {
     visible: {
@@ -24,9 +24,12 @@ function usePopupHook(onOutsideClickPopupClose: () => void) {
         duration: 0.25,
       },
     },
-  };
+  }
 
-  return { popupRef, popupVariant };
+  return {
+    popupRef,
+    popupVariant,
+  }
 }
 
-export default usePopupHook;
+export default usePopupHook

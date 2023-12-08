@@ -1,32 +1,33 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // Components
-import Button from "../../../../common/components/button/Button";
-import Svg from "../../../../common/components/svg/Svg";
+import Button from "../../../../common/components/button/Button"
+import Svg from "../../../../common/components/svg/Svg"
+import Sort from "../../../../common/components/sort/Sort.tsx"
 
 // CSS
-import subHeaderCSS from "./SubHeader.module.scss";
-import utilsCSS from "../../../../common/scss/utils.module.scss";
+import subHeaderCSS from "./SubHeader.module.scss"
+import utilsCSS from "../../../../common/scss/utils.module.scss"
 
 // Icons
-import { plusIcon, sortIcon } from "../../../../common/icons/icons";
+import { plusIcon } from "../../../../common/icons/icons"
 
 // ENUMS
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../common/components/button/Button.types";
-import { SvgColors } from "../../../../common/components/svg/Svg.types";
+} from "../../../../common/components/button/Button.types"
+import { SvgColors } from "../../../../common/components/svg/Svg.types"
 
 // Context
-import { LocalizationContext } from "../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../common/context/LocalizationContext"
 
 // Types
-import { SubHeaderProps } from "./SubHeader.types";
+import { SubHeaderProps } from "./SubHeader.types"
 
 function SubHeader({ isSelectedProject }: SubHeaderProps) {
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
   return (
     isSelectedProject() && (
@@ -47,25 +48,10 @@ function SubHeader({ isSelectedProject }: SubHeaderProps) {
           />
           {localization.new}
         </Button>
-        <Button
-          size={ButtonSize.MEDIUM}
-          type={ButtonType.PRIMARY}
-          onClick={() => null}
-          additionalClasses={subHeaderCSS.sortButton}
-        >
-          {localization.sortBy}
-          <Svg
-            path={sortIcon}
-            width="16"
-            height="11"
-            viewBox="0 0 13 12"
-            color={SvgColors.NEUTRAL}
-            additionalClasses={utilsCSS.ml05}
-          />
-        </Button>
+        <Sort />
       </>
     )
-  );
+  )
 }
 
-export default SubHeader;
+export default SubHeader

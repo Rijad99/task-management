@@ -1,30 +1,30 @@
 // CSS
-import teamUserCSS from "./TeamUser.module.scss";
-import utilsCSS from "../../../../../../../../common/scss/utils.module.scss";
+import teamUserCSS from "./TeamUser.module.scss"
+import utilsCSS from "../../../../../../../../common/scss/utils.module.scss"
 
 // Types
-import { UserProps } from "./TeamUser.types";
+import { UserProps } from "./TeamUser.types"
 
 // Components
-import Button from "../../../../../../../../common/components/button/Button";
-import Svg from "../../../../../../../../common/components/svg/Svg";
+import Button from "../../../../../../../../common/components/button/Button"
+import Svg from "../../../../../../../../common/components/svg/Svg"
 
 // ENUMS
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../../../../common/components/button/Button.types";
+} from "../../../../../../../../common/components/button/Button.types"
 import {
   SvgStrokeLineCap,
   SvgStrokeLineJoin,
-} from "../../../../../../../../common/components/svg/Svg.types";
+} from "../../../../../../../../common/components/svg/Svg.types"
 
 // Icons
-import { arrowIcon } from "../../../../../../../../common/icons/icons";
-import UserStatus from "../../../../../../../../common/components/user-status/UserStatus";
+import { arrowIcon } from "../../../../../../../../common/icons/icons"
+import UserStatus from "../../../../../../../../common/components/user-status/UserStatus"
 
 function TeamUser({ user }: UserProps) {
-  const handleShowHideUserDropdown = () => {};
+  const handleShowHideUserDropdown = () => {}
 
   return (
     <Button
@@ -55,7 +55,7 @@ function TeamUser({ user }: UserProps) {
         additionalClasses={teamUserCSS.arrow}
       />
     </Button>
-  );
+  )
 }
 
-export default TeamUser;
+export default TeamUser

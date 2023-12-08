@@ -1,18 +1,18 @@
 // React
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react"
 
 // CSS
-import accordionCSS from "./Accordion.module.scss";
+import accordionCSS from "./Accordion.module.scss"
 
 // Components
-import AccordionHeader from "./components/accordion-header/AccordionHeader";
-import AccordionContent from "./components/accordion-content/AccordionContent";
+import AccordionHeader from "./components/accordion-header/AccordionHeader"
+import AccordionContent from "./components/accordion-content/AccordionContent"
 
 // Types
-import { AccordionProps } from "./Accordion.types";
+import { AccordionProps } from "./Accordion.types"
 
 // Accordion hook
-import useAccordionHook from "./useAccordionHook";
+import useAccordionHook from "./useAccordionHook"
 
 function Accordion(props: PropsWithChildren<AccordionProps>) {
   const {
@@ -24,7 +24,7 @@ function Accordion(props: PropsWithChildren<AccordionProps>) {
     setIsAccordionOpen,
     animateAccordionContentScope,
     animateArrow,
-  } = useAccordionHook();
+  } = useAccordionHook()
 
   const handleShowHideContent = () => {
     animateAccordionContentScope(
@@ -32,14 +32,14 @@ function Accordion(props: PropsWithChildren<AccordionProps>) {
       isAccordionOpen
         ? accordionContentVariant.closed
         : accordionContentVariant.open,
-    );
+    )
     animateArrow(
       arrow.current,
       isAccordionOpen ? arrowVariant.rotate : arrowVariant.rotateToInitial,
-    );
+    )
 
-    setIsAccordionOpen(!isAccordionOpen);
-  };
+    setIsAccordionOpen(!isAccordionOpen)
+  }
 
   return (
     <div className={accordionCSS.accordion}>
@@ -50,7 +50,7 @@ function Accordion(props: PropsWithChildren<AccordionProps>) {
       />
       <AccordionContent ref={accordionContentScope} children={props.children} />
     </div>
-  );
+  )
 }
 
-export default Accordion;
+export default Accordion

@@ -1,27 +1,27 @@
 // CSS
-import notificationCSS from "./Notification.module.scss";
+import notificationCSS from "./Notification.module.scss"
 
 // Components
-import Button from "../../../../../../../../../../../common/components/button/Button";
-import UserStatus from "../../../../../../../../../../../common/components/user-status/UserStatus";
+import Button from "../../../../../../../../../../../common/components/button/Button"
+import UserStatus from "../../../../../../../../../../../common/components/user-status/UserStatus"
 
 // Types
 import {
   NotificationProps,
   NotificationTypes,
   NotificationState,
-} from "./Notification.types";
+} from "./Notification.types"
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../../../../../../../common/components/button/Button.types";
+} from "../../../../../../../../../../../common/components/button/Button.types"
 
 // Notification hook
-import useNotificationHook from "./useNotificationHook";
+import useNotificationHook from "./useNotificationHook"
 
 function Notification({ notification }: NotificationProps) {
   const { localization, description, userInitials, initialsCircleColor } =
-    useNotificationHook(notification);
+    useNotificationHook(notification)
 
   return (
     <div
@@ -75,7 +75,7 @@ function Notification({ notification }: NotificationProps) {
         )}
       </div>
     </div>
-  );
+  )
 }
 
-export default Notification;
+export default Notification

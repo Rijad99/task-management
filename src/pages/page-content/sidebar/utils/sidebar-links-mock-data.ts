@@ -1,6 +1,6 @@
 // Types
-import { Paths } from "../../../../common/utils/paths";
-import { SidebarLink } from "./types";
+import { Paths } from "../../../../common/utils/paths"
+import { SidebarLink } from "./types"
 
 // Icons
 import {
@@ -10,7 +10,7 @@ import {
   reportsIcon,
   settingsIcon,
   sprintIcon,
-} from "../../../../common/icons/icons";
+} from "../../../../common/icons/icons"
 
 export const sidebarLinks: SidebarLink[] = [
   {
@@ -49,4 +49,4 @@ export const sidebarLinks: SidebarLink[] = [
     linkTo: Paths.LOGOUT,
     icon: logoutIcon,
   },
-];
+]

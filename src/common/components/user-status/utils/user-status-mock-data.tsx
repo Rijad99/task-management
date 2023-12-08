@@ -1,12 +1,12 @@
 // Types
-import { DropdownItem } from "../../dropdown/components/dropdown-item/DropdownItem.types";
+import { DropdownItem } from "../../dropdown/components/dropdown-item/DropdownItem.types"
 
 // ENUMS
-import { UserStatus } from "../../../../pages/page-content/header/components/user/User.types";
+import { UserStatus } from "../../../../pages/page-content/header/components/user/User.types"
 
 // CSS
-import userStatusCSS from "../UserStatus.module.scss";
-import utilsCSS from "../../../scss/utils.module.scss";
+import userStatusCSS from "../UserStatus.module.scss"
+import utilsCSS from "../../../scss/utils.module.scss"
 
 export const userStatusData: DropdownItem[] = [
   {
@@ -72,4 +72,4 @@ export const userStatusData: DropdownItem[] = [
       ></div>
     ),
   },
-];
+]

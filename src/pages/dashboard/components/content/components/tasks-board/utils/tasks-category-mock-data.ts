@@ -1,5 +1,5 @@
 // Types
-import { TaskCategory } from "../TasksBoard.types";
+import { TaskCategory } from "../TasksBoard.types"
 
 export const tasksCategory: TaskCategory[] = [
   {
@@ -14,4 +14,4 @@ export const tasksCategory: TaskCategory[] = [
     id: 2,
     category: "completedTasks",
   },
-];
+]

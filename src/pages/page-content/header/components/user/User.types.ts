@@ -1,18 +1,18 @@
 export interface UserProps {
-  firstName: string;
-  lastName: string;
-  email: string;
-  photo: string;
-  status: string;
+  firstName: string
+  lastName: string
+  email: string
+  photo: string
+  status: string
 }
 
 export interface User {
-  id: string | number;
-  firstName: string;
-  lastName: string;
-  email: string;
-  photo: string;
-  status: UserStatus;
+  id: string | number
+  firstName: string
+  lastName: string
+  email: string
+  photo: string
+  status: UserStatus
 }
 
 export enum UserStatus {

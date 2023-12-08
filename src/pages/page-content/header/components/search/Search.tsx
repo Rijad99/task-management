@@ -1,25 +1,25 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // Components
-import FormControl from "../../../../../common/components/form/form-control/FormControl";
+import FormControl from "../../../../../common/components/form/form-control/FormControl"
 
 // CSS
-import searchCSS from "./Search.module.scss";
+import searchCSS from "./Search.module.scss"
 
 // Icons
-import { searchIcon } from "../../../../../common/icons/icons";
+import { searchIcon } from "../../../../../common/icons/icons"
 
 // Context
-import { LocalizationContext } from "../../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../../common/context/LocalizationContext"
 
 // Search hook
-import useSearchHook from "./useSearchHook";
+import useSearchHook from "./useSearchHook"
 
 function Search() {
-  const { search, handleSearch } = useSearchHook();
+  const { search, handleSearch } = useSearchHook()
 
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
   return (
     <FormControl
@@ -31,7 +31,7 @@ function Search() {
       additionalClasses={searchCSS.search}
       onInput={handleSearch}
     />
-  );
+  )
 }
 
-export default Search;
+export default Search

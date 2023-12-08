@@ -1,15 +1,15 @@
 // CSS
-import formControlCSS from "./FormControl.module.scss";
-import utilsCSS from "../../../scss/utils.module.scss";
+import formControlCSS from "./FormControl.module.scss"
+import utilsCSS from "../../../scss/utils.module.scss"
 
 // Components
-import Svg from "../../svg/Svg";
+import Svg from "../../svg/Svg"
 
 // Types
-import { FormControlProps } from "./FormControl.types";
+import { FormControlProps } from "./FormControl.types"
 
 // ENUMS
-import { SvgColors } from "../../svg/Svg.types";
+import { SvgColors } from "../../svg/Svg.types"
 
 function FormControl({
   type,
@@ -51,7 +51,7 @@ function FormControl({
         onInput={onInput}
       />
     </div>
-  );
+  )
 }
 
-export default FormControl;
+export default FormControl

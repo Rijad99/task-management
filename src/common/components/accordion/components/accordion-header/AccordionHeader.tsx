@@ -1,24 +1,24 @@
 // React
-import { forwardRef } from "react";
+import { forwardRef } from "react"
 
 // CSS
-import accordionHeaderCSS from "./AccordionHeader.module.scss";
+import accordionHeaderCSS from "./AccordionHeader.module.scss"
 
 // Components
-import Svg from "../../../svg/Svg";
+import Svg from "../../../svg/Svg"
 
 // Types
-import { AccordionHeaderProps } from "./AccordionHeader.types";
+import { AccordionHeaderProps } from "./AccordionHeader.types"
 
 // ENUMS
 import {
   SvgColors,
   SvgStrokeLineCap,
   SvgStrokeLineJoin,
-} from "../../../svg/Svg.types";
+} from "../../../svg/Svg.types"
 
 // Icons
-import { arrowIcon } from "../../../../icons/icons";
+import { arrowIcon } from "../../../../icons/icons"
 
 const AccordionHeader = forwardRef<SVGSVGElement, AccordionHeaderProps>(
   (props, ref) => {
@@ -40,8 +40,8 @@ const AccordionHeader = forwardRef<SVGSVGElement, AccordionHeaderProps>(
           strokeLinejoin={SvgStrokeLineJoin.ROUND}
         />
       </div>
-    );
+    )
   },
-);
+)
 
-export default AccordionHeader;
+export default AccordionHeader

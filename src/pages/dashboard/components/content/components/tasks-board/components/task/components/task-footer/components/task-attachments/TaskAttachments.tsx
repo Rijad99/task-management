@@ -1,24 +1,24 @@
 // CSS
-import taskAttachmentsCSS from "./TaskAttachments.module.scss";
-import utilsCSS from "../../../../../../../../../../../../common/scss/utils.module.scss";
+import taskAttachmentsCSS from "./TaskAttachments.module.scss"
+import utilsCSS from "../../../../../../../../../../../../common/scss/utils.module.scss"
 
 // Components
-import Button from "../../../../../../../../../../../../common/components/button/Button";
-import Svg from "../../../../../../../../../../../../common/components/svg/Svg";
+import Button from "../../../../../../../../../../../../common/components/button/Button"
+import Svg from "../../../../../../../../../../../../common/components/svg/Svg"
 
 // ENUMS
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../../../../../../../../common/components/button/Button.types";
+} from "../../../../../../../../../../../../common/components/button/Button.types"
 import {
   SvgColors,
   SvgFillRule,
   SvgClipRule,
-} from "../../../../../../../../../../../../common/components/svg/Svg.types";
+} from "../../../../../../../../../../../../common/components/svg/Svg.types"
 
 // Icons
-import { fileIcon } from "../../../../../../../../../../../../common/icons/icons";
+import { fileIcon } from "../../../../../../../../../../../../common/icons/icons"
 
 function TaskAttachments() {
   return (
@@ -39,7 +39,7 @@ function TaskAttachments() {
       />
       <span className={taskAttachmentsCSS.number}>2</span>
     </Button>
-  );
+  )
 }
 
-export default TaskAttachments;
+export default TaskAttachments

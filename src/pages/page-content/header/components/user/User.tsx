@@ -1,30 +1,30 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // CSS
-import userCSS from "./User.module.scss";
-import utilsCSS from "../../../../../common/scss/utils.module.scss";
-import statusCSS from "../../../../../common/components/user-status/UserStatus.module.scss";
+import userCSS from "./User.module.scss"
+import utilsCSS from "../../../../../common/scss/utils.module.scss"
+import statusCSS from "../../../../../common/components/user-status/UserStatus.module.scss"
 
 // Components
-import UserStatus from "../../../../../common/components/user-status/UserStatus";
-import Dropdown from "../../../../../common/components/dropdown/Dropdown";
-import Tooltip from "../../../../../common/components/tooltip/Tooltip";
+import UserStatus from "../../../../../common/components/user-status/UserStatus"
+import Dropdown from "../../../../../common/components/dropdown/Dropdown"
+import Tooltip from "../../../../../common/components/tooltip/Tooltip"
 
 // ENUMS
-import { TooltipPosition } from "../../../../../common/components/tooltip/Tooltip.types";
+import { TooltipPosition } from "../../../../../common/components/tooltip/Tooltip.types"
 
 // Types
-import { UserProps } from "./User.types";
+import { UserProps } from "./User.types"
 
 // Data
-import { userStatusData } from "../../../../../common/components/user-status/utils/user-status-mock-data";
+import { userStatusData } from "../../../../../common/components/user-status/utils/user-status-mock-data"
 
 // User hook
-import useUserHook from "./useUserHook";
+import useUserHook from "./useUserHook"
 
 // Context
-import { LocalizationContext } from "../../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../../common/context/LocalizationContext"
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
   const {
@@ -32,9 +32,9 @@ function User({ firstName, lastName, email, photo, status }: UserProps) {
     setIsUserStatusDropdownOpen,
     handleChangeStatus,
     handleStatusDropdownOpen,
-  } = useUserHook();
+  } = useUserHook()
 
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
   return (
     <div className={userCSS.userContainer}>
@@ -65,7 +65,7 @@ function User({ firstName, lastName, email, photo, status }: UserProps) {
         />
       </div>
     </div>
-  );
+  )
 }
 
-export default User;
+export default User

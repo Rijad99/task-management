@@ -1,29 +1,29 @@
 // React
-import { useContext } from "react";
+import { useContext } from "react"
 
 // Components
-import Button from "../../../../../common/components/button/Button";
-import Svg from "../../../../../common/components/svg/Svg";
+import Button from "../../../../../common/components/button/Button"
+import Svg from "../../../../../common/components/svg/Svg"
 
 // CSS
-import sidebarItemCSS from "./SidebarItem.module.scss";
+import sidebarItemCSS from "./SidebarItem.module.scss"
 
 // Types
-import { SidebarItemProps } from "./SidebarItem.types";
+import { SidebarItemProps } from "./SidebarItem.types"
 import {
   ButtonSize,
   ButtonType,
-} from "../../../../../common/components/button/Button.types";
+} from "../../../../../common/components/button/Button.types"
 
 // ENUMS
 import {
   SvgFillRule,
   SvgClipRule,
-} from "../../../../../common/components/svg/Svg.types";
-import { Paths } from "../../../../../common/utils/paths";
+} from "../../../../../common/components/svg/Svg.types"
+import { Paths } from "../../../../../common/utils/paths"
 
 // Context
-import { LocalizationContext } from "../../../../../common/context/LocalizationContext";
+import { LocalizationContext } from "../../../../../common/context/LocalizationContext"
 
 function SidebarItem({
   sidebarLink,
@@ -31,7 +31,7 @@ function SidebarItem({
   activeRoute,
   onRouteChange,
 }: SidebarItemProps) {
-  const { localization } = useContext(LocalizationContext);
+  const { localization } = useContext(LocalizationContext)
 
   return (
     <Button
@@ -57,7 +57,7 @@ function SidebarItem({
         {localization[sidebarLink.name]}
       </span>
     </Button>
-  );
+  )
 }
 
-export default SidebarItem;
+export default SidebarItem

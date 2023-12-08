@@ -1,17 +1,17 @@
 // Framer motion
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"
 
 // CSS
-import dashboardCSS from "./Dashboard.module.scss";
+import dashboardCSS from "./Dashboard.module.scss"
 
 // Components
-import Sidebar from "./components/sidebar/Sidebar";
-import Header from "./components/header/Header";
-import SubHeader from "./components/sub-header/SubHeader";
-import Content from "./components/content/Content";
+import Sidebar from "./components/sidebar/Sidebar"
+import Header from "./components/header/Header"
+import SubHeader from "./components/sub-header/SubHeader"
+import Content from "./components/content/Content"
 
 // Dashboard hook
-import useDashboardHook from "./useDashboardHook";
+import useDashboardHook from "./useDashboardHook"
 
 function Dashboard() {
   const {
@@ -19,7 +19,7 @@ function Dashboard() {
     dashboardSidebarVariant,
     isProjectSelected,
     handleProjectChange,
-  } = useDashboardHook();
+  } = useDashboardHook()
 
   return (
     <div
@@ -31,7 +31,9 @@ function Dashboard() {
     >
       <motion.div
         className={dashboardCSS.dashboardSidebar}
-        initial={{ opacity: 0 }}
+        initial={{
+          opacity: 0,
+        }}
         animate="visible"
         variants={dashboardSidebarVariant}
       >
@@ -53,7 +55,7 @@ function Dashboard() {
         <Content isProjectSelected={isProjectSelected} tasks={project.tasks} />
       </div>
     </div>
-  );
+  )
 }
 
-export default Dashboard;
+export default Dashboard

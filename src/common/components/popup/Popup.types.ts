@@ -1,4 +1,4 @@
 export interface PopupProps {
-  isPopupShown: boolean;
-  onOutsideClickPopupClose: () => void;
+  isPopupShown: boolean
+  onOutsideClickPopupClose: () => void
 }

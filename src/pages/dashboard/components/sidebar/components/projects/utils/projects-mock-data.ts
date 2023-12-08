@@ -1,5 +1,5 @@
 // Types
-import { ProjectItem } from "../Projects.types";
+import { ProjectItem } from "../Projects.types"
 
 export const allProjectsData: ProjectItem[] = [
   {
@@ -22,4 +22,4 @@ export const allProjectsData: ProjectItem[] = [
     name: "ProjectB",
     image: "/src/common/images/projects/project.png",
   },
-];
+]
