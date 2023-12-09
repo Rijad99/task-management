@@ -198,8 +198,59 @@
 				]
 			}
 		],
-		"underReviewTasks": [],
-		"readyForTestingTasks": [],
+		"underReviewTasks": [
+			{
+				"id": 10,
+				"title": "Project X dashboard UI design",
+				"description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
+				"priority": 3,
+				"fromDate": "2023-07-01T18:25:43.511Z",
+				"toDate": "2023-07-07T18:25:43.511Z",
+				"status": "Under Review",
+				"participants": [
+					{
+						"id": 1,
+						"photo": "/src/common/images/profile-photos/Profile1.png"
+					},
+					{
+						"id": 2,
+						"photo": "/src/common/images/profile-photos/Profile2.png"
+					}
+				]
+			},
+			{
+				"id": 11,
+				"title": "Project X dashboard UI design",
+				"description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
+				"priority": 3,
+				"fromDate": "2023-07-01T18:25:43.511Z",
+				"toDate": "2023-07-07T18:25:43.511Z",
+				"status": "Under Review",
+				"participants": [
+					{
+						"id": 1,
+						"photo": "/src/common/images/profile-photos/Profile1.png"
+					}
+				]
+			}
+		],
+		"readyForTestingTasks": [
+			{
+				"id": 12,
+				"title": "Project X dashboard UI design",
+				"description": "Dashboard UI design is a visually engaging and intuitively structured interface tailored to streamline project management",
+				"priority": 3,
+				"fromDate": "2023-07-01T18:25:43.511Z",
+				"toDate": "2023-07-07T18:25:43.511Z",
+				"status": "Ready For Testing",
+				"participants": [
+					{
+						"id": 1,
+						"photo": "/src/common/images/profile-photos/Profile1.png"
+					}
+				]
+			}
+		],
 		"completedTasks": [
 			{
 				"id": 7,

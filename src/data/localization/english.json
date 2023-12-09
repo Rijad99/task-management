@@ -28,6 +28,8 @@
 	"highPriority": "High Priority",
 	"todo": "To Do",
 	"inprogress": "In Progress",
+	"underreview": "Under Review",
+	"readyfortesting": "Ready For Testing",
 	"done": "Done",
 	"addParticipant": "Add Participant",
 	"new": "New",
@@ -41,5 +43,6 @@
 	"deny": "Deny",
 	"sortBy": "Sort by",
 	"dateAscending": "Date ascending",
-	"dateDescending": "Date descending"
+	"dateDescending": "Date descending",
+	"createNewProject": "Create New Project"
 }

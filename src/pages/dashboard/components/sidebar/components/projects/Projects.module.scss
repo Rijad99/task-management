@@ -1,1 +1,19 @@
 @import "src/common/scss/variables";
+
+.createProjectButton {
+	width: 100%;
+	margin-top: 1rem;
+	outline: dashed 1px $black20;
+	color: $neutral;
+
+	&:hover {
+		color: $black;
+		box-shadow: 0 5px 15px rgba($black, 0.075);
+
+		svg {
+			path {
+				fill: $black;
+			}
+		}
+	}
+}

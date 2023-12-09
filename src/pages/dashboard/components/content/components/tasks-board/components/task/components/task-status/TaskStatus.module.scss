@@ -8,14 +8,24 @@
 	border-radius: 8px;
 }
 
+.todo {
+	background-color: $orange5;
+	color: $orange;
+}
+
 .inprogress {
 	background-color: $blue5;
 	color: $blue;
 }
 
-.todo {
-	background-color: $orange5;
-	color: $orange;
+.underreview {
+	background-color: $red5;
+	color: $red;
+}
+
+.readyfortesting {
+	background-color: $purple5;
+	color: $purple;
 }
 
 .done {

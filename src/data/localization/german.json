@@ -28,6 +28,8 @@
 	"highPriority": "Hohe Priorität",
 	"todo": "Machen",
 	"inprogress": "Im Gange",
+	"underreview": "Wird überprüft",
+	"readyfortesting": "Bereit zum Testen",
 	"done": "Erledigt",
 	"addParticipant": "Teilnehmer hinzufügen",
 	"new": "Neu",
@@ -41,5 +43,6 @@
 	"deny": "Leugnen",
 	"sortBy": "Sortiere nach",
 	"dateAscending": "Datum aufsteigend",
-	"dateDescending": "Datum absteigend"
+	"dateDescending": "Datum absteigend",
+	"createNewProject": "Neues Projekt erstellen"
 }
