@@ -6,6 +6,8 @@
   "tasks": {
     "todoTasks": [],
     "inProgressTasks": [],
+    "underReviewTasks": [],
+    "readyForTestingTasks": [],
     "completedTasks": [
       {
         "id": 10,

@@ -198,6 +198,8 @@
         ]
       }
     ],
+    "underReviewTasks": [],
+    "readyForTestingTasks": [],
     "completedTasks": [
       {
         "id": 7,

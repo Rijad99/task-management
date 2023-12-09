@@ -30,6 +30,7 @@ function Dropdown({
       initial={{
         opacity: 0,
         transform: "translateY(-20px)",
+        pointerEvents: "none",
         zIndex: -1,
       }}
       animate={

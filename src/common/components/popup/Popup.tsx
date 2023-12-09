@@ -23,6 +23,7 @@ function Popup(props: PropsWithChildren<PopupProps>) {
       initial={{
         opacity: 0,
         transform: "translateY(-10px) scale(0.8)",
+        pointerEvents: "none",
       }}
       animate={props.isPopupShown ? popupVariant.visible : popupVariant.hidden}
       variants={popupVariant}

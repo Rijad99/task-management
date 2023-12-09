@@ -19,6 +19,7 @@ function useDropdownHook(
     visible: {
       opacity: 1,
       transform: "translateY(10px) scale(1)",
+      pointerEvents: "unset",
       zIndex: 10000,
       transition: {
         duration: 0.25,
@@ -27,6 +28,7 @@ function useDropdownHook(
     hidden: {
       opacity: 0,
       transform: "translateY(-20px) scale(0.8)",
+      pointerEvents: "none",
       transition: {
         duration: 0.25,
       },

@@ -1,5 +1,6 @@
 // Types
 import { User } from "../../../../../../../user/User.types"
+import {File} from "../../../../../../../../../../../common/components/file-upload/FileUpload.types.ts"
 
 export enum NotificationTypes {
   COMPLETION = "completion",
@@ -21,6 +22,7 @@ export interface Notification {
   id: string | number
   user: User
   task: string
+  file?: File
   type: NotificationTypes
   sentDate: string
   state: NotificationState

@@ -25,6 +25,7 @@ const Options = forwardRef<HTMLUListElement, OptionsProps>((props, ref) => {
       initial={{
         opacity: 0,
         transform: "translateY(-20px)",
+        pointerEvents: "none"
       }}
       animate={
         props.isSelectOpen ? optionsVariant.visible : optionsVariant.hidden

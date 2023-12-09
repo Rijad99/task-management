@@ -12,6 +12,14 @@ export const tasksCategory: TaskCategory[] = [
   },
   {
     id: 2,
-    category: "completedTasks",
+    category: "underreviewTasks",
   },
+  {
+    id: 3,
+    category: "readyfortestingTasks",
+  },
+  {
+    id: 4,
+    category: "completedTasks",
+  }
 ]

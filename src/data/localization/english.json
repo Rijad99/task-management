@@ -19,6 +19,8 @@
   "noProjectSelected": "Select project to view tasks",
   "todoTasks": "To Do",
   "inprogressTasks": "In Progress",
+  "underreviewTasks": "Under Review",
+  "readyfortestingTasks": "Ready For Testing",
   "completedTasks": "Completed",
   "deadline": "Deadline",
   "lowPriority": "Low Priority",

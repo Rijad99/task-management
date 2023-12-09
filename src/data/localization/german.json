@@ -19,6 +19,8 @@
   "noProjectSelected": "Wählen Sie ein Projekt aus, um Aufgaben anzuzeigen",
   "todoTasks": "Machen",
   "inprogressTasks": "Im Gange",
+  "underreviewTasks": "Wird überprüft",
+  "readyfortestingTasks": "Bereit zum Testen",
   "completedTasks": "Vollendet",
   "deadline": "Der Einsendeschluss",
   "lowPriority": "Niedrige Priorität",

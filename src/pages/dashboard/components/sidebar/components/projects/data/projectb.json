@@ -112,6 +112,8 @@
       }
     ],
     "inProgressTasks": [],
+    "underReviewTasks": [],
+    "readyForTestingTasks": [],
     "completedTasks": [
       {
         "id": 14,

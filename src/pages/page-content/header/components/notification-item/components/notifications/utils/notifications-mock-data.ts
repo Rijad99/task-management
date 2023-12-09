@@ -10,6 +10,7 @@ import { UserStatus } from "../../../../user/User.types"
 import userOnePhoto from "../../../../../../../../common/images/profile-photos/Profile5.jpg"
 import userThreePhoto from "../../../../../../../../common/images/profile-photos/Profile6.jpg"
 import userFourPhoto from "../../../../../../../../common/images/profile-photos/Profile7.jpg"
+import {FileExtensionTypes} from "../../../../../../../../common/components/file-upload/FileUpload.types.ts";
 
 export const notificationsData: Notification[] = [
   {
@@ -38,6 +39,11 @@ export const notificationsData: Notification[] = [
       status: UserStatus.ONLINE,
     },
     task: "Dark mode",
+    file: {
+      name: "Tet_Dark_Mode_V1.02",
+      extension: FileExtensionTypes.FIG,
+      size: 1.2
+    },
     type: NotificationTypes.ADDED,
     sentDate: "1 hour ago",
     state: NotificationState.UNREAD,

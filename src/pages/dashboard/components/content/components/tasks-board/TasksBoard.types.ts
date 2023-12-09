@@ -11,6 +11,8 @@ export interface TasksBoardProps {
 export interface Tasks {
   todoTasks: Task[]
   inProgressTasks: Task[]
+  underReviewTasks: [],
+  readyForTestingTasks: [],
   completedTasks: Task[]
 }
 

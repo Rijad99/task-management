@@ -10,6 +10,7 @@ function useOptionsHook(onOptionChange: (option: Option) => void) {
     visible: {
       opacity: 1,
       transform: "translateY(5px) scale(1)",
+      pointerEvents: "unset",
       transition: {
         duration: 0.25,
       },
@@ -17,6 +18,7 @@ function useOptionsHook(onOptionChange: (option: Option) => void) {
     hidden: {
       opacity: 0,
       transform: "translateY(-10px) scale(0.8)",
+      pointerEvents: "none",
       transition: {
         duration: 0.25,
       },
