@@ -8,18 +8,18 @@ import ProjectItem from "../project-item/ProjectItem"
 import useProjectItemHook from "./useProjectItemsHook"
 
 function ProjectItems({ projects, onProjectChange }: ProjectItemsProps) {
-  const { handleActiveProject } = useProjectItemHook()
+	const { handleActiveProject } = useProjectItemHook()
 
-  return projects.map(project => {
-    return (
-      <ProjectItem
-        key={project.id}
-        project={project}
-        activeProject={handleActiveProject(project)}
-        onProjectChange={onProjectChange}
-      />
-    )
-  })
+	return projects.map(project => {
+		return (
+			<ProjectItem
+				key={project.id}
+				project={project}
+				activeProject={handleActiveProject(project)}
+				onProjectChange={onProjectChange}
+			/>
+		)
+	})
 }
 
 export default ProjectItems

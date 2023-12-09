@@ -13,16 +13,16 @@ import { ContentProps } from "./Content.types"
 import { LocalizationContext } from "../../../../common/context/LocalizationContext"
 
 function Content({ isProjectSelected, tasks }: ContentProps) {
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return isProjectSelected() ? (
-    <TasksBoard tasks={tasks as unknown as Task[]} />
-  ) : (
-    <InformationBox
-      title={localization.info}
-      description={localization.noProjectSelected}
-    />
-  )
+	return isProjectSelected() ? (
+		<TasksBoard tasks={tasks as unknown as Task[]} />
+	) : (
+		<InformationBox
+			title={localization.info}
+			description={localization.noProjectSelected}
+		/>
+	)
 }
 
 export default Content

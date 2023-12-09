@@ -24,42 +24,42 @@ import Dropdown from "../dropdown/Dropdown.tsx"
 import { sortOptionsData } from "../../../pages/dashboard/components/sub-header/utils/sort-options-mock-data.ts"
 
 function Sort() {
-  const [isSortDropdownOpen, setIsSortDropdownOpen] = useState<boolean>(false)
+	const [isSortDropdownOpen, setIsSortDropdownOpen] = useState<boolean>(false)
 
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  const handleActionChange = () => {}
+	const handleActionChange = () => {}
 
-  const handleOpenCloseSortDropdown = () => {
-    setIsSortDropdownOpen(!isSortDropdownOpen)
-  }
+	const handleOpenCloseSortDropdown = () => {
+		setIsSortDropdownOpen(!isSortDropdownOpen)
+	}
 
-  return (
-    <div className={sortCSS.sortDropdownContainer}>
-      <Button
-        size={ButtonSize.MEDIUM}
-        type={ButtonType.PRIMARY}
-        onClick={handleOpenCloseSortDropdown}
-        additionalClasses={sortCSS.sortButton}
-      >
-        {localization.sortBy}
-        <Svg
-          path={sortIcon}
-          width="16"
-          height="11"
-          viewBox="0 0 13 12"
-          color={SvgColors.NEUTRAL}
-          additionalClasses={utilsCSS.ml05}
-        />
-      </Button>
-      <Dropdown
-        items={sortOptionsData}
-        isDropdownOpen={isSortDropdownOpen}
-        onActionChange={handleActionChange}
-        onOutsideClickDropdownClose={() => setIsSortDropdownOpen(false)}
-      />
-    </div>
-  )
+	return (
+		<div className={sortCSS.sortDropdownContainer}>
+			<Button
+				size={ButtonSize.MEDIUM}
+				type={ButtonType.PRIMARY}
+				onClick={handleOpenCloseSortDropdown}
+				additionalClasses={sortCSS.sortButton}
+			>
+				{localization.sortBy}
+				<Svg
+					path={sortIcon}
+					width="16"
+					height="11"
+					viewBox="0 0 13 12"
+					color={SvgColors.NEUTRAL}
+					additionalClasses={utilsCSS.ml05}
+				/>
+			</Button>
+			<Dropdown
+				items={sortOptionsData}
+				isDropdownOpen={isSortDropdownOpen}
+				onActionChange={handleActionChange}
+				onOutsideClickDropdownClose={() => setIsSortDropdownOpen(false)}
+			/>
+		</div>
+	)
 }
 
 export default Sort

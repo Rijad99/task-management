@@ -8,42 +8,42 @@ import { DropdownItem } from "./components/dropdown-item/DropdownItem.types"
 import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 
 function useDropdownHook(
-  onActionChange: (item: DropdownItem) => void,
-  onOutsideClickDropdownClose: () => void,
+	onActionChange: (item: DropdownItem) => void,
+	onOutsideClickDropdownClose: () => void,
 ) {
-  const dropdownRef = useRef<HTMLDivElement>(null as HTMLDivElement)
+	const dropdownRef = useRef<HTMLDivElement>(null as HTMLDivElement)
 
-  useOutsideClickHook(dropdownRef, onOutsideClickDropdownClose)
+	useOutsideClickHook(dropdownRef, onOutsideClickDropdownClose)
 
-  const dropdownVariant = {
-    visible: {
-      opacity: 1,
-      transform: "translateY(10px) scale(1)",
-      pointerEvents: "unset",
-      zIndex: 10000,
-      transition: {
-        duration: 0.25,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transform: "translateY(-20px) scale(0.8)",
-      pointerEvents: "none",
-      transition: {
-        duration: 0.25,
-      },
-    },
-  }
+	const dropdownVariant = {
+		visible: {
+			opacity: 1,
+			transform: "translateY(10px) scale(1)",
+			pointerEvents: "unset",
+			zIndex: 10000,
+			transition: {
+				duration: 0.25,
+			},
+		},
+		hidden: {
+			opacity: 0,
+			transform: "translateY(-20px) scale(0.8)",
+			pointerEvents: "none",
+			transition: {
+				duration: 0.25,
+			},
+		},
+	}
 
-  const handleActionChange = (item: DropdownItem) => {
-    onActionChange(item)
-  }
+	const handleActionChange = (item: DropdownItem) => {
+		onActionChange(item)
+	}
 
-  return {
-    dropdownRef,
-    dropdownVariant,
-    handleActionChange,
-  }
+	return {
+		dropdownRef,
+		dropdownVariant,
+		handleActionChange,
+	}
 }
 
 export default useDropdownHook

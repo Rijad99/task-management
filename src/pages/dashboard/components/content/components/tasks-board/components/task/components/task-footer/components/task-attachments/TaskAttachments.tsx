@@ -8,38 +8,38 @@ import Svg from "../../../../../../../../../../../../common/components/svg/Svg"
 
 // ENUMS
 import {
-  ButtonSize,
-  ButtonType,
+	ButtonSize,
+	ButtonType,
 } from "../../../../../../../../../../../../common/components/button/Button.types"
 import {
-  SvgColors,
-  SvgFillRule,
-  SvgClipRule,
+	SvgColors,
+	SvgFillRule,
+	SvgClipRule,
 } from "../../../../../../../../../../../../common/components/svg/Svg.types"
 
 // Icons
 import { fileIcon } from "../../../../../../../../../../../../common/icons/icons"
 
 function TaskAttachments() {
-  return (
-    <Button
-      size={ButtonSize.SMALLEST}
-      type={ButtonType.PRIMARY}
-      onClick={() => null}
-      additionalClasses={` ${taskAttachmentsCSS.attachmentsButton} ${utilsCSS.mr1}`}
-    >
-      <Svg
-        path={fileIcon}
-        width="21"
-        height="26"
-        viewBox="0 0 25 24"
-        color={SvgColors.LIGHT_GRAY}
-        fillRule={SvgFillRule.EVENODD}
-        clipRule={SvgClipRule.EVENODD}
-      />
-      <span className={taskAttachmentsCSS.number}>2</span>
-    </Button>
-  )
+	return (
+		<Button
+			size={ButtonSize.SMALLEST}
+			type={ButtonType.PRIMARY}
+			onClick={() => null}
+			additionalClasses={` ${taskAttachmentsCSS.attachmentsButton} ${utilsCSS.mr1}`}
+		>
+			<Svg
+				path={fileIcon}
+				width="21"
+				height="26"
+				viewBox="0 0 25 24"
+				color={SvgColors.LIGHT_GRAY}
+				fillRule={SvgFillRule.EVENODD}
+				clipRule={SvgClipRule.EVENODD}
+			/>
+			<span className={taskAttachmentsCSS.number}>2</span>
+		</Button>
+	)
 }
 
 export default TaskAttachments

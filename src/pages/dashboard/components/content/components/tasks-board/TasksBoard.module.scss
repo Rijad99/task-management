@@ -1,12 +1,12 @@
 @import "src/common/scss/variables";
 
 .tasksBoardGrid {
-  display: flex;
-  flex-wrap: nowrap;
-  position: absolute;
-  width: calc(100% - 300px);
-  height: calc(100% - 162px);
-  background-color: rgba($black, 0.025);
-  padding: 2rem 1rem;
-  overflow-x: scroll;
+	display: flex;
+	flex-wrap: nowrap;
+	position: absolute;
+	width: calc(100% - 300px);
+	height: calc(100% - 162px);
+	background-color: rgba($black, 0.025);
+	padding: 2rem 1rem;
+	overflow-x: scroll;
 }

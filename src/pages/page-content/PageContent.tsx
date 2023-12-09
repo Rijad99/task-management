@@ -12,25 +12,25 @@ import Header from "./header/Header"
 import usePageContentHook from "./usePageContentHook"
 
 function PageContent() {
-  const {
-    sidebarRef,
-    headerRef,
-    pageContentRef,
-    handlePageContentWidthUpdate,
-  } = usePageContentHook()
+	const {
+		sidebarRef,
+		headerRef,
+		pageContentRef,
+		handlePageContentWidthUpdate,
+	} = usePageContentHook()
 
-  return (
-    <>
-      <Sidebar
-        ref={sidebarRef}
-        onPageContentWidthChange={handlePageContentWidthUpdate}
-      />
-      <Header ref={headerRef} />
-      <div ref={pageContentRef} className={PageContentCSS.pageContentLayout}>
-        <Outlet />
-      </div>
-    </>
-  )
+	return (
+		<>
+			<Sidebar
+				ref={sidebarRef}
+				onPageContentWidthChange={handlePageContentWidthUpdate}
+			/>
+			<Header ref={headerRef} />
+			<div ref={pageContentRef} className={PageContentCSS.pageContentLayout}>
+				<Outlet />
+			</div>
+		</>
+	)
 }
 
 export default PageContent

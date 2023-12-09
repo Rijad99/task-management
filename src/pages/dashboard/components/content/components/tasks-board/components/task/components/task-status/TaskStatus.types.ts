@@ -1,3 +1,3 @@
 export interface TaskStatusProps {
-  status: string
+	status: string
 }

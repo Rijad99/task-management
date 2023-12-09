@@ -12,18 +12,18 @@ import { languageOptions } from "./language-select-mock-data"
 import useLanguageSelectHook from "./useLanguageSelectHook"
 
 function LanguageSelect() {
-  const { userLanguage, handleLanguageChange } = useLanguageSelectHook()
+	const { userLanguage, handleLanguageChange } = useLanguageSelectHook()
 
-  return (
-    <div className={languageSelectCSS.languageContainer}>
-      <Select
-        selectedOption={userLanguage}
-        options={languageOptions}
-        additionalClasses={utilsCSS.mr1_5}
-        onOptionChange={handleLanguageChange}
-      />
-    </div>
-  )
+	return (
+		<div className={languageSelectCSS.languageContainer}>
+			<Select
+				selectedOption={userLanguage}
+				options={languageOptions}
+				additionalClasses={utilsCSS.mr1_5}
+				onOptionChange={handleLanguageChange}
+			/>
+		</div>
+	)
 }
 
 export default LanguageSelect

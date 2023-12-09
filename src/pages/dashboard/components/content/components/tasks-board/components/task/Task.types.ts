@@ -2,5 +2,5 @@
 import { Task } from "../../TasksBoard.types"
 
 export interface TaskProps {
-  task: Task
+	task: Task
 }

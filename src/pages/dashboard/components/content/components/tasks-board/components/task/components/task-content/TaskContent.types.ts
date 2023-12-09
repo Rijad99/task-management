@@ -1,5 +1,5 @@
 export interface TaskContentProps {
-  description: string
-  fromDate: string
-  toDate: string
+	description: string
+	fromDate: string
+	toDate: string
 }

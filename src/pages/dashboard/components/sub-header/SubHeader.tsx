@@ -15,8 +15,8 @@ import { plusIcon } from "../../../../common/icons/icons"
 
 // ENUMS
 import {
-  ButtonSize,
-  ButtonType,
+	ButtonSize,
+	ButtonType,
 } from "../../../../common/components/button/Button.types"
 import { SvgColors } from "../../../../common/components/svg/Svg.types"
 
@@ -27,31 +27,31 @@ import { LocalizationContext } from "../../../../common/context/LocalizationCont
 import { SubHeaderProps } from "./SubHeader.types"
 
 function SubHeader({ isSelectedProject }: SubHeaderProps) {
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return (
-    isSelectedProject() && (
-      <>
-        <Button
-          size={ButtonSize.MEDIUM}
-          type={ButtonType.PRIMARY}
-          onClick={() => null}
-          additionalClasses={subHeaderCSS.addNewButton}
-        >
-          <Svg
-            path={plusIcon}
-            width="16"
-            height="11"
-            viewBox="0 0 13 12"
-            color={SvgColors.WHITE}
-            additionalClasses={utilsCSS.mr05}
-          />
-          {localization.new}
-        </Button>
-        <Sort />
-      </>
-    )
-  )
+	return (
+		isSelectedProject() && (
+			<>
+				<Button
+					size={ButtonSize.MEDIUM}
+					type={ButtonType.PRIMARY}
+					onClick={() => null}
+					additionalClasses={subHeaderCSS.addNewButton}
+				>
+					<Svg
+						path={plusIcon}
+						width="16"
+						height="11"
+						viewBox="0 0 13 12"
+						color={SvgColors.WHITE}
+						additionalClasses={utilsCSS.mr05}
+					/>
+					{localization.new}
+				</Button>
+				<Sort />
+			</>
+		)
+	)
 }
 
 export default SubHeader

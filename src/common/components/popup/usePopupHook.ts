@@ -5,33 +5,33 @@ import { useRef } from "react"
 import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
 
 function usePopupHook(onOutsideClickPopupClose: () => void) {
-  const popupRef = useRef<HTMLDivElement>(null as HTMLDivElement)
+	const popupRef = useRef<HTMLDivElement>(null as HTMLDivElement)
 
-  useOutsideClickHook(popupRef, onOutsideClickPopupClose)
+	useOutsideClickHook(popupRef, onOutsideClickPopupClose)
 
-  const popupVariant = {
-    visible: {
-      opacity: 1,
-      transform: "translateY(0px) scale(1)",
-      pointerEvents: "unset",
-      transition: {
-        duration: 0.25,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transform: "translateY(-10px) scale(0.8)",
-      pointerEvents: "none",
-      transition: {
-        duration: 0.25,
-      },
-    },
-  }
+	const popupVariant = {
+		visible: {
+			opacity: 1,
+			transform: "translateY(0px) scale(1)",
+			pointerEvents: "unset",
+			transition: {
+				duration: 0.25,
+			},
+		},
+		hidden: {
+			opacity: 0,
+			transform: "translateY(-10px) scale(0.8)",
+			pointerEvents: "none",
+			transition: {
+				duration: 0.25,
+			},
+		},
+	}
 
-  return {
-    popupRef,
-    popupVariant,
-  }
+	return {
+		popupRef,
+		popupVariant,
+	}
 }
 
 export default usePopupHook

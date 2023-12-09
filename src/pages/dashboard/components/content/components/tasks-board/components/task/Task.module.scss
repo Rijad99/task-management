@@ -1,15 +1,15 @@
 @import "src/common/scss/variables";
 
 .task {
-  width: 100%;
-  padding: 1rem;
-  background-color: $white;
-  border-radius: 10px;
-  border: 1px solid $black5;
-  user-select: none;
-  cursor: grab;
+	width: 100%;
+	padding: 1rem;
+	background-color: $white;
+	border-radius: 10px;
+	border: 1px solid $black5;
+	user-select: none;
+	cursor: grab;
 
-  &:not(:last-child) {
-    margin-bottom: 1rem;
-  }
+	&:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 }

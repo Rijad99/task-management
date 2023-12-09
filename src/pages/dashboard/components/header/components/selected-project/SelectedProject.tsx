@@ -11,19 +11,19 @@ import ProjectProgressBar from "./components/project-progress-bar/ProjectProgres
 import useSelectedProjectHook from "./useSelectedProjectHook"
 
 function SelectedProject({ name, image, tasks }: SelectProjectProps) {
-  const { completionPercentage } = useSelectedProjectHook(name, tasks)
+	const { completionPercentage } = useSelectedProjectHook(name, tasks)
 
-  return (
-    <div className={selectedProjectCSS.selectedProjectContainer}>
-      <div className={selectedProjectCSS.project}>
-        <img src={image} />
-        <div className={selectedProjectCSS.info}>
-          <h4 className={selectedProjectCSS.projectName}>{name}</h4>
-          <ProjectProgressBar completionPercentage={completionPercentage!} />
-        </div>
-      </div>
-    </div>
-  )
+	return (
+		<div className={selectedProjectCSS.selectedProjectContainer}>
+			<div className={selectedProjectCSS.project}>
+				<img src={image} />
+				<div className={selectedProjectCSS.info}>
+					<h4 className={selectedProjectCSS.projectName}>{name}</h4>
+					<ProjectProgressBar completionPercentage={completionPercentage!} />
+				</div>
+			</div>
+		</div>
+	)
 }
 
 export default SelectedProject

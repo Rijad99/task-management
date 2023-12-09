@@ -2,5 +2,5 @@
 import { Project } from "../../Dashboard.types"
 
 export interface SidebarProps {
-  handleProjectChange: (project: Project) => void
+	handleProjectChange: (project: Project) => void
 }

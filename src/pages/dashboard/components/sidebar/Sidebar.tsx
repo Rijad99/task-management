@@ -6,12 +6,12 @@ import MyTeam from "./components/my-team/MyTeam"
 import { SidebarProps } from "./Sidebar.types"
 
 function Sidebar({ handleProjectChange }: SidebarProps) {
-  return (
-    <>
-      <Projects onProjectChange={handleProjectChange} />
-      <MyTeam />
-    </>
-  )
+	return (
+		<>
+			<Projects onProjectChange={handleProjectChange} />
+			<MyTeam />
+		</>
+	)
 }
 
 export default Sidebar

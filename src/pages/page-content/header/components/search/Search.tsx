@@ -17,21 +17,21 @@ import { LocalizationContext } from "../../../../../common/context/LocalizationC
 import useSearchHook from "./useSearchHook"
 
 function Search() {
-  const { search, handleSearch } = useSearchHook()
+	const { search, handleSearch } = useSearchHook()
 
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return (
-    <FormControl
-      type="text"
-      name="search"
-      placeholder={localization.search}
-      value={search}
-      icon={searchIcon}
-      additionalClasses={searchCSS.search}
-      onInput={handleSearch}
-    />
-  )
+	return (
+		<FormControl
+			type="text"
+			name="search"
+			placeholder={localization.search}
+			value={search}
+			icon={searchIcon}
+			additionalClasses={searchCSS.search}
+			onInput={handleSearch}
+		/>
+	)
 }
 
 export default Search

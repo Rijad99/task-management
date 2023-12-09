@@ -10,15 +10,15 @@ import TaskAttachments from "./components/task-attachments/TaskAttachments"
 import TaskNotes from "./components/task-notes/TaskNotes"
 
 function TaskFooter({ participants }: TaskFooterProps) {
-  return (
-    <div className={taskFooterCSS.footer}>
-      <Participants participants={participants} />
-      <div className={taskFooterCSS.buttonActions}>
-        <TaskAttachments />
-        <TaskNotes />
-      </div>
-    </div>
-  )
+	return (
+		<div className={taskFooterCSS.footer}>
+			<Participants participants={participants} />
+			<div className={taskFooterCSS.buttonActions}>
+				<TaskAttachments />
+				<TaskNotes />
+			</div>
+		</div>
+	)
 }
 
 export default TaskFooter

@@ -12,59 +12,59 @@ import { Paths } from "../../common/utils/paths"
 import { getData } from "../../common/utils/http"
 
 function useDashboardHook() {
-  const [project, setProject] = useState<Project>({
-    id: null,
-    name: "",
-    image: "",
-    participants: [],
-    tasks: {
-      todoTasks: [],
-      inProgressTasks: [],
-      completedTasks: [],
-    },
-  })
+	const [project, setProject] = useState<Project>({
+		id: null,
+		name: "",
+		image: "",
+		participants: [],
+		tasks: {
+			todoTasks: [],
+			inProgressTasks: [],
+			completedTasks: [],
+		},
+	})
 
-  const dashboardSidebarVariant = {
-    visible: {
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  }
+	const dashboardSidebarVariant = {
+		visible: {
+			opacity: 1,
+			transition: {
+				duration: 0.5,
+			},
+		},
+	}
 
-  const navigate = useNavigate()
+	const navigate = useNavigate()
 
-  const location = useLocation()
+	const location = useLocation()
 
-  useEffect(() => {
-    const projectName = location.pathname.split("/")[2]
+	useEffect(() => {
+		const projectName = location.pathname.split("/")[2]
 
-    if (projectName) {
-      getData(
-        `../../../src/pages/dashboard/components/sidebar/components/projects/data/${projectName}.json`,
-      ).then(data => setProject(data))
-    }
-  }, [])
+		if (projectName) {
+			getData(
+				`../../../src/pages/dashboard/components/sidebar/components/projects/data/${projectName}.json`,
+			).then(data => setProject(data))
+		}
+	}, [])
 
-  const handleProjectChange = (project: Project) => {
-    navigate(`${Paths.DASHBOARD}/${project.name.toLowerCase()}`)
+	const handleProjectChange = (project: Project) => {
+		navigate(`${Paths.DASHBOARD}/${project.name.toLowerCase()}`)
 
-    getData(
-      `../../../src/pages/dashboard/components/sidebar/components/projects/data/${project.name.toLowerCase()}.json`,
-    ).then(data => setProject(data))
-  }
+		getData(
+			`../../../src/pages/dashboard/components/sidebar/components/projects/data/${project.name.toLowerCase()}.json`,
+		).then(data => setProject(data))
+	}
 
-  const isProjectSelected = (): boolean => {
-    return location.pathname !== Paths.DASHBOARD
-  }
+	const isProjectSelected = (): boolean => {
+		return location.pathname !== Paths.DASHBOARD
+	}
 
-  return {
-    project,
-    dashboardSidebarVariant,
-    handleProjectChange,
-    isProjectSelected,
-  }
+	return {
+		project,
+		dashboardSidebarVariant,
+		handleProjectChange,
+		isProjectSelected,
+	}
 }
 
 export default useDashboardHook

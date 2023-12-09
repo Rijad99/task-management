@@ -9,12 +9,12 @@ import NotificationsList from "./components/notifications-list/NotificationsList
 import { NotificationsProps } from "./Notifications.types"
 
 function Notifications({ notifications }: NotificationsProps) {
-  return (
-    <div className={notificationsCSS.notificationsContainer}>
-      <NotificationsHeader />
-      <NotificationsList notifications={notifications} />
-    </div>
-  )
+	return (
+		<div className={notificationsCSS.notificationsContainer}>
+			<NotificationsHeader />
+			<NotificationsList notifications={notifications} />
+		</div>
+	)
 }
 
 export default Notifications

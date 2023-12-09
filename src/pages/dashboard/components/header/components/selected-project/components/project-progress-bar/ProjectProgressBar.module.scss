@@ -1,27 +1,27 @@
 @import "src/common/scss/variables";
 
 .progressBarContainer {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 
-  .progressBar {
-    width: 600px;
-    height: 8px;
-    background-color: rgba($black5, 0.35);
-    border-radius: 100px;
+	.progressBar {
+		width: 600px;
+		height: 8px;
+		background-color: rgba($black5, 0.35);
+		border-radius: 100px;
 
-    .progress {
-      width: 0;
-      height: 100%;
-      border-radius: inherit;
-      background-color: $green;
-    }
-  }
+		.progress {
+			width: 0;
+			height: 100%;
+			border-radius: inherit;
+			background-color: $green;
+		}
+	}
 
-  .progressPercentage {
-    font-size: $caption;
-    font-weight: $medium;
-    color: $neutral;
-    margin-left: 0.5rem;
-  }
+	.progressPercentage {
+		font-size: $caption;
+		font-weight: $medium;
+		color: $neutral;
+		margin-left: 0.5rem;
+	}
 }

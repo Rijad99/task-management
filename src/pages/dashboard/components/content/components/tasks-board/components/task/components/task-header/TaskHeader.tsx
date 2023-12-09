@@ -23,56 +23,56 @@ import { getPriorityIconColor } from "../../utils/utils"
 import { LocalizationContext } from "../../../../../../../../../../common/context/LocalizationContext"
 
 function TaskHeader({ title, priority, status }: TaskHeaderProps) {
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  const priorityIconColor = getPriorityIconColor(priority)
+	const priorityIconColor = getPriorityIconColor(priority)
 
-  const getPriorityText = () => {
-    switch (priority) {
-      case 1:
-        return {
-          priority: "Low Priority",
-          localization: localization.lowPriority,
-        }
+	const getPriorityText = () => {
+		switch (priority) {
+			case 1:
+				return {
+					priority: "Low Priority",
+					localization: localization.lowPriority,
+				}
 
-      case 2:
-        return {
-          priority: "Medium Priority",
-          localization: localization.mediumPriority,
-        }
+			case 2:
+				return {
+					priority: "Medium Priority",
+					localization: localization.mediumPriority,
+				}
 
-      case 3:
-        return {
-          priority: "High Priority",
-          localization: localization.highPriority,
-        }
-    }
-  }
+			case 3:
+				return {
+					priority: "High Priority",
+					localization: localization.highPriority,
+				}
+		}
+	}
 
-  return (
-    <div className={taskHeaderCSS.header}>
-      <Tooltip
-        text={getPriorityText()!.localization}
-        position={TooltipPosition.TOP}
-        tooltipClasses={
-          taskHeaderCSS[
-            getPriorityText()!.priority.split(" ").join("").toLowerCase()
-          ]
-        }
-      >
-        <Svg
-          path={priorityIcon}
-          width="17"
-          height="14"
-          viewBox="0 0 17 14"
-          color={priorityIconColor}
-          additionalClasses={taskHeaderCSS.priorityIcon}
-        />
-      </Tooltip>
-      <h4 className={taskHeaderCSS.title}>{title}</h4>
-      <TaskStatus status={status} />
-    </div>
-  )
+	return (
+		<div className={taskHeaderCSS.header}>
+			<Tooltip
+				text={getPriorityText()!.localization}
+				position={TooltipPosition.TOP}
+				tooltipClasses={
+					taskHeaderCSS[
+						getPriorityText()!.priority.split(" ").join("").toLowerCase()
+					]
+				}
+			>
+				<Svg
+					path={priorityIcon}
+					width="17"
+					height="14"
+					viewBox="0 0 17 14"
+					color={priorityIconColor}
+					additionalClasses={taskHeaderCSS.priorityIcon}
+				/>
+			</Tooltip>
+			<h4 className={taskHeaderCSS.title}>{title}</h4>
+			<TaskStatus status={status} />
+		</div>
+	)
 }
 
 export default TaskHeader

@@ -1,29 +1,29 @@
 @import "../../../../../common/scss/variables.scss";
 
 .notificationItem {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 10000;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 10000;
 
-  .notificationButton {
-    position: relative;
+	.notificationButton {
+		position: relative;
 
-    .notificationCircle {
-      position: absolute;
-      top: 1px;
-      right: 2px;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background-color: $red;
-      border: 1px solid $white;
-    }
-  }
+		.notificationCircle {
+			position: absolute;
+			top: 1px;
+			right: 2px;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: $red;
+			border: 1px solid $white;
+		}
+	}
 
-  .notificationTooltip {
-    background-color: $red5;
-    color: $red;
-  }
+	.notificationTooltip {
+		background-color: $red5;
+		color: $red;
+	}
 }

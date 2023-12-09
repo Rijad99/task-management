@@ -14,36 +14,36 @@ import { motion } from "framer-motion"
 import useOptionsHook from "./useOptionsHook"
 
 const Options = forwardRef<HTMLUListElement, OptionsProps>((props, ref) => {
-  const { optionsVariant, handleOptionChange } = useOptionsHook(
-    props.onOptionChange,
-  )
+	const { optionsVariant, handleOptionChange } = useOptionsHook(
+		props.onOptionChange,
+	)
 
-  return (
-    <motion.ul
-      ref={ref}
-      className={optionsCSS.optionsList}
-      initial={{
-        opacity: 0,
-        transform: "translateY(-20px)",
-        pointerEvents: "none"
-      }}
-      animate={
-        props.isSelectOpen ? optionsVariant.visible : optionsVariant.hidden
-      }
-    >
-      {props.options.map(option => {
-        return (
-          <li
-            key={option.id}
-            className={optionsCSS.option}
-            onClick={() => handleOptionChange(option)}
-          >
-            {option?.icon && <img src={option.icon} />} {option.value}
-          </li>
-        )
-      })}
-    </motion.ul>
-  )
+	return (
+		<motion.ul
+			ref={ref}
+			className={optionsCSS.optionsList}
+			initial={{
+				opacity: 0,
+				transform: "translateY(-20px)",
+				pointerEvents: "none",
+			}}
+			animate={
+				props.isSelectOpen ? optionsVariant.visible : optionsVariant.hidden
+			}
+		>
+			{props.options.map(option => {
+				return (
+					<li
+						key={option.id}
+						className={optionsCSS.option}
+						onClick={() => handleOptionChange(option)}
+					>
+						{option?.icon && <img src={option.icon} />} {option.value}
+					</li>
+				)
+			})}
+		</motion.ul>
+	)
 })
 
 export default Options

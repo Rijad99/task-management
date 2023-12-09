@@ -6,20 +6,20 @@ import Participants from "../sidebar/components/projects/components/participants
 import { HeaderProps } from "./Header.types"
 
 function Header({
-  isProjectSelected,
-  name,
-  image,
-  tasks,
-  participants,
+	isProjectSelected,
+	name,
+	image,
+	tasks,
+	participants,
 }: HeaderProps) {
-  return (
-    isProjectSelected() && (
-      <>
-        <SelectedProject name={name} image={image} tasks={tasks} />
-        <Participants participants={participants} />
-      </>
-    )
-  )
+	return (
+		isProjectSelected() && (
+			<>
+				<SelectedProject name={name} image={image} tasks={tasks} />
+				<Participants participants={participants} />
+			</>
+		)
+	)
 }
 
 export default Header

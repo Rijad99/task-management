@@ -14,34 +14,34 @@ import statusCSS from "./UserStatus.module.scss"
 import { LocalizationContext } from "../../context/LocalizationContext"
 
 function UserStatus({
-  status,
-  showStatusText,
-  additionalClasses,
-  onStatusDropdownOpen,
+	status,
+	showStatusText,
+	additionalClasses,
+	onStatusDropdownOpen,
 }: StatusProps) {
-  const { getStatus } = useUserStatusHook()
+	const { getStatus } = useUserStatusHook()
 
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  const statusColor = getStatus(status)
+	const statusColor = getStatus(status)
 
-  return (
-    <div
-      className={`${statusCSS.statusContainer} ${
-        additionalClasses ? additionalClasses : ""
-      }`}
-    >
-      <div
-        className={`${statusCSS.circle} ${statusCSS.status} ${statusCSS} ${
-          statusCSS[statusColor!]
-        }`}
-        onClick={onStatusDropdownOpen}
-      ></div>
-      {showStatusText && (
-        <span className={statusCSS.statusText}>{localization[status]}</span>
-      )}
-    </div>
-  )
+	return (
+		<div
+			className={`${statusCSS.statusContainer} ${
+				additionalClasses ? additionalClasses : ""
+			}`}
+		>
+			<div
+				className={`${statusCSS.circle} ${statusCSS.status} ${statusCSS} ${
+					statusCSS[statusColor!]
+				}`}
+				onClick={onStatusDropdownOpen}
+			></div>
+			{showStatusText && (
+				<span className={statusCSS.statusText}>{localization[status]}</span>
+			)}
+		</div>
+	)
 }
 
 export default UserStatus

@@ -1,74 +1,74 @@
 @import "../../../common/scss/variables.scss";
 
 .sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 32px 16px;
-  width: max-content;
-  background-color: $white;
-  border-right: 1px solid $black5;
-  z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 32px 16px;
+	width: max-content;
+	background-color: $white;
+	border-right: 1px solid $black5;
+	z-index: 9999;
 }
 
 .sidebarOpened {
-  .sidebarItems {
-    > button {
-      > span {
-        margin-left: 1rem;
-        padding-right: 4rem;
-        width: auto;
-        opacity: 1;
-        visibility: visible;
-        white-space: nowrap;
-      }
-    }
-  }
+	.sidebarItems {
+		> button {
+			> span {
+				margin-left: 1rem;
+				padding-right: 4rem;
+				width: auto;
+				opacity: 1;
+				visibility: visible;
+				white-space: nowrap;
+			}
+		}
+	}
 
-  > button {
-    > span {
-      margin-left: 1rem;
-      padding-right: 4rem;
-      width: auto;
-      opacity: 1;
-      visibility: visible;
-      white-space: nowrap;
-    }
-  }
+	> button {
+		> span {
+			margin-left: 1rem;
+			padding-right: 4rem;
+			width: auto;
+			opacity: 1;
+			visibility: visible;
+			white-space: nowrap;
+		}
+	}
 
-  ~ .expandSidebarButton {
-    svg:first-child {
-      transform: rotate(90deg);
-    }
+	~ .expandSidebarButton {
+		svg:first-child {
+			transform: rotate(90deg);
+		}
 
-    svg:last-child {
-      transform: rotate(-90deg);
-    }
-  }
+		svg:last-child {
+			transform: rotate(-90deg);
+		}
+	}
 }
 
 .expandSidebarButton {
-  position: absolute;
-  right: -14px;
-  top: 164px;
-  width: 28px;
-  height: 28px;
-  background-color: $white;
-  border-color: $black10 !important;
+	position: absolute;
+	right: -14px;
+	top: 164px;
+	width: 28px;
+	height: 28px;
+	background-color: $white;
+	border-color: $black10 !important;
 
-  &:hover {
-    box-shadow: 0 0 10px $black5;
-  }
+	&:hover {
+		box-shadow: 0 0 10px $black5;
+	}
 
-  .leftArrow {
-    transform: rotate(-90deg);
-  }
+	.leftArrow {
+		transform: rotate(-90deg);
+	}
 
-  .rightArrow {
-    transform: rotate(90deg);
-  }
+	.rightArrow {
+		transform: rotate(90deg);
+	}
 }

@@ -22,31 +22,31 @@ import { UserContext } from "../../../common/context/user-context/UserContext"
 import { LocalizationContext } from "../../../common/context/LocalizationContext"
 
 const Header = forwardRef<HTMLDivElement>((_, ref) => {
-  const { currentTitle } = useHeaderHook()
+	const { currentTitle } = useHeaderHook()
 
-  const { user } = useContext(UserContext)
-  const { localization } = useContext(LocalizationContext)
+	const { user } = useContext(UserContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return (
-    <div ref={ref} className={headerCSS.header}>
-      <span className={headerCSS.title}>{localization[currentTitle!]}</span>
-      <Search />
-      <div className={headerCSS.headerRightSide}>
-        <LanguageSelect />
-        <div className={headerCSS.actions}>
-          <MessageItem />
-          <NotificationItem notifications={notificationsData} />
-        </div>
-        <User
-          firstName={user.firstName}
-          lastName={user.lastName}
-          email={user.email}
-          photo={user.photo}
-          status={user.status}
-        />
-      </div>
-    </div>
-  )
+	return (
+		<div ref={ref} className={headerCSS.header}>
+			<span className={headerCSS.title}>{localization[currentTitle!]}</span>
+			<Search />
+			<div className={headerCSS.headerRightSide}>
+				<LanguageSelect />
+				<div className={headerCSS.actions}>
+					<MessageItem />
+					<NotificationItem notifications={notificationsData} />
+				</div>
+				<User
+					firstName={user.firstName}
+					lastName={user.lastName}
+					email={user.email}
+					photo={user.photo}
+					status={user.status}
+				/>
+			</div>
+		</div>
+	)
 })
 
 export default Header

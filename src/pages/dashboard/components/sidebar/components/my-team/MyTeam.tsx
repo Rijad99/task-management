@@ -12,13 +12,13 @@ import { myTeam } from "./utils/my-team-mock-data"
 import { LocalizationContext } from "../../../../../../common/context/LocalizationContext"
 
 function MyTeam() {
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return (
-    <Accordion title={localization.myteam}>
-      <MyTeamList myTeam={myTeam} />
-    </Accordion>
-  )
+	return (
+		<Accordion title={localization.myteam}>
+			<MyTeamList myTeam={myTeam} />
+		</Accordion>
+	)
 }
 
 export default MyTeam

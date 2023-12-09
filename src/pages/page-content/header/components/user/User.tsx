@@ -27,45 +27,45 @@ import useUserHook from "./useUserHook"
 import { LocalizationContext } from "../../../../../common/context/LocalizationContext"
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
-  const {
-    isUserStatusDropdownOpen,
-    setIsUserStatusDropdownOpen,
-    handleChangeStatus,
-    handleStatusDropdownOpen,
-  } = useUserHook()
+	const {
+		isUserStatusDropdownOpen,
+		setIsUserStatusDropdownOpen,
+		handleChangeStatus,
+		handleStatusDropdownOpen,
+	} = useUserHook()
 
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return (
-    <div className={userCSS.userContainer}>
-      <img src={photo} className={userCSS.photo} />
-      <div className={userCSS.userInfo}>
-        <span className={userCSS.name}>
-          {`${firstName} ${lastName}`}
-          <Tooltip
-            text={localization[status]}
-            position={TooltipPosition.RIGHT}
-            tooltipContainerClasses={utilsCSS.ml05}
-            tooltipClasses={
-              statusCSS[status.split(" ").join("_").toLowerCase()]
-            }
-          >
-            <UserStatus
-              status={status}
-              onStatusDropdownOpen={handleStatusDropdownOpen}
-            />
-          </Tooltip>
-        </span>
-        <span className={userCSS.email}>{email}</span>
-        <Dropdown
-          isDropdownOpen={isUserStatusDropdownOpen}
-          items={userStatusData}
-          onActionChange={handleChangeStatus}
-          onOutsideClickDropdownClose={() => setIsUserStatusDropdownOpen(false)}
-        />
-      </div>
-    </div>
-  )
+	return (
+		<div className={userCSS.userContainer}>
+			<img src={photo} className={userCSS.photo} />
+			<div className={userCSS.userInfo}>
+				<span className={userCSS.name}>
+					{`${firstName} ${lastName}`}
+					<Tooltip
+						text={localization[status]}
+						position={TooltipPosition.RIGHT}
+						tooltipContainerClasses={utilsCSS.ml05}
+						tooltipClasses={
+							statusCSS[status.split(" ").join("_").toLowerCase()]
+						}
+					>
+						<UserStatus
+							status={status}
+							onStatusDropdownOpen={handleStatusDropdownOpen}
+						/>
+					</Tooltip>
+				</span>
+				<span className={userCSS.email}>{email}</span>
+				<Dropdown
+					isDropdownOpen={isUserStatusDropdownOpen}
+					items={userStatusData}
+					onActionChange={handleChangeStatus}
+					onOutsideClickDropdownClose={() => setIsUserStatusDropdownOpen(false)}
+				/>
+			</div>
+		</div>
+	)
 }
 
 export default User

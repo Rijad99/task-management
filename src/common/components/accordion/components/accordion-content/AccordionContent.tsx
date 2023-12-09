@@ -5,13 +5,13 @@ import { forwardRef } from "react"
 import { AccordionContentProps } from "./AccordionContent.types"
 
 const AccordionContent = forwardRef<HTMLDivElement, AccordionContentProps>(
-  (props, ref) => {
-    return (
-      <div ref={ref}>
-        <main>{props.children}</main>
-      </div>
-    )
-  },
+	(props, ref) => {
+		return (
+			<div ref={ref}>
+				<main>{props.children}</main>
+			</div>
+		)
+	},
 )
 
 export default AccordionContent

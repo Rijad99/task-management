@@ -13,12 +13,12 @@ import SidebarItems from "./sidebar-items/SidebarItems"
 import { SidebarProps } from "./Sidebar.types"
 
 const Sidebar = forwardRef<HTMLDivElement, SidebarProps>((props, ref) => {
-  return (
-    <div ref={ref} className={sidebarCSS.sidebar}>
-      <Logo />
-      <SidebarItems onPageContentWidthChange={props.onPageContentWidthChange} />
-    </div>
-  )
+	return (
+		<div ref={ref} className={sidebarCSS.sidebar}>
+			<Logo />
+			<SidebarItems onPageContentWidthChange={props.onPageContentWidthChange} />
+		</div>
+	)
 })
 
 export default Sidebar

@@ -15,42 +15,42 @@ import { AccordionProps } from "./Accordion.types"
 import useAccordionHook from "./useAccordionHook"
 
 function Accordion(props: PropsWithChildren<AccordionProps>) {
-  const {
-    isAccordionOpen,
-    accordionContentScope,
-    arrow,
-    accordionContentVariant,
-    arrowVariant,
-    setIsAccordionOpen,
-    animateAccordionContentScope,
-    animateArrow,
-  } = useAccordionHook()
+	const {
+		isAccordionOpen,
+		accordionContentScope,
+		arrow,
+		accordionContentVariant,
+		arrowVariant,
+		setIsAccordionOpen,
+		animateAccordionContentScope,
+		animateArrow,
+	} = useAccordionHook()
 
-  const handleShowHideContent = () => {
-    animateAccordionContentScope(
-      "main",
-      isAccordionOpen
-        ? accordionContentVariant.closed
-        : accordionContentVariant.open,
-    )
-    animateArrow(
-      arrow.current,
-      isAccordionOpen ? arrowVariant.rotate : arrowVariant.rotateToInitial,
-    )
+	const handleShowHideContent = () => {
+		animateAccordionContentScope(
+			"main",
+			isAccordionOpen
+				? accordionContentVariant.closed
+				: accordionContentVariant.open,
+		)
+		animateArrow(
+			arrow.current,
+			isAccordionOpen ? arrowVariant.rotate : arrowVariant.rotateToInitial,
+		)
 
-    setIsAccordionOpen(!isAccordionOpen)
-  }
+		setIsAccordionOpen(!isAccordionOpen)
+	}
 
-  return (
-    <div className={accordionCSS.accordion}>
-      <AccordionHeader
-        ref={arrow}
-        title={props.title}
-        onShowHideContent={handleShowHideContent}
-      />
-      <AccordionContent ref={accordionContentScope} children={props.children} />
-    </div>
-  )
+	return (
+		<div className={accordionCSS.accordion}>
+			<AccordionHeader
+				ref={arrow}
+				title={props.title}
+				onShowHideContent={handleShowHideContent}
+			/>
+			<AccordionContent ref={accordionContentScope} children={props.children} />
+		</div>
+	)
 }
 
 export default Accordion

@@ -1,15 +1,15 @@
 @import "../../../../scss/variables.scss";
 
 .accordionHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  border-bottom: 1px solid $black5;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	border-bottom: 1px solid $black5;
+	cursor: pointer;
 }
 
 .title {
-  font-size: $bodyOne;
-  font-weight: $medium;
+	font-size: $bodyOne;
+	font-weight: $medium;
 }

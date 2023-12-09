@@ -13,43 +13,43 @@ import useDropdownHook from "./useDropdownHook"
 import { motion } from "framer-motion"
 
 function Dropdown({
-  items,
-  isDropdownOpen,
-  onActionChange,
-  onOutsideClickDropdownClose,
+	items,
+	isDropdownOpen,
+	onActionChange,
+	onOutsideClickDropdownClose,
 }: DropdownProps) {
-  const { dropdownRef, dropdownVariant, handleActionChange } = useDropdownHook(
-    onActionChange,
-    onOutsideClickDropdownClose,
-  )
+	const { dropdownRef, dropdownVariant, handleActionChange } = useDropdownHook(
+		onActionChange,
+		onOutsideClickDropdownClose,
+	)
 
-  return (
-    <motion.div
-      ref={dropdownRef}
-      className={dropdownCSS.dropdown}
-      initial={{
-        opacity: 0,
-        transform: "translateY(-20px)",
-        pointerEvents: "none",
-        zIndex: -1,
-      }}
-      animate={
-        isDropdownOpen ? dropdownVariant.visible : dropdownVariant.hidden
-      }
-    >
-      <ul>
-        {items.map(item => {
-          return (
-            <DropdownItem
-              key={item.id}
-              item={item}
-              onActionChange={handleActionChange}
-            />
-          )
-        })}
-      </ul>
-    </motion.div>
-  )
+	return (
+		<motion.div
+			ref={dropdownRef}
+			className={dropdownCSS.dropdown}
+			initial={{
+				opacity: 0,
+				transform: "translateY(-20px)",
+				pointerEvents: "none",
+				zIndex: -1,
+			}}
+			animate={
+				isDropdownOpen ? dropdownVariant.visible : dropdownVariant.hidden
+			}
+		>
+			<ul>
+				{items.map(item => {
+					return (
+						<DropdownItem
+							key={item.id}
+							item={item}
+							onActionChange={handleActionChange}
+						/>
+					)
+				})}
+			</ul>
+		</motion.div>
+	)
 }
 
 export default Dropdown

@@ -15,16 +15,16 @@ import { LocalizationContext } from "../../../../../../common/context/Localizati
 import { ProjectsProps } from "./Projects.types"
 
 function Projects({ onProjectChange }: ProjectsProps) {
-  const { localization } = useContext(LocalizationContext)
+	const { localization } = useContext(LocalizationContext)
 
-  return (
-    <Accordion title={localization.projects}>
-      <ProjectItems
-        projects={allProjectsData}
-        onProjectChange={onProjectChange}
-      />
-    </Accordion>
-  )
+	return (
+		<Accordion title={localization.projects}>
+			<ProjectItems
+				projects={allProjectsData}
+				onProjectChange={onProjectChange}
+			/>
+		</Accordion>
+	)
 }
 
 export default Projects

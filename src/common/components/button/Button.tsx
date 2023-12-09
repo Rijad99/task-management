@@ -11,18 +11,18 @@ import { ButtonProps } from "./Button.types"
 import { getButtonCSS } from "./utils"
 
 function Button(props: PropsWithChildren<ButtonProps>) {
-  const buttonStyle = getButtonCSS(props.size, props.type)
+	const buttonStyle = getButtonCSS(props.size, props.type)
 
-  return (
-    <button
-      className={`${buttonCSS.button} ${buttonStyle} ${
-        props?.additionalClasses && props.additionalClasses
-      }`}
-      onClick={props.onClick}
-    >
-      {props.children}
-    </button>
-  )
+	return (
+		<button
+			className={`${buttonCSS.button} ${buttonStyle} ${
+				props?.additionalClasses && props.additionalClasses
+			}`}
+			onClick={props.onClick}
+		>
+			{props.children}
+		</button>
+	)
 }
 
 export default Button

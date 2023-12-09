@@ -8,30 +8,30 @@ import { DropdownItem } from "../../../../../common/components/dropdown/componen
 import { UserContext } from "../../../../../common/context/user-context/UserContext"
 
 function useUserHook() {
-  const [isUserStatusDropdownOpen, setIsUserStatusDropdownOpen] =
-    useState<boolean>(false)
+	const [isUserStatusDropdownOpen, setIsUserStatusDropdownOpen] =
+		useState<boolean>(false)
 
-  const { user, setUser } = useContext(UserContext)
+	const { user, setUser } = useContext(UserContext)
 
-  const handleChangeStatus = (item: DropdownItem) => {
-    setUser({
-      ...user,
-      status: item.actionName,
-    })
+	const handleChangeStatus = (item: DropdownItem) => {
+		setUser({
+			...user,
+			status: item.actionName,
+		})
 
-    setIsUserStatusDropdownOpen(false)
-  }
+		setIsUserStatusDropdownOpen(false)
+	}
 
-  const handleStatusDropdownOpen = () => {
-    setIsUserStatusDropdownOpen(!isUserStatusDropdownOpen)
-  }
+	const handleStatusDropdownOpen = () => {
+		setIsUserStatusDropdownOpen(!isUserStatusDropdownOpen)
+	}
 
-  return {
-    isUserStatusDropdownOpen,
-    setIsUserStatusDropdownOpen,
-    handleChangeStatus,
-    handleStatusDropdownOpen,
-  }
+	return {
+		isUserStatusDropdownOpen,
+		setIsUserStatusDropdownOpen,
+		handleChangeStatus,
+		handleStatusDropdownOpen,
+	}
 }
 
 export default useUserHook

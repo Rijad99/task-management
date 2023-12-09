@@ -9,38 +9,38 @@ import { sidebarLinks } from "../utils/sidebar-links-mock-data"
 import sidebarCSS from "../Sidebar.module.scss"
 
 function useSidebarItemsHook(onPageContentWidthChange: () => void) {
-  const navigate = useNavigate()
-  const location = useLocation()
+	const navigate = useNavigate()
+	const location = useLocation()
 
-  const sidebarRef = useRef<HTMLDivElement>(null)
+	const sidebarRef = useRef<HTMLDivElement>(null)
 
-  const links = sidebarLinks.slice(0, -1)
-  const logoutLink = sidebarLinks[sidebarLinks.length - 1]
+	const links = sidebarLinks.slice(0, -1)
+	const logoutLink = sidebarLinks[sidebarLinks.length - 1]
 
-  const handleNavigateTo = (path: string) => {
-    navigate(path)
-  }
+	const handleNavigateTo = (path: string) => {
+		navigate(path)
+	}
 
-  const handleActiveRoute = (path: string) => {
-    const currentLocation = `/${location.pathname.split("/")[1]}`
+	const handleActiveRoute = (path: string) => {
+		const currentLocation = `/${location.pathname.split("/")[1]}`
 
-    return currentLocation === path ? true : false
-  }
+		return currentLocation === path ? true : false
+	}
 
-  const handleOpenSidebar = () => {
-    sidebarRef.current?.classList.toggle(sidebarCSS.sidebarOpened)
+	const handleOpenSidebar = () => {
+		sidebarRef.current?.classList.toggle(sidebarCSS.sidebarOpened)
 
-    onPageContentWidthChange()
-  }
+		onPageContentWidthChange()
+	}
 
-  return {
-    links,
-    logoutLink,
-    sidebarRef,
-    handleNavigateTo,
-    handleActiveRoute,
-    handleOpenSidebar,
-  }
+	return {
+		links,
+		logoutLink,
+		sidebarRef,
+		handleNavigateTo,
+		handleActiveRoute,
+		handleOpenSidebar,
+	}
 }
 
 export default useSidebarItemsHook
