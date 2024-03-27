@@ -55,6 +55,16 @@
 						"id": 6,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 0,
+						"name": "Bug"
+					},
+					{
+						"id": 1,
+						"name": "UI"
+					}
 				]
 			},
 			{
@@ -74,6 +84,12 @@
 						"id": 2,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 0,
+						"name": "Architecture"
+					}
 				]
 			},
 			{
@@ -92,6 +108,16 @@
 					{
 						"id": 2,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
+					}
+				],
+				"categories": [
+					{
+						"id": 2,
+						"name": "UI / UX"
+					},
+					{
+						"id": 3,
+						"name": "New Feature"
 					}
 				]
 			}
@@ -126,6 +152,12 @@
 						"id": 5,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 4,
+						"name": "UI"
+					}
 				]
 			},
 			{
@@ -144,6 +176,12 @@
 					{
 						"id": 2,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
+					}
+				],
+				"categories": [
+					{
+						"id": 5,
+						"name": "Architecture"
 					}
 				]
 			},
@@ -176,6 +214,12 @@
 						"id": 5,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 6,
+						"name": "UI"
+					}
 				]
 			},
 			{
@@ -194,6 +238,12 @@
 					{
 						"id": 2,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
+					}
+				],
+				"categories": [
+					{
+						"id": 7,
+						"name": "UX"
 					}
 				]
 			}
@@ -216,6 +266,12 @@
 						"id": 2,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 8,
+						"name": "UI"
+					}
 				]
 			},
 			{
@@ -230,6 +286,12 @@
 					{
 						"id": 1,
 						"photo": "/src/common/images/profile-photos/Profile1.png"
+					}
+				],
+				"categories": [
+					{
+						"id": 9,
+						"name": "Bug"
 					}
 				]
 			}
@@ -247,6 +309,12 @@
 					{
 						"id": 1,
 						"photo": "/src/common/images/profile-photos/Profile1.png"
+					}
+				],
+				"categories": [
+					{
+						"id": 10,
+						"name": "Architecture"
 					}
 				]
 			}
@@ -281,6 +349,12 @@
 						"id": 5,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 11,
+						"name": "UI"
+					}
 				]
 			},
 			{
@@ -304,6 +378,12 @@
 						"id": 3,
 						"photo": "/src/common/images/profile-photos/Profile3.png"
 					}
+				],
+				"categories": [
+					{
+						"id": 12,
+						"name": "UI & UX"
+					}
 				]
 			},
 			{
@@ -322,6 +402,12 @@
 					{
 						"id": 2,
 						"photo": "/src/common/images/profile-photos/Profile2.png"
+					}
+				],
+				"categories": [
+					{
+						"id": 13,
+						"name": "Architecture"
 					}
 				]
 			}

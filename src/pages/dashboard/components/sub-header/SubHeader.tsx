@@ -26,7 +26,7 @@ import { LocalizationContext } from "../../../../common/context/LocalizationCont
 // Types
 import { SubHeaderProps } from "./SubHeader.types"
 
-function SubHeader({ isSelectedProject }: SubHeaderProps) {
+function SubHeader({ isSelectedProject, onTaskCreate }: SubHeaderProps) {
 	const { localization } = useContext(LocalizationContext)
 
 	return (
@@ -35,7 +35,7 @@ function SubHeader({ isSelectedProject }: SubHeaderProps) {
 				<Button
 					size={ButtonSize.MEDIUM}
 					type={ButtonType.PRIMARY}
-					onClick={() => null}
+					onClick={onTaskCreate}
 					additionalClasses={subHeaderCSS.addNewButton}
 				>
 					<Svg

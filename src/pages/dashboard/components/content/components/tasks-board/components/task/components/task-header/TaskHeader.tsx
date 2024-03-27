@@ -12,6 +12,7 @@ import { TooltipPosition } from "../../../../../../../../../../common/components
 import Svg from "../../../../../../../../../../common/components/svg/Svg"
 import Tooltip from "../../../../../../../../../../common/components/tooltip/Tooltip"
 import TaskStatus from "../task-status/TaskStatus"
+import TaskCategories from "../task-categories/TaskCategories"
 
 // Icons
 import { priorityIcon } from "../../../../../../../../../../common/icons/icons"
@@ -22,7 +23,7 @@ import { getPriorityIconColor } from "../../utils/utils"
 // Context
 import { LocalizationContext } from "../../../../../../../../../../common/context/LocalizationContext"
 
-function TaskHeader({ title, priority, status }: TaskHeaderProps) {
+function TaskHeader({ title, priority, status, categories }: TaskHeaderProps) {
 	const { localization } = useContext(LocalizationContext)
 
 	const priorityIconColor = getPriorityIconColor(priority)
@@ -51,26 +52,29 @@ function TaskHeader({ title, priority, status }: TaskHeaderProps) {
 
 	return (
 		<div className={taskHeaderCSS.header}>
-			<Tooltip
-				text={getPriorityText()!.localization}
-				position={TooltipPosition.TOP}
-				tooltipClasses={
-					taskHeaderCSS[
-						getPriorityText()!.priority.split(" ").join("").toLowerCase()
-					]
-				}
-			>
-				<Svg
-					path={priorityIcon}
-					width="17"
-					height="14"
-					viewBox="0 0 17 14"
-					color={priorityIconColor}
-					additionalClasses={taskHeaderCSS.priorityIcon}
-				/>
-			</Tooltip>
-			<h4 className={taskHeaderCSS.title}>{title}</h4>
-			<TaskStatus status={status} />
+			<TaskCategories taskCategories={categories} />
+			<div className={taskHeaderCSS.info}>
+				<Tooltip
+					text={getPriorityText()!.localization}
+					position={TooltipPosition.TOP}
+					tooltipClasses={
+						taskHeaderCSS[
+							getPriorityText()!.priority.split(" ").join("").toLowerCase()
+						]
+					}
+				>
+					<Svg
+						path={priorityIcon}
+						width="17"
+						height="14"
+						viewBox="0 0 17 14"
+						color={priorityIconColor}
+						additionalClasses={taskHeaderCSS.priorityIcon}
+					/>
+				</Tooltip>
+				<h4 className={taskHeaderCSS.title}>{title}</h4>
+				<TaskStatus status={status} />
+			</div>
 		</div>
 	)
 }

@@ -1,0 +1,32 @@
+@import "../../../common/scss/variables";
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba($black2_5, 0.9);
+	z-index: 10001;
+
+	.modal {
+		background-color: $white;
+		padding: 1rem;
+		border-radius: 16px;
+	}
+
+	.closeModalButton {
+		position: absolute;
+		right: 2rem;
+		top: 2rem;
+		background-color: $white;
+		border-radius: 50%;
+
+		&:hover {
+			box-shadow: 0 0 20px $black5;
+		}
+	}
+}

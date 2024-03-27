@@ -36,6 +36,7 @@ function Task({ task }: TaskProps) {
 				title={task.title}
 				priority={task.priority}
 				status={task.status}
+				categories={task.categories}
 			/>
 			<TaskContent
 				description={task.description}

@@ -23,6 +23,8 @@ function Dropdown({
 		onOutsideClickDropdownClose,
 	)
 
+	const listItems = items.map(item => <DropdownItem key={item.id} item={item} onActionChange={handleActionChange} />)
+
 	return (
 		<motion.div
 			ref={dropdownRef}
@@ -38,15 +40,7 @@ function Dropdown({
 			}
 		>
 			<ul>
-				{items.map(item => {
-					return (
-						<DropdownItem
-							key={item.id}
-							item={item}
-							onActionChange={handleActionChange}
-						/>
-					)
-				})}
+				{listItems}
 			</ul>
 		</motion.div>
 	)

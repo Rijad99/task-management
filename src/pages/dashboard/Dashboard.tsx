@@ -12,14 +12,20 @@ import Content from "./components/content/Content"
 
 // Dashboard hook
 import useDashboardHook from "./useDashboardHook"
+import useTaskHook from "./components/content/components/tasks-board/components/task/useTaskHook"
+import TaskForm from "./components/task-form/TaskForm";
 
 function Dashboard() {
 	const {
 		project,
 		dashboardSidebarVariant,
+		isTaskFormOpen,
+		setIsTaskFormOpen,
 		isProjectSelected,
 		handleProjectChange,
 	} = useDashboardHook()
+
+	const { handleCreateTask } = useTaskHook(setIsTaskFormOpen)
 
 	return (
 		<div
@@ -49,11 +55,12 @@ function Dashboard() {
 				/>
 			</div>
 			<div className={dashboardCSS.dashboardSubheader}>
-				<SubHeader isSelectedProject={isProjectSelected} />
+				<SubHeader isSelectedProject={isProjectSelected} onTaskCreate={handleCreateTask} />
 			</div>
 			<div className={dashboardCSS.dashboardContent}>
 				<Content isProjectSelected={isProjectSelected} tasks={project.tasks} />
 			</div>
+			<TaskForm isTaskFormOpen={isTaskFormOpen} onModalClose={() => setIsTaskFormOpen(false)} />
 		</div>
 	)
 }

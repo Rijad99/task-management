@@ -1,3 +1,6 @@
+// Types
+import { TaskCategory } from "./components/task/components/task-category/TaskCategory.types"
+
 export enum TaskPriority {
 	LOW = 1,
 	MEDIUM = 2,
@@ -25,6 +28,7 @@ export interface Task {
 	toDate: string
 	status: string
 	participants: Participant[]
+	categories: TaskCategory[]
 }
 
 export interface TaskCategory {

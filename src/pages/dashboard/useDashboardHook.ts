@@ -20,9 +20,13 @@ function useDashboardHook() {
 		tasks: {
 			todoTasks: [],
 			inProgressTasks: [],
+			underReviewTasks: [],
+			readyForTestingTasks: [],
 			completedTasks: [],
-		},
+		}
 	})
+
+	const [isTaskFormOpen, setIsTaskFormOpen] = useState<boolean>(false)
 
 	const dashboardSidebarVariant = {
 		visible: {
@@ -62,6 +66,9 @@ function useDashboardHook() {
 	return {
 		project,
 		dashboardSidebarVariant,
+		isTaskFormOpen,
+		setIsTaskFormOpen,
+		setProject,
 		handleProjectChange,
 		isProjectSelected,
 	}

@@ -7,10 +7,12 @@ import buttonCSS from "./Button.module.scss"
 // Types
 import { ButtonProps } from "./Button.types"
 
-// Utils
-import { getButtonCSS } from "./utils"
+// Button hook
+import useButtonHook from "./useButtonHook";
 
 function Button(props: PropsWithChildren<ButtonProps>) {
+	const { getButtonCSS } = useButtonHook()
+
 	const buttonStyle = getButtonCSS(props.size, props.type)
 
 	return (

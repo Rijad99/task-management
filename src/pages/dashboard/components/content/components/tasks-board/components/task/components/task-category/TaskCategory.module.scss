@@ -1,0 +1,15 @@
+@import "../../../../../../../../../../common/scss/variables";
+
+.category {
+	width: max-content;
+	font-size: $caption;
+	font-weight: $medium;
+	color: $neutral;
+	padding: 0.5rem;
+	background-color: $black2_5;
+	border-radius: 8px;
+
+	&:not(:last-child) {
+		margin-right: 0.25rem;
+	}
+}

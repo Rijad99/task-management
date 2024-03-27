@@ -25,7 +25,7 @@ function FormControl({
 }: FormControlProps) {
 	return (
 		<div className={formControlCSS.formControl}>
-			{label && <label className={formControlCSS.label}>{label}</label>}
+			{label && <label>{label}</label>}
 			{icon && (
 				<Svg
 					path={icon}
