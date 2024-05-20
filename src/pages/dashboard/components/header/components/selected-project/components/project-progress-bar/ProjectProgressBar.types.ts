@@ -1,3 +1,3 @@
 export interface ProjectProgressBarProps {
-	completionPercentage: string
+  completionPercentage: string;
 }

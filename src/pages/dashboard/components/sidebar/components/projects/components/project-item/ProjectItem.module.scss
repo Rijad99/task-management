@@ -1,41 +1,41 @@
-@import "src/common/scss/variables";
+@import 'src/common/scss/variables';
 
 .projectButton {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	border: 1px solid $black5;
-	margin-top: 1rem;
-	transition: all 200ms ease;
-	cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid $black5;
+  margin-top: 1rem;
+  transition: all 200ms ease;
+  cursor: pointer;
 
-	&:hover {
-		background-color: $green5;
+  &:hover {
+    background-color: $green5;
 
-		.projectInfo {
-			color: $green;
-		}
-	}
+    .projectInfo {
+      color: $green;
+    }
+  }
 }
 
 .projectInfo {
-	display: flex;
-	align-items: center;
-	font-size: $bodyThree;
-	font-weight: $medium;
-	transition: all 200ms ease;
+  display: flex;
+  align-items: center;
+  font-size: $bodyThree;
+  font-weight: $medium;
+  transition: all 200ms ease;
 
-	img {
-		margin-right: 0.5rem;
-	}
+  img {
+    margin-right: 0.5rem;
+  }
 
-	.name {
-		font-size: $medium;
-		font-weight: $medium;
-	}
+  .name {
+    font-size: $medium;
+    font-weight: $medium;
+  }
 }
 
 .activeProjectButton {
-	color: $green;
-	background-color: $green5;
+  color: $green;
+  background-color: $green5;
 }

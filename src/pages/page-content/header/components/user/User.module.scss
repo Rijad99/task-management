@@ -1,27 +1,27 @@
-@import "../../../../../common/scss/variables.scss";
+@import '../../../../../common/scss/variables.scss';
 
 .userContainer {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .photo {
-	margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .userInfo {
-	position: relative;
-	line-height: 1;
+  position: relative;
+  line-height: 1;
 
-	.name {
-		display: flex;
-		align-items: center;
-		font-weight: $bold;
-	}
+  .name {
+    display: flex;
+    align-items: center;
+    font-weight: $bold;
+  }
 
-	.email {
-		font-size: $caption;
-		font-weight: $medium;
-		color: $neutral;
-	}
+  .email {
+    font-size: $caption;
+    font-weight: $medium;
+    color: $neutral;
+  }
 }

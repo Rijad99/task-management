@@ -1,17 +1,17 @@
 // React
-import { useState } from "react"
+import { useState } from 'react';
 
 function useSearchHook() {
-	const [search, setSearch] = useState<string>("")
+  const [search, setSearch] = useState<string>('');
 
-	const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		setSearch(e.currentTarget.value)
-	}
+  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    setSearch(e.currentTarget.value);
+  };
 
-	return {
-		search,
-		handleSearch,
-	}
+  return {
+    search,
+    handleSearch,
+  };
 }
 
-export default useSearchHook
+export default useSearchHook;

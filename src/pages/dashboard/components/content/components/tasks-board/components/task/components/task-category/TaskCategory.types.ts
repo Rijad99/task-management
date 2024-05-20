@@ -1,8 +1,8 @@
 export interface TaskCategoryProps {
-	name: string
+  name: string;
 }
 
 export interface TaskCategory {
-	id: string | number
-	name: string
+  id: string | number;
+  name: string;
 }

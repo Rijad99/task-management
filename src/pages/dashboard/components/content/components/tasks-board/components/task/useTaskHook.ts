@@ -1,10 +1,9 @@
 function useTaskHook(onModalOpen: (isModalOpen: boolean) => void) {
-
   const handleCreateTask = () => {
-    onModalOpen(true)
-  }
+    onModalOpen(true);
+  };
 
-  return { handleCreateTask }
+  return { handleCreateTask };
 }
 
-export default useTaskHook
+export default useTaskHook;

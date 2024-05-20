@@ -1,4 +1,4 @@
 export interface SubHeaderProps {
-	isSelectedProject: () => boolean
-	onTaskCreate: () => void
+  isSelectedProject: () => boolean;
+  onTaskCreate: () => void;
 }

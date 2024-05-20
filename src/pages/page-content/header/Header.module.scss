@@ -1,31 +1,31 @@
-@import "../../../common/scss/variables.scss";
+@import '../../../common/scss/variables.scss';
 
 .header {
-	height: 87px;
-	position: absolute;
-	right: 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 6rem 0 1rem;
-	border-bottom: 1px solid $black5;
-	transition: all 200ms ease;
+  height: 87px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6rem 0 1rem;
+  border-bottom: 1px solid $black5;
+  transition: all 200ms ease;
 }
 
 .title {
-	width: 200px;
-	font-size: $subHeading;
-	font-weight: $medium;
-	color: $neutral;
+  width: 200px;
+  font-size: $subHeading;
+  font-weight: $medium;
+  color: $neutral;
 }
 
 .headerRightSide,
 .actions {
-	display: flex;
+  display: flex;
 }
 
 .actions {
-	display: flex;
-	align-items: center;
-	margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
 }

@@ -1,21 +1,21 @@
-@import "src/common/scss/variables";
+@import 'src/common/scss/variables';
 
 .selectedProjectContainer {
-	height: 100%;
-	display: flex;
-	align-items: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .project {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 
-	.info {
-		margin-left: 0.5rem;
+  .info {
+    margin-left: 0.5rem;
 
-		.projectName {
-			font-size: $bodyTwo;
-			margin-bottom: 0.3rem;
-		}
-	}
+    .projectName {
+      font-size: $bodyTwo;
+      margin-bottom: 0.3rem;
+    }
+  }
 }

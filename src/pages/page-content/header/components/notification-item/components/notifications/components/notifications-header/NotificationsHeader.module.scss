@@ -1,17 +1,17 @@
-@import "../../../../../../../../../common/scss/variables";
+@import '../../../../../../../../../common/scss/variables';
 
 .notificationsHeader {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
 
-	.title {
-		font-size: $bodyThree;
-		font-weight: $medium;
-	}
+  .title {
+    font-size: $bodyThree;
+    font-weight: $medium;
+  }
 
-	.markAllAsReadButton {
-		color: $blue;
-	}
+  .markAllAsReadButton {
+    color: $blue;
+  }
 }

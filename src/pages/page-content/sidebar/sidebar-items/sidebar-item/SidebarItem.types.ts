@@ -1,12 +1,12 @@
 // Types
-import { SidebarLink } from "../../utils/types"
+import { SidebarLink } from '../../utils/types';
 
 // ENUMS
-import { SvgColors } from "../../../../svg/Svg.types"
+import { SvgColors } from '../../../../svg/Svg.types';
 
 export interface SidebarItemProps {
-	sidebarLink: SidebarLink
-	color: SvgColors
-	activeRoute?: boolean
-	onRouteChange: () => void
+  sidebarLink: SidebarLink;
+  color: SvgColors;
+  activeRoute?: boolean;
+  onRouteChange: () => void;
 }

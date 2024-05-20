@@ -1,4 +1,4 @@
 export interface TaskFormProps {
-  isTaskFormOpen: boolean
-  onModalClose: () => void
+  isTaskFormOpen: boolean;
+  onModalClose: () => void;
 }

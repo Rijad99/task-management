@@ -1,146 +1,146 @@
-@import "../../../../../../../../../../../common/scss/variables";
+@import '../../../../../../../../../../../common/scss/variables';
 
 .notification {
-	display: flex;
-	align-items: flex-start;
-	padding: 0.75rem 1rem;
-	cursor: pointer;
-	transition: all 300ms ease;
+  display: flex;
+  align-items: flex-start;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
 
-	&:hover {
-		background-color: rgba($black, 0.025);
-	}
+  &:hover {
+    background-color: rgba($black, 0.025);
+  }
 
-	&:not(:last-child) {
-		border-bottom: 1px solid $black5;
-	}
+  &:not(:last-child) {
+    border-bottom: 1px solid $black5;
+  }
 
-	&:last-child {
-		border-bottom-right-radius: 12px;
-		border-bottom-left-radius: 12px;
-	}
+  &:last-child {
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+  }
 
-	.userStatus {
-		position: absolute;
-		top: 0px;
-		left: -1px;
-		border: 2px solid $white;
-		border-radius: 50%;
-	}
+  .userStatus {
+    position: absolute;
+    top: 0px;
+    left: -1px;
+    border: 2px solid $white;
+    border-radius: 50%;
+  }
 
-	.circle {
-		position: relative;
-		width: 37px;
-		height: 37px;
+  .circle {
+    position: relative;
+    width: 37px;
+    height: 37px;
 
-		img {
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-		}
-	}
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
 
-	.initialsCircle {
-		position: relative;
-		width: 37px;
-		height: 37px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: $caption;
-		font-weight: $medium;
-		border-radius: 50%;
+  .initialsCircle {
+    position: relative;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $caption;
+    font-weight: $medium;
+    border-radius: 50%;
 
-		&.green {
-			background-color: $green10;
-		}
+    &.green {
+      background-color: $green10;
+    }
 
-		&.red {
-			background-color: $red5;
-		}
+    &.red {
+      background-color: $red5;
+    }
 
-		&.blue {
-			background-color: $blue10;
-		}
+    &.blue {
+      background-color: $blue10;
+    }
 
-		&.orange {
-			background-color: $orange10;
-		}
-	}
+    &.orange {
+      background-color: $orange10;
+    }
+  }
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		margin-left: 0.5rem;
+  .content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
 
-		.description {
-			font-size: $bodyThree;
-			white-space: nowrap;
+    .description {
+      font-size: $bodyThree;
+      white-space: nowrap;
 
-			.user,
-			.task {
-				font-weight: $medium;
-			}
-		}
+      .user,
+      .task {
+        font-weight: $medium;
+      }
+    }
 
-		.sentDate {
-			font-size: $caption;
-			font-weight: $medium;
-			color: $neutral;
-		}
+    .sentDate {
+      font-size: $caption;
+      font-weight: $medium;
+      color: $neutral;
+    }
 
-		.actions {
-			display: flex;
-			margin-top: 1rem;
+    .actions {
+      display: flex;
+      margin-top: 1rem;
 
-			.acceptButton {
-				color: $blue;
-				background-color: $blue5;
-				border: 1px solid $blue5;
+      .acceptButton {
+        color: $blue;
+        background-color: $blue5;
+        border: 1px solid $blue5;
 
-				&:hover {
-					color: $black;
-					background-color: transparent;
-					border-color: $black5;
-				}
-			}
+        &:hover {
+          color: $black;
+          background-color: transparent;
+          border-color: $black5;
+        }
+      }
 
-			.denyButton {
-				background-color: $white;
-				border-color: $black5;
-				margin-left: 0.5rem;
+      .denyButton {
+        background-color: $white;
+        border-color: $black5;
+        margin-left: 0.5rem;
 
-				&:hover {
-					color: $blue;
-					background-color: $blue5;
-					border: 1px solid $blue5;
-				}
-			}
-		}
-	}
+        &:hover {
+          color: $blue;
+          background-color: $blue5;
+          border: 1px solid $blue5;
+        }
+      }
+    }
+  }
 }
 
 .addedFile {
-	display: flex;
-	flex-direction: column;
-	margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 
-	.fileName {
-		font-size: $caption;
-		font-weight: $medium;
-	}
+  .fileName {
+    font-size: $caption;
+    font-weight: $medium;
+  }
 
-	.fileSize {
-		font-size: $caption;
-		font-weight: $medium;
-		color: $neutral;
-	}
+  .fileSize {
+    font-size: $caption;
+    font-weight: $medium;
+    color: $neutral;
+  }
 }
 
 .read {
-	background-color: $white;
+  background-color: $white;
 }
 
 .unread {
-	background-color: rgba($black, 0.025);
+  background-color: rgba($black, 0.025);
 }

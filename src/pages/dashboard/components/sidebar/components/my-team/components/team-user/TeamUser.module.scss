@@ -1,47 +1,47 @@
-@import "src/common/scss/variables";
+@import 'src/common/scss/variables';
 
 .userButton {
-	width: 100%;
-	display: flex;
-	justify-content: flex-start;
-	border: 1px solid $black5;
-	margin-top: 1rem;
-	transition: all 200ms ease;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  border: 1px solid $black5;
+  margin-top: 1rem;
+  transition: all 200ms ease;
 
-	img {
-		width: 36px;
-		border-radius: 50%;
-	}
+  img {
+    width: 36px;
+    border-radius: 50%;
+  }
 
-	&:hover {
-		background-color: rgba($black5, 0.2);
+  &:hover {
+    background-color: rgba($black5, 0.2);
 
-		.arrow {
-			path {
-				stroke: $black;
-			}
-		}
-	}
+    .arrow {
+      path {
+        stroke: $black;
+      }
+    }
+  }
 }
 
 .userInfo {
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
-	.name {
-		margin-left: 0.5rem;
-		margin-bottom: 0.2rem;
-		font-size: $medium;
-		font-weight: $medium;
-	}
+  .name {
+    margin-left: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-size: $medium;
+    font-weight: $medium;
+  }
 }
 
 .arrow {
-	margin-left: auto;
-	transform: rotate(180deg);
+  margin-left: auto;
+  transform: rotate(180deg);
 
-	path {
-		stroke: $neutral;
-	}
+  path {
+    stroke: $neutral;
+  }
 }

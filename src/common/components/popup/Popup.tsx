@@ -1,36 +1,36 @@
 // React
-import { PropsWithChildren } from "react"
+import { forwardRef, PropsWithChildren, RefObject } from 'react';
 
 // CSS
-import popupCSS from "./Popup.module.scss"
+import popupCSS from './Popup.module.scss';
 
 // Framer motion
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion';
 
 // Types
-import { PopupProps } from "./Popup.types"
-import usePopupHook from "./usePopupHook"
+import { PopupProps } from './Popup.types';
+import usePopupHook from './usePopupHook';
 
-function Popup(props: PropsWithChildren<PopupProps>) {
-	const { popupRef, popupVariant } = usePopupHook(
-		props.onOutsideClickPopupClose,
-	)
+const Popup = forwardRef<HTMLDivElement, PropsWithChildren<PopupProps>>((props, ref: RefObject<HTMLDivElement>) => {
+  const { popupVariant } = usePopupHook(ref, props.onOutsideClickPopupClose);
 
-	return (
-		<motion.div
-			ref={popupRef}
-			className={popupCSS.popupContainer}
-			initial={{
-				opacity: 0,
-				transform: "translateY(-10px) scale(0.8)",
-				pointerEvents: "none",
-			}}
-			animate={props.isPopupShown ? popupVariant.visible : popupVariant.hidden}
-			variants={popupVariant}
-		>
-			{props.children}
-		</motion.div>
-	)
-}
+  const animatePopup = props.isPopupShown ? popupVariant.visible : popupVariant.hidden;
 
-export default Popup
+  return (
+    <motion.div
+      ref={ref}
+      className={popupCSS.popupContainer}
+      initial={{
+        opacity: 0,
+        transform: 'translateY(-10px) scale(0.8)',
+        pointerEvents: 'none',
+      }}
+      animate={animatePopup}
+      variants={popupVariant}
+    >
+      {props.children}
+    </motion.div>
+  );
+});
+
+export default Popup;

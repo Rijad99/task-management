@@ -1,9 +1,9 @@
-@import "src/common/scss/variables";
+@import 'src/common/scss/variables';
 
 .tasksColumn {
-	flex: 0 0 450px;
+  flex: 0 0 450px;
 
-	&:not(:last-child) {
-		margin-right: 1rem;
-	}
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
 }

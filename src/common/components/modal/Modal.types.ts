@@ -1,4 +1,4 @@
 export interface ModalProps {
-	isModalShown: boolean
-	onModalClose: () => void
+  isModalShown: boolean;
+  onModalClose: () => void;
 }

@@ -1,35 +1,33 @@
 // React
-import { createRef, useState } from "react"
+import { useRef, useState } from 'react';
 
 // Types
-import { Option } from "./components/options/Options.types"
-
-// Custom Hooks
-import useOutsideClickHook from "../../custom-hooks/useOutsideClickHook"
+import { Option } from './components/options/Options.types';
+import useOutsideClickHook from '../../custom-hooks/useOutsideClickHook';
 
 function useSelectHook(onOptionChange: (option: Option) => void) {
-	const [isSelectOpen, setIsSelectOpen] = useState<boolean>(false)
+  const [isSelectOpen, setIsSelectOpen] = useState<boolean>(false);
 
-	const optionsRef = createRef<HTMLUListElement>()
+  const selectRef = useRef<HTMLDivElement | null>(null);
+  useOutsideClickHook(selectRef, setIsSelectOpen);
 
-	useOutsideClickHook(optionsRef, setIsSelectOpen)
+  const handleSelectOpen = () => {
+    setIsSelectOpen(!isSelectOpen);
+  };
 
-	const handleSelectOpen = () => {
-		setIsSelectOpen(!isSelectOpen)
-	}
+  const handleOptionChange = (option: Option) => {
+    onOptionChange(option);
 
-	const handleOptionChange = (option: Option) => {
-		onOptionChange(option)
+    setIsSelectOpen(false);
+  };
 
-		setIsSelectOpen(false)
-	}
-
-	return {
-		optionsRef,
-		isSelectOpen,
-		handleSelectOpen,
-		handleOptionChange,
-	}
+  return {
+    selectRef,
+    isSelectOpen,
+    setIsSelectOpen,
+    handleSelectOpen,
+    handleOptionChange,
+  };
 }
 
-export default useSelectHook
+export default useSelectHook;

@@ -1,71 +1,64 @@
 // React
-import { useContext } from "react"
+import { useContext, useRef } from 'react';
 
 // CSS
-import userCSS from "./User.module.scss"
-import utilsCSS from "../../../../../common/scss/utils.module.scss"
-import statusCSS from "../../../../../common/components/user-status/UserStatus.module.scss"
+import userCSS from './User.module.scss';
+import utilsCSS from '../../../../../common/scss/utils.module.scss';
+import statusCSS from '../../../../../common/components/user-status/UserStatus.module.scss';
 
 // Components
-import UserStatus from "../../../../../common/components/user-status/UserStatus"
-import Dropdown from "../../../../../common/components/dropdown/Dropdown"
-import Tooltip from "../../../../../common/components/tooltip/Tooltip"
+import UserStatus from '../../../../../common/components/user-status/UserStatus';
+import Dropdown from '../../../../../common/components/dropdown/Dropdown';
+import Tooltip from '../../../../../common/components/tooltip/Tooltip';
 
 // ENUMS
-import { TooltipPosition } from "../../../../../common/components/tooltip/Tooltip.types"
+import { TooltipPosition } from '../../../../../common/components/tooltip/Tooltip.types';
 
 // Types
-import { UserProps } from "./User.types"
+import { UserProps } from './User.types';
 
 // Data
-import { userStatusData } from "../../../../../common/components/user-status/utils/user-status-mock-data"
+import { userStatusData } from '../../../../../common/components/user-status/utils/user-status-mock-data';
 
 // User hook
-import useUserHook from "./useUserHook"
+import useUserHook from './useUserHook';
 
 // Context
-import { LocalizationContext } from "../../../../../common/context/LocalizationContext"
+import { LocalizationContext } from '../../../../../common/context/LocalizationContext';
 
 function User({ firstName, lastName, email, photo, status }: UserProps) {
-	const {
-		isUserStatusDropdownOpen,
-		setIsUserStatusDropdownOpen,
-		handleChangeStatus,
-		handleStatusDropdownOpen,
-	} = useUserHook()
+  const { isUserStatusDropdownOpen, setIsUserStatusDropdownOpen, handleChangeStatus, handleStatusDropdownOpen } = useUserHook();
 
-	const { localization } = useContext(LocalizationContext)
+  const { localization } = useContext(LocalizationContext);
 
-	return (
-		<div className={userCSS.userContainer}>
-			<img src={photo} className={userCSS.photo} />
-			<div className={userCSS.userInfo}>
-				<span className={userCSS.name}>
-					{`${firstName} ${lastName}`}
-					<Tooltip
-						text={localization[status]}
-						position={TooltipPosition.RIGHT}
-						tooltipContainerClasses={utilsCSS.ml05}
-						tooltipClasses={
-							statusCSS[status.split(" ").join("_").toLowerCase()]
-						}
-					>
-						<UserStatus
-							status={status}
-							onStatusDropdownOpen={handleStatusDropdownOpen}
-						/>
-					</Tooltip>
-				</span>
-				<span className={userCSS.email}>{email}</span>
-				<Dropdown
-					isDropdownOpen={isUserStatusDropdownOpen}
-					items={userStatusData}
-					onActionChange={handleChangeStatus}
-					onOutsideClickDropdownClose={() => setIsUserStatusDropdownOpen(false)}
-				/>
-			</div>
-		</div>
-	)
+  const userRef = useRef<HTMLDivElement | null>(null);
+
+  return (
+    <div ref={userRef} className={userCSS.userContainer}>
+      <img src={photo} className={userCSS.photo} />
+      <div className={userCSS.userInfo}>
+        <span className={userCSS.name}>
+          {`${firstName} ${lastName}`}
+          <Tooltip
+            text={localization[status]}
+            position={TooltipPosition.RIGHT}
+            tooltipContainerClasses={utilsCSS.ml05}
+            tooltipClasses={statusCSS[status.split(' ').join('_').toLowerCase()]}
+          >
+            <UserStatus status={status} onStatusDropdownOpen={handleStatusDropdownOpen} />
+          </Tooltip>
+        </span>
+        <span className={userCSS.email}>{email}</span>
+        <Dropdown
+          ref={userRef}
+          isDropdownOpen={isUserStatusDropdownOpen}
+          items={userStatusData}
+          onActionChange={handleChangeStatus}
+          onOutsideClickDropdownClose={() => setIsUserStatusDropdownOpen(false)}
+        />
+      </div>
+    </div>
+  );
 }
 
-export default User
+export default User;
