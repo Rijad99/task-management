@@ -1,5 +1,5 @@
 // React
-import { useState, useEffect } from 'react';
+import {useState, useEffect, useCallback} from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 // Types
@@ -45,28 +45,31 @@ function useDashboardHook() {
     const projectName = location.pathname.split('/')[2];
 
     if (projectName) {
-      getData(`../../../src/pages/dashboard/components/sidebar/components/projects/data/${projectName}.json`).then((data) => setProject(data));
+      getData(`../../../src/pages/dashboard/components/sidebar/components/projects/data/${projectName}.json`).then((data) => handleUpdateProjectData(data));
     }
   }, []);
 
-  const handleProjectChange = (project: Project) => {
+  const handleUpdateProjectData = useCallback((data: Project) => {
+    setProject(data)
+  }, [project])
+
+  const handleProjectChange = useCallback((project: Project) => {
     navigate(`${Paths.DASHBOARD}/${project.name.toLowerCase()}`);
 
     getData(`../../../src/pages/dashboard/components/sidebar/components/projects/data/${project.name.toLowerCase()}.json`).then((data) =>
-      setProject(data),
+      handleUpdateProjectData(data),
     );
-  };
+  }, [project]);
 
-  const isProjectSelected = (): boolean => {
+  const isProjectSelected = useCallback((): boolean => {
     return location.pathname !== Paths.DASHBOARD;
-  };
+  }, [location.pathname]);
 
   return {
     project,
     dashboardSidebarVariant,
     isTaskFormOpen,
     setIsTaskFormOpen,
-    setProject,
     handleProjectChange,
     isProjectSelected,
   };

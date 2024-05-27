@@ -12,7 +12,7 @@ function useSidebarItemsHook(onPageContentWidthChange: () => void) {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const sidebarRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement | null>(null);
 
   const links = sidebarLinks.slice(0, -1);
   const logoutLink = sidebarLinks[sidebarLinks.length - 1];
